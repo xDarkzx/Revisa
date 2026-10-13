@@ -29,12 +29,21 @@ def main(argv: list[str] | None = None) -> None:
     ocr.add_argument("--sheets", type=Path, default=Path("data/sheets"))
     ocr.add_argument("--out", type=Path, default=Path("data/ocr/rapidocr/pages"))
 
+    blocks = commands.add_parser("ocr-blocks", help="locate each title block and OCR it enlarged (cached)")
+    blocks.add_argument("--manifest", type=Path, default=DEFAULT_MANIFEST)
+    blocks.add_argument("--sheets", type=Path, default=Path("data/sheets"))
+    blocks.add_argument("--pages", type=Path, default=Path("data/ocr/rapidocr/pages"))
+    blocks.add_argument("--out", type=Path, default=Path("data/ocr/rapidocr/blocks"))
+
     args = parser.parse_args(argv)
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
     logging.getLogger("httpx").setLevel(logging.WARNING)
 
     if args.command == "ocr-pages":
         _ocr_pages(args.manifest, args.sheets, args.out)
+        return
+    if args.command == "ocr-blocks":
+        _ocr_blocks(args.manifest, args.sheets, args.pages, args.out)
         return
 
     from revisa import dataset
@@ -71,6 +80,32 @@ def _ocr_pages(manifest: Path, sheets: Path, out: Path) -> None:
             lines = engine.read(image)
         target.write_text(json.dumps(lines_to_json(lines)), encoding="utf-8")
         print(f"{sheet.id}: {len(lines)} lines in {time.perf_counter() - start:.1f}s", flush=True)
+
+
+def _ocr_blocks(manifest: Path, sheets: Path, pages: Path, out: Path) -> None:
+    import json
+    import time
+
+    from PIL import Image
+
+    from revisa.blocks import block_to_json, read_block
+    from revisa.dataset import read_manifest
+    from revisa.ocr import RapidOcrEngine, lines_from_json
+    from revisa.packs import construction
+
+    engine = RapidOcrEngine()
+    out.mkdir(parents=True, exist_ok=True)
+    for sheet in read_manifest(manifest):
+        target = out / f"{sheet.id}.json"
+        if target.exists():
+            continue
+        start = time.perf_counter()
+        page_lines = lines_from_json(json.loads((pages / f"{sheet.id}.json").read_text(encoding="utf-8")))
+        with Image.open(sheets / f"{sheet.id}.jpg") as image:
+            block = read_block(image, page_lines, engine, construction.LOCATE)
+        target.write_text(json.dumps(block_to_json(block)), encoding="utf-8")
+        found = f"{len(block.lines)} lines" if block else "no title block"
+        print(f"{sheet.id}: {found} in {time.perf_counter() - start:.1f}s", flush=True)
 
 
 if __name__ == "__main__":
