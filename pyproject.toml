@@ -1,0 +1,81 @@
+[project]
+name = "revisa"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "xDarkzx", email = "35842612+xDarkzx@users.noreply.github.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "httpx>=0.28.1",
+    "pillow>=12.3.0",
+    "pydantic>=2.14.1",
+    "pydantic-settings>=2.15.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.10.10,<0.11.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "mypy>=2.4.0",
+    "pip-audit>=2.10.1",
+    "pre-commit>=4.7.0",
+    "pytest>=9.1.1",
+    "pytest-asyncio>=1.4.0",
+    "pytest-cov>=7.1.0",
+    "respx>=0.23.1",
+    "ruff>=0.17.0",
+    "types-pyyaml>=6.0.12.20260906",
+]
+
+[project.scripts]
+revisa = "revisa.cli:main"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+pythonpath = ["."]
+markers = ["integration: needs live external services"]
+addopts = "--strict-markers"
+
+[tool.ruff]
+line-length = 110
+target-version = "py311"
+
+[tool.ruff.lint]
+select = [
+    "E", "W", "F", "I", "N", "B", "UP", "SIM", "C4", "PIE", "RET", "RUF",
+    "ASYNC",  # blocking calls inside async code
+    "S",      # security (bandit rules)
+    "PT",     # pytest style
+    "PTH",    # pathlib over os.path
+    "ARG",    # unused arguments
+    "ERA",    # commented-out code
+    "T20",    # stray print()
+    "BLE",    # blind except
+    "TRY",    # exception hygiene
+    "PL",     # pylint subset
+]
+ignore = ["TRY003", "PLR0913"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S101", "S105", "S106", "PLR2004", "ARG"]
+# The CLI prints by design, and imports per command so `revisa --help` stays fast.
+"src/revisa/cli.py" = ["T201", "PLC0415"]
+
+[tool.mypy]
+strict = true
+python_version = "3.11"
+packages = ["revisa"]
+mypy_path = "src"
+
+[tool.coverage.run]
+source = ["revisa"]
+branch = true
+
+[tool.coverage.report]
+fail_under = 85
+show_missing = true
+skip_covered = true
