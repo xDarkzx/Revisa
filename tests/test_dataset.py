@@ -8,6 +8,7 @@ from revisa.dataset import (
     DatasetError,
     Sheet,
     collect_sheets,
+    download_sheets,
     read_manifest,
     sheet_id,
     stratified_sample,
@@ -122,3 +123,43 @@ def test_api_errors_are_raised():
 
     with pytest.raises(DatasetError, match="maxlag"):
         list(CommonsClient(httpx.Client()).search_titles("q"))
+
+
+@respx.mock
+def test_download_fetches_thumbnails_and_keeps_existing_files(tmp_path):
+    def api(request):
+        params = dict(httpx.QueryParams(request.content.decode()))
+        assert params["iiurlwidth"] == "1200"
+        info = page("File:a-1")
+        info["imageinfo"][0]["thumburl"] = "https://upload.example/thumb/a-1.jpg"
+        return httpx.Response(200, json={"query": {"pages": {"1": info}}})
+
+    respx.post(COMMONS_API).mock(side_effect=api)
+    respx.get("https://upload.example/thumb/a-1.jpg").mock(return_value=httpx.Response(200, content=b"jpeg"))
+    (tmp_path / "b-2.jpg").write_bytes(b"cached")
+
+    paths = download_sheets(CommonsClient(httpx.Client()), [sheet("a", 1), sheet("b", 2)], tmp_path, 1200)
+
+    assert [p.name for p in paths] == ["a-1.jpg", "b-2.jpg"]
+    assert (tmp_path / "a-1.jpg").read_bytes() == b"jpeg"
+    assert (tmp_path / "b-2.jpg").read_bytes() == b"cached"
+
+
+@respx.mock
+def test_download_fails_loudly_when_a_sheet_is_gone(tmp_path):
+    respx.post(COMMONS_API).mock(return_value=httpx.Response(200, json={"query": {"pages": {}}}))
+
+    with pytest.raises(DatasetError, match="no longer serves"):
+        download_sheets(CommonsClient(httpx.Client()), [sheet("a", 1)], tmp_path, 1200)
+
+
+@respx.mock
+def test_http_errors_are_raised(tmp_path):
+    respx.post(COMMONS_API).mock(return_value=httpx.Response(503, text="lagged"))
+    respx.get("https://upload.example/x.jpg").mock(return_value=httpx.Response(404))
+    client = CommonsClient(httpx.Client())
+
+    with pytest.raises(DatasetError, match="503"):
+        client.image_info(["File:x"])
+    with pytest.raises(DatasetError, match="404"):
+        client.download("https://upload.example/x.jpg", tmp_path / "x.jpg")
