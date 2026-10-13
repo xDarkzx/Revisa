@@ -12,6 +12,8 @@ from typing import Literal
 
 from pydantic import BaseModel, Field
 
+from revisa.locate import LocateConfig
+
 # Fields every title block is expected to have and that the eval scores.
 SCORED_FIELDS = ("drawing_number", "title", "revision", "sheet_number", "sheet_count", "date", "organisation")
 
@@ -47,6 +49,8 @@ TITLE_BLOCK_KEYWORDS = re.compile(
 # Archive stamps added when the drawings were photographed, e.g. "HABS No. GA-2257-5-17".
 # OCR misreads them ("HAB5N0.6A-2257"), so match the prefix loosely: HABS, HAER, HALS.
 ARCHIVE_STAMP = re.compile(r"\bHA[BEL][S5]", re.IGNORECASE)
+
+LOCATE = LocateConfig(keywords=TITLE_BLOCK_KEYWORDS, ignore=ARCHIVE_STAMP)
 
 Discipline = Literal["architectural", "structural", "mechanical", "electrical", "civil", "plumbing", "other"]
 
