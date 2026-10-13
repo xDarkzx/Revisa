@@ -1,0 +1,37 @@
+name: Extraction error
+description: A title-block field was read wrongly or missed
+labels: [extraction]
+body:
+  - type: input
+    id: sheet
+    attributes:
+      label: Sheet id
+      description: The 12-character id from datasets/habs/manifest.jsonl, or a link to the drawing
+    validations:
+      required: true
+  - type: dropdown
+    id: field
+    attributes:
+      label: Field
+      options: [drawing_number, title, project, organisation, revision, revision_date, date, sheet_number, sheet_count, scale, drawn_by, checked_by, title block not found]
+    validations:
+      required: true
+  - type: input
+    id: printed
+    attributes:
+      label: What the sheet shows
+    validations:
+      required: true
+  - type: input
+    id: extracted
+    attributes:
+      label: What Revisa extracted
+    validations:
+      required: true
+  - type: dropdown
+    id: routed
+    attributes:
+      label: Was the sheet sent to review?
+      options: [yes, "no (silent error)"]
+    validations:
+      required: true
