@@ -24,9 +24,18 @@ def main(argv: list[str] | None = None) -> None:
     download.add_argument("--dest", type=Path, default=Path("data/sheets"))
     download.add_argument("--width", type=int, default=3000)
 
+    ocr = commands.add_parser("ocr-pages", help="OCR whole sheets once and cache the lines (local engine)")
+    ocr.add_argument("--manifest", type=Path, default=DEFAULT_MANIFEST)
+    ocr.add_argument("--sheets", type=Path, default=Path("data/sheets"))
+    ocr.add_argument("--out", type=Path, default=Path("data/ocr/rapidocr/pages"))
+
     args = parser.parse_args(argv)
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
     logging.getLogger("httpx").setLevel(logging.WARNING)
+
+    if args.command == "ocr-pages":
+        _ocr_pages(args.manifest, args.sheets, args.out)
+        return
 
     from revisa import dataset
 
@@ -40,6 +49,28 @@ def main(argv: list[str] | None = None) -> None:
     elif args.command == "dataset-download":
         paths = dataset.download_sheets(client, dataset.read_manifest(args.manifest), args.dest, args.width)
         print(f"{len(paths)} sheets in {args.dest}")
+
+
+def _ocr_pages(manifest: Path, sheets: Path, out: Path) -> None:
+    import json
+    import time
+
+    from PIL import Image
+
+    from revisa.dataset import read_manifest
+    from revisa.ocr import RapidOcrEngine, lines_to_json
+
+    engine = RapidOcrEngine()
+    out.mkdir(parents=True, exist_ok=True)
+    for sheet in read_manifest(manifest):
+        target = out / f"{sheet.id}.json"
+        if target.exists():
+            continue
+        start = time.perf_counter()
+        with Image.open(sheets / f"{sheet.id}.jpg") as image:
+            lines = engine.read(image)
+        target.write_text(json.dumps(lines_to_json(lines)), encoding="utf-8")
+        print(f"{sheet.id}: {len(lines)} lines in {time.perf_counter() - start:.1f}s", flush=True)
 
 
 if __name__ == "__main__":

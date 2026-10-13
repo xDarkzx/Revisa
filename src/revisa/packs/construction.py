@@ -37,6 +37,17 @@ class TitleBlock(BaseModel):
     checked_by: str | None = None
 
 
+# Words that appear in title blocks and rarely elsewhere on a drawing (ADR 0004).
+TITLE_BLOCK_KEYWORDS = re.compile(
+    # Leading boundary only: OCR often runs words together ("DATENOV.22").
+    r"\b(DRAWN|CHECKED|APPROVED|SCALE|SHEET|DATE|REVISIONS?|DRAWING|DWG|DESIGNED|TRACED|SUBMITTED|"
+    r"ARCHITECTS?|ENGINEERS?|PROJECT|CONTRACT|SPEC|SIZE|DIVISION)",
+    re.IGNORECASE,
+)
+# Archive stamps added when the drawings were photographed, e.g. "HABS No. GA-2257-5-17".
+# OCR misreads them ("HAB5N0.6A-2257"), so match the prefix loosely: HABS, HAER, HALS.
+ARCHIVE_STAMP = re.compile(r"\bHA[BEL][S5]", re.IGNORECASE)
+
 Discipline = Literal["architectural", "structural", "mechanical", "electrical", "civil", "plumbing", "other"]
 
 
