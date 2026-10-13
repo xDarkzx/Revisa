@@ -16,8 +16,8 @@ uv run revisa dataset-download
 3. Commit messages follow [Conventional Commits](https://www.conventionalcommits.org/)
    (`feat:`, `fix:`, `docs:`, `test:`, `refactor:`, `perf:`, `build:`, `ci:`, `chore:`, and
    `eval:` for changes to evaluation data or results). The commit-msg hook enforces this.
-4. Open a pull request using the template. CI must pass and one review is required before
-   merging; `main` is protected and only accepts squash merges.
+4. Open a pull request using the template. `main` is protected: changes land only through a
+   pull request, every CI job must pass, and merges are squash-only with linear history.
 
 ## Quality gates
 
