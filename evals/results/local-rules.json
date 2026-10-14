@@ -1,14 +1,14 @@
 {
  "name": "local-rules",
- "created": "2026-10-14T00:28:10+00:00",
- "commit": "0f311c5",
+ "created": "2026-10-14T01:41:13+00:00",
+ "commit": "05a17e0",
  "config": {
   "ocr": "rapidocr",
   "reader": "rules",
   "model": null
  },
  "usage": {
-  "seconds": 0.2,
+  "seconds": 0.1,
   "sheets": 200
  },
  "summary": {
@@ -38,13 +38,13 @@
     },
     "date": {
      "counts": {
-      "missed": 46,
+      "missed": 48,
       "correct": 21,
-      "wrong": 9,
+      "wrong": 7,
       "absent": 21
      },
      "recall": 0.276,
-     "precision": 0.7
+     "precision": 0.75
     },
     "scale": {
      "counts": {
@@ -87,10 +87,10 @@
    },
    "sheet_accuracy": 0.103,
    "routing": {
-    "accepted": 15,
-    "needs_review": 92,
-    "error_recall": 0.844,
-    "review_precision": 0.88,
+    "accepted": 14,
+    "needs_review": 93,
+    "error_recall": 0.854,
+    "review_precision": 0.882,
     "silent_error_rate": 1.0,
     "accepted_correct": 0
    },
@@ -216,12 +216,12 @@
     "date": {
      "counts": {
       "correct": 35,
-      "missed": 73,
+      "missed": 75,
       "absent": 53,
-      "wrong": 19
+      "wrong": 17
      },
      "recall": 0.276,
-     "precision": 0.648
+     "precision": 0.673
     },
     "scale": {
      "counts": {
@@ -264,10 +264,10 @@
    },
    "sheet_accuracy": 0.14,
    "routing": {
-    "accepted": 27,
-    "needs_review": 173,
-    "error_recall": 0.843,
-    "review_precision": 0.838,
+    "accepted": 26,
+    "needs_review": 174,
+    "error_recall": 0.849,
+    "review_precision": 0.839,
     "silent_error_rate": 1.0,
     "accepted_correct": 0
    },
@@ -307,6 +307,22 @@
     "scale": "rule:scale-label",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "drawing_number": [
+     21
+    ],
+    "date": [
+     26
+    ],
+    "scale": [
+     31
+    ],
+    "title": [
+     4,
+     8,
+     11
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "dev"
@@ -329,6 +345,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": true,
    "split": "dev"
@@ -358,6 +375,14 @@
     "scale": "rule:scale-label",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "scale": [
+     9
+    ],
+    "title": [
+     7
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "test"
@@ -385,6 +410,11 @@
    "sources": {
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "title": [
+     0
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "test"
@@ -407,6 +437,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": true,
    "split": "test"
@@ -429,6 +460,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": false,
    "split": "dev"
@@ -459,6 +491,24 @@
     "scale": "rule:scale-label",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "drawing_number": [
+     45,
+     51
+    ],
+    "date": [
+     22
+    ],
+    "scale": [
+     48,
+     49
+    ],
+    "title": [
+     9,
+     17,
+     26
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "test"
@@ -488,6 +538,14 @@
     "drawing_number": "rule:standalone-id",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "drawing_number": [
+     2
+    ],
+    "title": [
+     15
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "test"
@@ -510,6 +568,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": true,
    "split": "dev"
@@ -538,6 +597,22 @@
     "date": "rule:date-label",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "drawing_number": [
+     83,
+     88
+    ],
+    "date": [
+     82
+    ],
+    "title": [
+     69,
+     74,
+     73,
+     76,
+     77
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "dev"
@@ -562,6 +637,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": true,
    "label_has_block": true,
    "split": "dev"
@@ -592,6 +668,21 @@
     "scale": "rule:scale-label",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "drawing_number": [
+     18,
+     23
+    ],
+    "date": [
+     17
+    ],
+    "scale": [
+     22
+    ],
+    "title": [
+     21
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "dev"
@@ -614,6 +705,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": true,
    "split": "dev"
@@ -642,6 +734,17 @@
     "date": "rule:date-unlabelled",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "drawing_number": [
+     78
+    ],
+    "date": [
+     65
+    ],
+    "title": [
+     10
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "test"
@@ -668,6 +771,11 @@
    },
    "sources": {
     "title": "rule:largest-lettering"
+   },
+   "evidence": {
+    "title": [
+     2
+    ]
    },
    "block_found": true,
    "label_has_block": true,
@@ -699,6 +807,17 @@
     "date": "rule:date-label",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "drawing_number": [
+     17
+    ],
+    "date": [
+     10
+    ],
+    "title": [
+     7
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "dev"
@@ -721,6 +840,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": true,
    "split": "dev"
@@ -749,6 +869,18 @@
     "date": "rule:date-label",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "drawing_number": [
+     13,
+     15
+    ],
+    "date": [
+     16
+    ],
+    "title": [
+     12
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "dev"
@@ -775,6 +907,12 @@
    },
    "sources": {
     "title": "rule:largest-lettering"
+   },
+   "evidence": {
+    "title": [
+     1,
+     3
+    ]
    },
    "block_found": true,
    "label_has_block": true,
@@ -803,6 +941,21 @@
     "drawing_number": "rule:number-label",
     "date": "rule:date-unlabelled",
     "title": "rule:largest-lettering"
+   },
+   "evidence": {
+    "drawing_number": [
+     19,
+     22
+    ],
+    "date": [
+     6
+    ],
+    "title": [
+     12,
+     17,
+     24,
+     29
+    ]
    },
    "block_found": true,
    "label_has_block": true,
@@ -836,6 +989,21 @@
     "sheet_number": "rule:sheet-of",
     "sheet_count": "rule:sheet-of"
    },
+   "evidence": {
+    "drawing_number": [
+     12,
+     14
+    ],
+    "title": [
+     45
+    ],
+    "sheet_number": [
+     36
+    ],
+    "sheet_count": [
+     36
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "test"
@@ -864,6 +1032,15 @@
     "date": "rule:date-label",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "date": [
+     23
+    ],
+    "title": [
+     5,
+     11
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "dev"
@@ -888,6 +1065,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": true,
    "label_has_block": true,
    "split": "test"
@@ -920,6 +1098,24 @@
     "sheet_number": "rule:sheet-of",
     "sheet_count": "rule:sheet-of"
    },
+   "evidence": {
+    "drawing_number": [
+     45,
+     50
+    ],
+    "date": [
+     32
+    ],
+    "title": [
+     41
+    ],
+    "sheet_number": [
+     61
+    ],
+    "sheet_count": [
+     61
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "test"
@@ -948,6 +1144,15 @@
     "drawing_number": "rule:number-label",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "drawing_number": [
+     10,
+     11
+    ],
+    "title": [
+     8
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "test"
@@ -975,6 +1180,11 @@
    "sources": {
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "title": [
+     0
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "dev"
@@ -997,6 +1207,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": true,
    "split": "dev"
@@ -1023,6 +1234,11 @@
    },
    "sources": {
     "title": "rule:largest-lettering"
+   },
+   "evidence": {
+    "title": [
+     8
+    ]
    },
    "block_found": true,
    "label_has_block": true,
@@ -1052,6 +1268,14 @@
     "drawing_number": "rule:standalone-id",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "drawing_number": [
+     21
+    ],
+    "title": [
+     32
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "test"
@@ -1074,6 +1298,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": true,
    "split": "test"
@@ -1101,6 +1326,16 @@
    "sources": {
     "drawing_number": "rule:standalone-id",
     "title": "rule:largest-lettering"
+   },
+   "evidence": {
+    "drawing_number": [
+     1
+    ],
+    "title": [
+     10,
+     12,
+     16
+    ]
    },
    "block_found": true,
    "label_has_block": true,
@@ -1130,6 +1365,16 @@
     "drawing_number": "rule:standalone-id",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "drawing_number": [
+     1
+    ],
+    "title": [
+     6,
+     8,
+     10
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "test"
@@ -1152,6 +1397,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": false,
    "split": "dev"
@@ -1174,6 +1420,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": false,
    "split": "test"
@@ -1201,6 +1448,11 @@
    "sources": {
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "title": [
+     0
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "test"
@@ -1223,6 +1475,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": true,
    "split": "dev"
@@ -1250,6 +1503,15 @@
    "sources": {
     "drawing_number": "rule:standalone-id",
     "title": "rule:largest-lettering"
+   },
+   "evidence": {
+    "drawing_number": [
+     30
+    ],
+    "title": [
+     12,
+     18
+    ]
    },
    "block_found": true,
    "label_has_block": true,
@@ -1279,6 +1541,16 @@
     "date": "rule:date-unlabelled",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "date": [
+     12
+    ],
+    "title": [
+     3,
+     5,
+     7
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "test"
@@ -1305,6 +1577,14 @@
    },
    "sources": {
     "title": "rule:largest-lettering"
+   },
+   "evidence": {
+    "title": [
+     1,
+     2,
+     3,
+     5
+    ]
    },
    "block_found": true,
    "label_has_block": true,
@@ -1333,6 +1613,11 @@
    "sources": {
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "title": [
+     1
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "test"
@@ -1357,6 +1642,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": true,
    "label_has_block": true,
    "split": "dev"
@@ -1384,6 +1670,15 @@
    "sources": {
     "drawing_number": "rule:number-label",
     "title": "rule:largest-lettering"
+   },
+   "evidence": {
+    "drawing_number": [
+     6,
+     11
+    ],
+    "title": [
+     2
+    ]
    },
    "block_found": true,
    "label_has_block": true,
@@ -1416,6 +1711,19 @@
     "scale": "rule:scale-label",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "drawing_number": [
+     6
+    ],
+    "scale": [
+     16,
+     18
+    ],
+    "title": [
+     24,
+     26
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "test"
@@ -1442,6 +1750,11 @@
    },
    "sources": {
     "title": "rule:largest-lettering"
+   },
+   "evidence": {
+    "title": [
+     6
+    ]
    },
    "block_found": true,
    "label_has_block": true,
@@ -1473,6 +1786,19 @@
     "date": "rule:date-unlabelled",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "drawing_number": [
+     19
+    ],
+    "date": [
+     25
+    ],
+    "title": [
+     3,
+     2,
+     4
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "test"
@@ -1500,6 +1826,12 @@
    "sources": {
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "title": [
+     1,
+     4
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "test"
@@ -1522,6 +1854,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": false,
    "split": "dev"
@@ -1544,6 +1877,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": true,
    "split": "dev"
@@ -1572,6 +1906,17 @@
     "date": "rule:date-unlabelled",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "date": [
+     2
+    ],
+    "title": [
+     3,
+     6,
+     7,
+     9
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "test"
@@ -1599,6 +1944,19 @@
     "drawing_number": "rule:number-label",
     "date": "rule:date-near-label",
     "title": "rule:largest-lettering"
+   },
+   "evidence": {
+    "drawing_number": [
+     27,
+     31
+    ],
+    "date": [
+     10
+    ],
+    "title": [
+     19,
+     21
+    ]
    },
    "block_found": true,
    "label_has_block": true,
@@ -1634,6 +1992,21 @@
     "scale": "rule:scale-label",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "drawing_number": [
+     23
+    ],
+    "date": [
+     53
+    ],
+    "scale": [
+     34,
+     36
+    ],
+    "title": [
+     43
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "dev"
@@ -1656,6 +2029,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": true,
    "split": "test"
@@ -1686,6 +2060,18 @@
     "scale": "rule:scale-label",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "drawing_number": [
+     27,
+     29
+    ],
+    "scale": [
+     36
+    ],
+    "title": [
+     18
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "test"
@@ -1708,6 +2094,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": true,
    "split": "dev"
@@ -1730,6 +2117,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": false,
    "split": "dev"
@@ -1752,6 +2140,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": true,
    "split": "test"
@@ -1774,6 +2163,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": false,
    "split": "test"
@@ -1796,6 +2186,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": true,
    "split": "dev"
@@ -1818,6 +2209,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": true,
    "split": "test"
@@ -1840,6 +2232,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": true,
    "split": "test"
@@ -1867,6 +2260,19 @@
     "drawing_number": "rule:standalone-id",
     "date": "rule:date-unlabelled",
     "title": "rule:largest-lettering"
+   },
+   "evidence": {
+    "drawing_number": [
+     27
+    ],
+    "date": [
+     8
+    ],
+    "title": [
+     18,
+     19,
+     22
+    ]
    },
    "block_found": true,
    "label_has_block": true,
@@ -1901,6 +2307,20 @@
     "sheet_number": "rule:sheet-of",
     "sheet_count": "rule:sheet-of"
    },
+   "evidence": {
+    "scale": [
+     11
+    ],
+    "title": [
+     10
+    ],
+    "sheet_number": [
+     1
+    ],
+    "sheet_count": [
+     1
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "test"
@@ -1927,6 +2347,13 @@
    },
    "sources": {
     "title": "rule:largest-lettering"
+   },
+   "evidence": {
+    "title": [
+     7,
+     10,
+     12
+    ]
    },
    "block_found": true,
    "label_has_block": true,
@@ -1956,6 +2383,16 @@
     "drawing_number": "rule:number-label",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "drawing_number": [
+     22,
+     25
+    ],
+    "title": [
+     9,
+     11
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "dev"
@@ -1978,6 +2415,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": false,
    "split": "dev"
@@ -2009,6 +2447,21 @@
     "title": "rule:largest-lettering",
     "sheet_number": "rule:sheet-of",
     "sheet_count": "rule:sheet-of"
+   },
+   "evidence": {
+    "drawing_number": [
+     39
+    ],
+    "title": [
+     23,
+     27
+    ],
+    "sheet_number": [
+     8
+    ],
+    "sheet_count": [
+     8
+    ]
    },
    "block_found": true,
    "label_has_block": true,
@@ -2044,6 +2497,28 @@
     "sheet_number": "rule:sheet-of",
     "sheet_count": "rule:sheet-of"
    },
+   "evidence": {
+    "drawing_number": [
+     33,
+     39
+    ],
+    "date": [
+     41
+    ],
+    "scale": [
+     32,
+     35
+    ],
+    "title": [
+     19
+    ],
+    "sheet_number": [
+     39
+    ],
+    "sheet_count": [
+     39
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "dev"
@@ -2072,6 +2547,14 @@
     "date": "rule:date-near-label",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "date": [
+     61
+    ],
+    "title": [
+     53
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "dev"
@@ -2098,6 +2581,11 @@
    },
    "sources": {
     "title": "rule:largest-lettering"
+   },
+   "evidence": {
+    "title": [
+     9
+    ]
    },
    "block_found": true,
    "label_has_block": true,
@@ -2131,6 +2619,22 @@
     "scale": "rule:scale-label",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "drawing_number": [
+     38,
+     41
+    ],
+    "date": [
+     35
+    ],
+    "scale": [
+     46
+    ],
+    "title": [
+     33,
+     34
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "dev"
@@ -2161,6 +2665,20 @@
     "scale": "rule:scale-label",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "drawing_number": [
+     19,
+     23
+    ],
+    "scale": [
+     2,
+     5
+    ],
+    "title": [
+     8,
+     13
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "dev"
@@ -2188,6 +2706,11 @@
    "sources": {
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "title": [
+     1
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "dev"
@@ -2210,6 +2733,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": false,
    "split": "test"
@@ -2244,6 +2768,26 @@
     "sheet_number": "rule:sheet-of",
     "sheet_count": "rule:sheet-of"
    },
+   "evidence": {
+    "drawing_number": [
+     22
+    ],
+    "date": [
+     20
+    ],
+    "scale": [
+     13
+    ],
+    "title": [
+     8
+    ],
+    "sheet_number": [
+     19
+    ],
+    "sheet_count": [
+     19
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "test"
@@ -2272,6 +2816,15 @@
     "drawing_number": "rule:standalone-id",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "drawing_number": [
+     10
+    ],
+    "title": [
+     3,
+     5
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "test"
@@ -2298,6 +2851,11 @@
    },
    "sources": {
     "title": "rule:largest-lettering"
+   },
+   "evidence": {
+    "title": [
+     0
+    ]
    },
    "block_found": true,
    "label_has_block": true,
@@ -2327,6 +2885,16 @@
     "drawing_number": "rule:standalone-id",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "drawing_number": [
+     18
+    ],
+    "title": [
+     2,
+     9,
+     12
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "test"
@@ -2349,6 +2917,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": false,
    "split": "dev"
@@ -2380,6 +2949,20 @@
     "scale": "rule:scale-label",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "drawing_number": [
+     33,
+     34
+    ],
+    "scale": [
+     35,
+     36
+    ],
+    "title": [
+     16,
+     22
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "dev"
@@ -2402,6 +2985,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": false,
    "split": "dev"
@@ -2434,6 +3018,24 @@
     "sheet_number": "rule:sheet-of",
     "sheet_count": "rule:sheet-of"
    },
+   "evidence": {
+    "drawing_number": [
+     48,
+     50
+    ],
+    "date": [
+     47
+    ],
+    "title": [
+     41
+    ],
+    "sheet_number": [
+     42
+    ],
+    "sheet_count": [
+     42
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "test"
@@ -2456,6 +3058,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": true,
    "split": "dev"
@@ -2478,6 +3081,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": false,
    "split": "dev"
@@ -2506,6 +3110,14 @@
    "sources": {
     "scale": "rule:scale-label",
     "title": "rule:largest-lettering"
+   },
+   "evidence": {
+    "scale": [
+     1
+    ],
+    "title": [
+     0
+    ]
    },
    "block_found": true,
    "label_has_block": true,
@@ -2537,6 +3149,17 @@
     "title": "rule:largest-lettering",
     "sheet_number": "rule:sheet-no"
    },
+   "evidence": {
+    "drawing_number": [
+     3
+    ],
+    "title": [
+     6
+    ],
+    "sheet_number": [
+     4
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "test"
@@ -2563,6 +3186,11 @@
    },
    "sources": {
     "title": "rule:largest-lettering"
+   },
+   "evidence": {
+    "title": [
+     1
+    ]
    },
    "block_found": true,
    "label_has_block": true,
@@ -2594,6 +3222,24 @@
     "date": "rule:date-near-label",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "drawing_number": [
+     29,
+     35
+    ],
+    "date": [
+     37
+    ],
+    "title": [
+     8,
+     11,
+     14,
+     15,
+     18,
+     21,
+     25
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "test"
@@ -2616,6 +3262,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": true,
    "split": "dev"
@@ -2644,6 +3291,14 @@
     "date": "rule:date-unlabelled",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "date": [
+     9
+    ],
+    "title": [
+     5
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "dev"
@@ -2671,6 +3326,11 @@
    "sources": {
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "title": [
+     8
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "test"
@@ -2693,6 +3353,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": true,
    "split": "test"
@@ -2723,6 +3384,21 @@
     "scale": "rule:scale-label",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "drawing_number": [
+     35,
+     36
+    ],
+    "date": [
+     1
+    ],
+    "scale": [
+     37
+    ],
+    "title": [
+     23
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "dev"
@@ -2752,6 +3428,17 @@
     "drawing_number": "rule:standalone-id",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "drawing_number": [
+     10
+    ],
+    "title": [
+     1,
+     2,
+     3,
+     5
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "test"
@@ -2780,6 +3467,15 @@
     "date": "rule:date-label",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "date": [
+     6
+    ],
+    "title": [
+     1,
+     2
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "test"
@@ -2802,6 +3498,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": false,
    "split": "dev"
@@ -2824,6 +3521,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": false,
    "split": "test"
@@ -2855,6 +3553,17 @@
     "scale": "rule:scale-label",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "drawing_number": [
+     3
+    ],
+    "scale": [
+     142
+    ],
+    "title": [
+     108
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "test"
@@ -2877,6 +3586,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": false,
    "split": "test"
@@ -2905,6 +3615,14 @@
     "drawing_number": "rule:standalone-id",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "drawing_number": [
+     0
+    ],
+    "title": [
+     3
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "dev"
@@ -2927,6 +3645,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": true,
    "split": "test"
@@ -2949,6 +3668,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": true,
    "split": "dev"
@@ -2971,6 +3691,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": true,
    "split": "test"
@@ -3005,6 +3726,29 @@
     "sheet_number": "rule:sheet-of",
     "sheet_count": "rule:sheet-of"
    },
+   "evidence": {
+    "drawing_number": [
+     36,
+     37
+    ],
+    "date": [
+     31
+    ],
+    "title": [
+     21,
+     23,
+     24,
+     25,
+     26,
+     27
+    ],
+    "sheet_number": [
+     35
+    ],
+    "sheet_count": [
+     35
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "test"
@@ -3027,6 +3771,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": true,
    "split": "test"
@@ -3057,6 +3802,17 @@
     "scale": "rule:scale-label",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "drawing_number": [
+     101
+    ],
+    "scale": [
+     96
+    ],
+    "title": [
+     16
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "test"
@@ -3081,6 +3837,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": true,
    "label_has_block": true,
    "split": "dev"
@@ -3103,6 +3860,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": true,
    "split": "test"
@@ -3132,6 +3890,14 @@
     "scale": "rule:scale-label",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "scale": [
+     5
+    ],
+    "title": [
+     4
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "test"
@@ -3159,6 +3925,11 @@
    "sources": {
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "title": [
+     2
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "dev"
@@ -3181,6 +3952,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": true,
    "split": "test"
@@ -3209,6 +3981,14 @@
    "sources": {
     "scale": "rule:scale-label",
     "title": "rule:largest-lettering"
+   },
+   "evidence": {
+    "scale": [
+     1
+    ],
+    "title": [
+     0
+    ]
    },
    "block_found": true,
    "label_has_block": false,
@@ -3242,6 +4022,23 @@
     "scale": "rule:scale-label",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "drawing_number": [
+     51,
+     63
+    ],
+    "date": [
+     98
+    ],
+    "scale": [
+     119,
+     120
+    ],
+    "title": [
+     93,
+     105
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "dev"
@@ -3271,6 +4068,18 @@
     "drawing_number": "rule:number-label",
     "scale": "rule:scale-label",
     "title": "rule:largest-lettering"
+   },
+   "evidence": {
+    "drawing_number": [
+     21,
+     23
+    ],
+    "scale": [
+     22
+    ],
+    "title": [
+     27
+    ]
    },
    "block_found": true,
    "label_has_block": true,
@@ -3302,6 +4111,20 @@
     "scale": "rule:scale-label",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "drawing_number": [
+     8
+    ],
+    "date": [
+     6
+    ],
+    "scale": [
+     5
+    ],
+    "title": [
+     7
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "dev"
@@ -3324,6 +4147,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": false,
    "split": "dev"
@@ -3353,6 +4177,14 @@
     "scale": "rule:scale-label",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "scale": [
+     1
+    ],
+    "title": [
+     0
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "dev"
@@ -3375,6 +4207,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": true,
    "split": "dev"
@@ -3397,6 +4230,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": true,
    "split": "dev"
@@ -3427,6 +4261,15 @@
     "scale": "rule:scale-label",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "scale": [
+     8
+    ],
+    "title": [
+     4,
+     5
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "dev"
@@ -3449,6 +4292,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": true,
    "split": "test"
@@ -3471,6 +4315,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": false,
    "split": "dev"
@@ -3499,6 +4344,15 @@
     "date": "rule:date-unlabelled",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "date": [
+     29
+    ],
+    "title": [
+     19,
+     21
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "test"
@@ -3526,6 +4380,15 @@
    "sources": {
     "date": "rule:date-label",
     "title": "rule:largest-lettering"
+   },
+   "evidence": {
+    "date": [
+     4
+    ],
+    "title": [
+     1,
+     3
+    ]
    },
    "block_found": true,
    "label_has_block": true,
@@ -3560,6 +4423,21 @@
     "scale": "rule:scale-label",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "drawing_number": [
+     150,
+     154
+    ],
+    "date": [
+     144
+    ],
+    "scale": [
+     158
+    ],
+    "title": [
+     62
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "dev"
@@ -3592,6 +4470,22 @@
     "scale": "rule:scale-label",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "drawing_number": [
+     46
+    ],
+    "date": [
+     235
+    ],
+    "scale": [
+     5
+    ],
+    "title": [
+     136,
+     157,
+     181
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "test"
@@ -3614,6 +4508,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": true,
    "split": "test"
@@ -3638,6 +4533,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": true,
    "label_has_block": false,
    "split": "dev"
@@ -3665,6 +4561,11 @@
    "sources": {
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "title": [
+     0
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "test"
@@ -3687,6 +4588,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": true,
    "split": "dev"
@@ -3720,6 +4622,21 @@
     "sheet_number": "rule:sheet-of",
     "sheet_count": "rule:sheet-of"
    },
+   "evidence": {
+    "scale": [
+     4,
+     5
+    ],
+    "title": [
+     7
+    ],
+    "sheet_number": [
+     14
+    ],
+    "sheet_count": [
+     14
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "test"
@@ -3746,6 +4663,11 @@
    },
    "sources": {
     "title": "rule:largest-lettering"
+   },
+   "evidence": {
+    "title": [
+     9
+    ]
    },
    "block_found": true,
    "label_has_block": true,
@@ -3779,6 +4701,22 @@
     "scale": "rule:scale-label",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "drawing_number": [
+     29,
+     31
+    ],
+    "date": [
+     28
+    ],
+    "scale": [
+     5,
+     8
+    ],
+    "title": [
+     34
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "test"
@@ -3807,6 +4745,15 @@
    "sources": {
     "scale": "rule:scale-label",
     "title": "rule:largest-lettering"
+   },
+   "evidence": {
+    "scale": [
+     30
+    ],
+    "title": [
+     18,
+     20
+    ]
    },
    "block_found": true,
    "label_has_block": true,
@@ -3838,6 +4785,22 @@
     "scale": "rule:scale-label",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "drawing_number": [
+     35,
+     41
+    ],
+    "date": [
+     30
+    ],
+    "scale": [
+     44
+    ],
+    "title": [
+     24,
+     26
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "dev"
@@ -3868,6 +4831,22 @@
     "scale": "rule:scale-label",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "drawing_number": [
+     97,
+     103
+    ],
+    "date": [
+     105
+    ],
+    "scale": [
+     47,
+     49
+    ],
+    "title": [
+     7
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "test"
@@ -3895,6 +4874,17 @@
     "drawing_number": "rule:standalone-id",
     "date": "rule:date-unlabelled",
     "title": "rule:largest-lettering"
+   },
+   "evidence": {
+    "drawing_number": [
+     32
+    ],
+    "date": [
+     28
+    ],
+    "title": [
+     11
+    ]
    },
    "block_found": true,
    "label_has_block": true,
@@ -3924,6 +4914,14 @@
     "drawing_number": "rule:standalone-id",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "drawing_number": [
+     44
+    ],
+    "title": [
+     8
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "test"
@@ -3950,6 +4948,11 @@
    },
    "sources": {
     "title": "rule:largest-lettering"
+   },
+   "evidence": {
+    "title": [
+     0
+    ]
    },
    "block_found": true,
    "label_has_block": true,
@@ -3979,6 +4982,16 @@
     "drawing_number": "rule:number-label",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "drawing_number": [
+     9,
+     14
+    ],
+    "title": [
+     4,
+     12
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "test"
@@ -4001,6 +5014,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": false,
    "split": "dev"
@@ -4028,6 +5042,15 @@
    "sources": {
     "drawing_number": "rule:standalone-id",
     "title": "rule:largest-lettering"
+   },
+   "evidence": {
+    "drawing_number": [
+     0
+    ],
+    "title": [
+     3,
+     5
+    ]
    },
    "block_found": true,
    "label_has_block": true,
@@ -4057,6 +5080,15 @@
     "drawing_number": "rule:number-label",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "drawing_number": [
+     19,
+     22
+    ],
+    "title": [
+     0
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "dev"
@@ -4083,6 +5115,13 @@
    },
    "sources": {
     "title": "rule:largest-lettering"
+   },
+   "evidence": {
+    "title": [
+     5,
+     8,
+     11
+    ]
    },
    "block_found": true,
    "label_has_block": true,
@@ -4112,6 +5151,15 @@
     "drawing_number": "rule:number-label",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "drawing_number": [
+     26,
+     27
+    ],
+    "title": [
+     20
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "test"
@@ -4136,6 +5184,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": true,
    "label_has_block": true,
    "split": "test"
@@ -4158,6 +5207,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": false,
    "split": "dev"
@@ -4180,6 +5230,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": true,
    "split": "test"
@@ -4210,6 +5261,20 @@
     "scale": "rule:scale-label",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "drawing_number": [
+     87
+    ],
+    "scale": [
+     50,
+     60
+    ],
+    "title": [
+     65,
+     66,
+     69
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "test"
@@ -4232,6 +5297,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": false,
    "split": "test"
@@ -4263,6 +5329,18 @@
     "scale": "rule:scale-label",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "date": [
+     18
+    ],
+    "scale": [
+     2,
+     4
+    ],
+    "title": [
+     10
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "dev"
@@ -4290,6 +5368,15 @@
    "sources": {
     "date": "rule:date-label",
     "title": "rule:largest-lettering"
+   },
+   "evidence": {
+    "date": [
+     7
+    ],
+    "title": [
+     1,
+     2
+    ]
    },
    "block_found": true,
    "label_has_block": true,
@@ -4319,6 +5406,14 @@
     "date": "rule:date-unlabelled",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "date": [
+     37
+    ],
+    "title": [
+     10
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "test"
@@ -4345,6 +5440,12 @@
    },
    "sources": {
     "title": "rule:largest-lettering"
+   },
+   "evidence": {
+    "title": [
+     1,
+     3
+    ]
    },
    "block_found": true,
    "label_has_block": true,
@@ -4374,6 +5475,18 @@
     "date": "rule:date-near-label",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "drawing_number": [
+     25,
+     32
+    ],
+    "date": [
+     35
+    ],
+    "title": [
+     0
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "test"
@@ -4402,6 +5515,19 @@
     "date": "rule:date-label",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "drawing_number": [
+     15,
+     17
+    ],
+    "date": [
+     0
+    ],
+    "title": [
+     20,
+     28
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "dev"
@@ -4424,6 +5550,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": false,
    "split": "test"
@@ -4446,6 +5573,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": false,
    "split": "dev"
@@ -4468,6 +5596,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": false,
    "split": "dev"
@@ -4495,6 +5624,14 @@
    "sources": {
     "drawing_number": "rule:standalone-id",
     "title": "rule:largest-lettering"
+   },
+   "evidence": {
+    "drawing_number": [
+     9
+    ],
+    "title": [
+     2
+    ]
    },
    "block_found": true,
    "label_has_block": true,
@@ -4526,6 +5663,18 @@
     "title": "rule:largest-lettering",
     "sheet_number": "rule:sheet-no"
    },
+   "evidence": {
+    "date": [
+     14
+    ],
+    "title": [
+     3,
+     6
+    ],
+    "sheet_number": [
+     15
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "dev"
@@ -4553,6 +5702,15 @@
    "sources": {
     "drawing_number": "rule:number-label",
     "title": "rule:largest-lettering"
+   },
+   "evidence": {
+    "drawing_number": [
+     31,
+     34
+    ],
+    "title": [
+     25
+    ]
    },
    "block_found": true,
    "label_has_block": true,
@@ -4585,6 +5743,17 @@
     "sheet_number": "rule:sheet-of",
     "sheet_count": "rule:sheet-of"
    },
+   "evidence": {
+    "title": [
+     0
+    ],
+    "sheet_number": [
+     17
+    ],
+    "sheet_count": [
+     17
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "dev"
@@ -4612,6 +5781,14 @@
    "sources": {
     "drawing_number": "rule:standalone-id",
     "title": "rule:largest-lettering"
+   },
+   "evidence": {
+    "drawing_number": [
+     25
+    ],
+    "title": [
+     29
+    ]
    },
    "block_found": true,
    "label_has_block": true,
@@ -4641,6 +5818,17 @@
     "date": "rule:date-label",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "drawing_number": [
+     56
+    ],
+    "date": [
+     57
+    ],
+    "title": [
+     22
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "dev"
@@ -4668,6 +5856,18 @@
     "drawing_number": "rule:standalone-id",
     "date": "rule:date-near-label",
     "title": "rule:largest-lettering"
+   },
+   "evidence": {
+    "drawing_number": [
+     21
+    ],
+    "date": [
+     23
+    ],
+    "title": [
+     6,
+     9
+    ]
    },
    "block_found": true,
    "label_has_block": true,
@@ -4700,6 +5900,18 @@
     "scale": "rule:scale-label",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "drawing_number": [
+     12
+    ],
+    "scale": [
+     6
+    ],
+    "title": [
+     1,
+     2
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "dev"
@@ -4707,12 +5919,14 @@
   {
    "id": "d71f0d922df2",
    "correct": false,
-   "status": "accepted",
-   "reasons": [],
+   "status": "needs_review",
+   "reasons": [
+    "missing date"
+   ],
    "outcomes": {
     "drawing_number": "wrong",
     "title": "wrong",
-    "date": "wrong",
+    "date": "missed",
     "scale": "missed",
     "sheet_number": "absent",
     "sheet_count": "absent",
@@ -4720,13 +5934,20 @@
    },
    "values": {
     "drawing_number": "68996111",
-    "date": "1077-12",
     "title": "ELEVATION OF GABLE END AT CODNED PIED  PLATFODM."
    },
    "sources": {
     "drawing_number": "rule:number-label",
-    "date": "rule:date-unlabelled",
     "title": "rule:largest-lettering"
+   },
+   "evidence": {
+    "drawing_number": [
+     32,
+     38
+    ],
+    "title": [
+     3
+    ]
    },
    "block_found": true,
    "label_has_block": true,
@@ -4758,6 +5979,19 @@
     "scale": "rule:scale-label",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "drawing_number": [
+     44
+    ],
+    "scale": [
+     34
+    ],
+    "title": [
+     20,
+     23,
+     26
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "test"
@@ -4780,6 +6014,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": false,
    "split": "test"
@@ -4802,6 +6037,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": false,
    "split": "test"
@@ -4828,6 +6064,11 @@
    },
    "sources": {
     "title": "rule:largest-lettering"
+   },
+   "evidence": {
+    "title": [
+     6
+    ]
    },
    "block_found": true,
    "label_has_block": true,
@@ -4856,6 +6097,12 @@
    "sources": {
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "title": [
+     0,
+     3
+    ]
+   },
    "block_found": true,
    "label_has_block": false,
    "split": "test"
@@ -4878,6 +6125,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": false,
    "split": "test"
@@ -4905,6 +6153,14 @@
    "sources": {
     "date": "rule:date-near-label",
     "title": "rule:largest-lettering"
+   },
+   "evidence": {
+    "date": [
+     9
+    ],
+    "title": [
+     0
+    ]
    },
    "block_found": true,
    "label_has_block": true,
@@ -4934,6 +6190,16 @@
     "drawing_number": "rule:number-label",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "drawing_number": [
+     9,
+     10
+    ],
+    "title": [
+     19,
+     22
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "dev"
@@ -4956,6 +6222,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": true,
    "split": "dev"
@@ -4978,6 +6245,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": true,
    "split": "test"
@@ -5000,6 +6268,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": true,
    "split": "test"
@@ -5022,6 +6291,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": true,
    "split": "test"
@@ -5031,24 +6301,29 @@
    "correct": false,
    "status": "needs_review",
    "reasons": [
-    "missing drawing_number"
+    "missing drawing_number",
+    "missing date"
    ],
    "outcomes": {
     "drawing_number": "missed",
     "title": "wrong",
-    "date": "wrong",
+    "date": "missed",
     "scale": "missed",
     "sheet_number": "missed",
     "sheet_count": "missed",
     "revision": "absent"
    },
    "values": {
-    "date": "1007-09",
     "title": "Approred N Moor Approred Vico Fesident"
    },
    "sources": {
-    "date": "rule:date-unlabelled",
     "title": "rule:largest-lettering"
+   },
+   "evidence": {
+    "title": [
+     6,
+     8
+    ]
    },
    "block_found": true,
    "label_has_block": true,
@@ -5072,6 +6347,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": false,
    "split": "dev"
@@ -5100,6 +6376,15 @@
     "date": "rule:date-label",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "date": [
+     24
+    ],
+    "title": [
+     0,
+     2
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "test"
@@ -5122,6 +6407,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": false,
    "split": "dev"
@@ -5150,6 +6436,18 @@
     "date": "rule:date-unlabelled",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "drawing_number": [
+     70,
+     71
+    ],
+    "date": [
+     67
+    ],
+    "title": [
+     47
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "test"
@@ -5177,6 +6475,11 @@
    "sources": {
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "title": [
+     4
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "dev"
@@ -5199,6 +6502,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": true,
    "split": "dev"
@@ -5226,6 +6530,14 @@
    "sources": {
     "date": "rule:date-near-label",
     "title": "rule:largest-lettering"
+   },
+   "evidence": {
+    "date": [
+     23
+    ],
+    "title": [
+     12
+    ]
    },
    "block_found": true,
    "label_has_block": true,
@@ -5255,6 +6567,15 @@
     "drawing_number": "rule:number-label",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "drawing_number": [
+     6,
+     11
+    ],
+    "title": [
+     39
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "test"
@@ -5282,6 +6603,12 @@
    "sources": {
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "title": [
+     9,
+     10
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "test"
@@ -5304,6 +6631,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": true,
    "split": "dev"
@@ -5332,6 +6660,15 @@
    "sources": {
     "scale": "rule:scale-label",
     "title": "rule:largest-lettering"
+   },
+   "evidence": {
+    "scale": [
+     5
+    ],
+    "title": [
+     2,
+     3
+    ]
    },
    "block_found": true,
    "label_has_block": true,
@@ -5363,6 +6700,23 @@
     "scale": "rule:scale-label",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "drawing_number": [
+     22,
+     26
+    ],
+    "date": [
+     24
+    ],
+    "scale": [
+     14,
+     18
+    ],
+    "title": [
+     21,
+     28
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "test"
@@ -5393,6 +6747,17 @@
     "scale": "rule:scale-label",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "drawing_number": [
+     16
+    ],
+    "scale": [
+     13
+    ],
+    "title": [
+     0
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "dev"
@@ -5421,6 +6786,19 @@
     "date": "rule:date-unlabelled",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "drawing_number": [
+     32,
+     36
+    ],
+    "date": [
+     10
+    ],
+    "title": [
+     26,
+     29
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "dev"
@@ -5443,6 +6821,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": false,
    "split": "dev"
@@ -5465,6 +6844,7 @@
    },
    "values": {},
    "sources": {},
+   "evidence": {},
    "block_found": false,
    "label_has_block": true,
    "split": "test"
@@ -5492,6 +6872,18 @@
     "drawing_number": "rule:number-label",
     "date": "rule:date-unlabelled",
     "title": "rule:largest-lettering"
+   },
+   "evidence": {
+    "drawing_number": [
+     38,
+     45
+    ],
+    "date": [
+     44
+    ],
+    "title": [
+     27
+    ]
    },
    "block_found": true,
    "label_has_block": true,
@@ -5522,6 +6914,15 @@
     "scale": "rule:scale-label",
     "title": "rule:largest-lettering"
    },
+   "evidence": {
+    "scale": [
+     6
+    ],
+    "title": [
+     1,
+     2
+    ]
+   },
    "block_found": true,
    "label_has_block": true,
    "split": "dev"
@@ -5550,6 +6951,14 @@
    "sources": {
     "scale": "rule:scale-label",
     "title": "rule:largest-lettering"
+   },
+   "evidence": {
+    "scale": [
+     2
+    ],
+    "title": [
+     1
+    ]
    },
    "block_found": true,
    "label_has_block": true,
@@ -5580,6 +6989,24 @@
     "date": "rule:date-near-label",
     "scale": "rule:scale-label",
     "title": "rule:largest-lettering"
+   },
+   "evidence": {
+    "drawing_number": [
+     277,
+     282
+    ],
+    "date": [
+     335
+    ],
+    "scale": [
+     307,
+     312
+    ],
+    "title": [
+     321,
+     325,
+     329
+    ]
    },
    "block_found": true,
    "label_has_block": true,

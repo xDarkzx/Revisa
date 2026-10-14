@@ -1,20 +1,20 @@
 {
  "name": "local-qwen14b",
- "created": "2026-10-14T00:51:19+00:00",
- "commit": "ead3383",
+ "created": "2026-10-14T01:41:15+00:00",
+ "commit": "05a17e0",
  "config": {
   "ocr": "rapidocr",
   "reader": "llm+rules",
   "model": "qwen2.5-coder:14b-instruct-q4_K_M"
  },
  "usage": {
-  "seconds": 969.0,
+  "seconds": 0.6,
   "sheets": 200,
-  "llm_calls": 91,
-  "llm_seconds": 968.6,
-  "prompt_tokens": 118382,
-  "completion_tokens": 15415,
-  "ungrounded_values_rejected": 188,
+  "llm_calls": 0,
+  "llm_seconds": 0.0,
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "ungrounded_values_rejected": 189,
   "rejected": [
    [
     "0069f716df8f",
@@ -853,6 +853,11 @@
    ],
    [
     "e8bbcebf3ca7",
+    "date",
+    "sept1007"
+   ],
+   [
+    "e8bbcebf3ca7",
     "sheet_number",
     "MoorCor"
    ],
@@ -986,13 +991,13 @@
     },
     "date": {
      "counts": {
-      "missed": 46,
-      "wrong": 11,
+      "missed": 48,
+      "wrong": 9,
       "correct": 19,
       "absent": 21
      },
      "recall": 0.25,
-     "precision": 0.633
+     "precision": 0.679
     },
     "scale": {
      "counts": {
@@ -1040,10 +1045,10 @@
    },
    "sheet_accuracy": 0.093,
    "routing": {
-    "accepted": 7,
-    "needs_review": 100,
-    "error_recall": 0.928,
-    "review_precision": 0.9,
+    "accepted": 6,
+    "needs_review": 101,
+    "error_recall": 0.938,
+    "review_precision": 0.901,
     "silent_error_rate": 1.0,
     "accepted_correct": 0
    },
@@ -1172,12 +1177,12 @@
     "date": {
      "counts": {
       "correct": 34,
-      "missed": 71,
+      "missed": 73,
       "absent": 53,
-      "wrong": 22
+      "wrong": 20
      },
      "recall": 0.268,
-     "precision": 0.607
+     "precision": 0.63
     },
     "scale": {
      "counts": {
@@ -1225,9 +1230,9 @@
    },
    "sheet_accuracy": 0.14,
    "routing": {
-    "accepted": 15,
-    "needs_review": 185,
-    "error_recall": 0.913,
+    "accepted": 14,
+    "needs_review": 186,
+    "error_recall": 0.919,
     "review_precision": 0.849,
     "silent_error_rate": 1.0,
     "accepted_correct": 0
@@ -1245,10 +1250,10 @@
    "correct": false,
    "status": "needs_review",
    "reasons": [
-    "low OCR confidence on scale (0.69)",
     "low OCR confidence on date (0.59)",
-    "readers disagree on scale: '/16\" = 1-0\"' vs '16\" = 1-0\"'",
-    "readers disagree on drawing_number: 'A-3' vs 'A-19'"
+    "low OCR confidence on scale (0.69)",
+    "readers disagree on drawing_number: 'A-3' vs 'A-19'",
+    "readers disagree on scale: '/16\" = 1-0\"' vs '16\" = 1-0\"'"
    ],
    "outcomes": {
     "drawing_number": "wrong",
@@ -1260,32 +1265,32 @@
     "revision": "absent"
    },
    "values": {
-    "title": "TECHWOOD PROJECT NO. 1101 PUBLIC WORKS ADMINISTRATION-HOUSINGDIVISION THE UNITED STATES OF AMERICA",
-    "scale": "/16\" = 1-0\"",
     "date": "1934-11-22",
-    "drawing_number": "A-3"
+    "title": "TECHWOOD PROJECT NO. 1101 PUBLIC WORKS ADMINISTRATION-HOUSINGDIVISION THE UNITED STATES OF AMERICA",
+    "drawing_number": "A-3",
+    "scale": "/16\" = 1-0\""
    },
    "sources": {
-    "title": "rule:largest-lettering",
-    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "date": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
-    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
+    "title": "rule:largest-lettering",
+    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
+    "date": [
+     7,
+     26
+    ],
     "title": [
      4,
      8,
      11
     ],
-    "scale": [
-     31
-    ],
-    "date": [
-     7,
-     26
-    ],
     "drawing_number": [
      0
+    ],
+    "scale": [
+     31
     ]
    },
    "block_found": true,
@@ -1333,25 +1338,25 @@
     "revision": "absent"
    },
    "values": {
-    "scale": "1\"=1'~",
     "title": "U.S. NAVY-YARD-MARE ISLAND CAL· - MONITOR-DETAILS-",
-    "drawing_number": "B7706"
+    "drawing_number": "B7706",
+    "scale": "1\"=1'~"
    },
    "sources": {
-    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "title": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
-    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
+    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
-    "scale": [
-     9
-    ],
     "title": [
      7,
      8
     ],
     "drawing_number": [
      0
+    ],
+    "scale": [
+     9
     ]
    },
    "block_found": true,
@@ -1447,8 +1452,8 @@
    "correct": false,
    "status": "needs_review",
    "reasons": [
-    "readers disagree on drawing_number: 'BUREAU OF YARDS & DOGKS' vs '64887/ 65'",
-    "readers disagree on date: '1965-07-26' vs '1965-07-21'"
+    "readers disagree on date: '1965-07-26' vs '1965-07-21'",
+    "readers disagree on drawing_number: 'BUREAU OF YARDS & DOGKS' vs '64887/ 65'"
    ],
    "outcomes": {
     "drawing_number": "wrong",
@@ -1461,17 +1466,17 @@
    },
    "values": {
     "title": "U.S. NAVAL AIR STATION U.S. NAVY PUBLIC WORKS CENTER STRUCTURAL REPAIRS TO BUILDING",
-    "scale": "SHOWN",
-    "drawing_number": "BUREAU OF YARDS & DOGKS",
     "sheet_count": 4,
-    "date": "1965-07-26"
+    "date": "1965-07-26",
+    "drawing_number": "BUREAU OF YARDS & DOGKS",
+    "scale": "SHOWN"
    },
    "sources": {
     "title": "rule:largest-lettering",
-    "scale": "rule:scale-label",
-    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "sheet_count": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
-    "date": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
+    "date": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "scale": "rule:scale-label"
    },
    "evidence": {
     "title": [
@@ -1479,19 +1484,19 @@
      17,
      26
     ],
-    "scale": [
-     48,
-     49
-    ],
-    "drawing_number": [
-     6,
-     7
-    ],
     "sheet_count": [
      58
     ],
     "date": [
      25
+    ],
+    "drawing_number": [
+     6,
+     7
+    ],
+    "scale": [
+     48,
+     49
     ]
    },
    "block_found": true,
@@ -1580,27 +1585,27 @@
     "revision": "missed"
    },
    "values": {
-    "title": "DISPENSARY BLDG. E AREA F H FLOOR PLAN ELEVATIONS",
     "date": "1944-07-12",
+    "title": "DISPENSARY BLDG. E AREA F H FLOOR PLAN ELEVATIONS",
     "drawing_number": "323374"
    },
    "sources": {
-    "title": "rule:largest-lettering",
     "date": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "title": "rule:largest-lettering",
     "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
+    "date": [
+     68,
+     80,
+     82
+    ],
     "title": [
      69,
      74,
      73,
      76,
      77
-    ],
-    "date": [
-     68,
-     80,
-     82
     ],
     "drawing_number": [
      88
@@ -1662,32 +1667,32 @@
    },
    "values": {
     "title": "OCT 1 3 189",
-    "scale": "AS NOTED",
-    "drawing_number": "REVISION DAYE BRIEF",
     "date": "1939-05-05",
+    "drawing_number": "REVISION DAYE BRIEF",
+    "scale": "AS NOTED",
     "revision": "U.S.NAVY YARD-MARE ISLAND.CAL- BY"
    },
    "sources": {
     "title": "rule:largest-lettering",
-    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
-    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "date": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "revision": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
     "title": [
      21
     ],
-    "scale": [
-     22
+    "date": [
+     17
     ],
     "drawing_number": [
      0,
      1,
      2
     ],
-    "date": [
-     17
+    "scale": [
+     22
     ],
     "revision": [
      6,
@@ -1736,21 +1741,21 @@
     "revision": "absent"
    },
    "values": {
-    "title": "Record Room",
     "date": "1915-06-01",
+    "title": "Record Room",
     "drawing_number": "C-3565"
    },
    "sources": {
-    "title": "rule:largest-lettering",
     "date": "rule:date-unlabelled",
+    "title": "rule:largest-lettering",
     "drawing_number": "rule:standalone-id"
    },
    "evidence": {
-    "title": [
-     10
-    ],
     "date": [
      65
+    ],
+    "title": [
+     10
     ],
     "drawing_number": [
      78
@@ -1819,21 +1824,21 @@
     "revision": "absent"
    },
    "values": {
-    "date": "1902-01-29",
     "title": "TONE AND CUNGRETE DRY DOCK",
+    "date": "1902-01-29",
     "drawing_number": "CONTRMET NO. 297"
    },
    "sources": {
-    "date": "rule:date-label",
     "title": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "date": "rule:date-label",
     "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
-    "date": [
-     10
-    ],
     "title": [
      4
+    ],
+    "date": [
+     10
     ],
     "drawing_number": [
      7
@@ -1881,21 +1886,21 @@
     "revision": "absent"
    },
    "values": {
-    "title": "QURRTERS A-43-44-45-199",
     "date": "1933-02-03",
+    "title": "QURRTERS A-43-44-45-199",
     "drawing_number": "115712"
    },
    "sources": {
-    "title": "rule:largest-lettering",
     "date": "rule:date-label",
+    "title": "rule:largest-lettering",
     "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
-    "title": [
-     12
-    ],
     "date": [
      16
+    ],
+    "title": [
+     12
     ],
     "drawing_number": [
      15
@@ -1958,26 +1963,26 @@
     "revision": "absent"
    },
    "values": {
-    "title": "GENERAL STURE, CABINS,PAVILION  PUBLIC COMFORT STATION ATHORSETHIEF LESCHER AND MAHONEY ARCSITECTP",
     "date": "1936-05-28",
+    "title": "GENERAL STURE, CABINS,PAVILION  PUBLIC COMFORT STATION ATHORSETHIEF LESCHER AND MAHONEY ARCSITECTP",
     "drawing_number": "275",
     "scale": "-1 5.28-36"
    },
    "sources": {
-    "title": "rule:largest-lettering",
     "date": "rule:date-unlabelled",
+    "title": "rule:largest-lettering",
     "drawing_number": "rule:number-label",
     "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
+    "date": [
+     6
+    ],
     "title": [
      12,
      17,
      24,
      29
-    ],
-    "date": [
-     6
     ],
     "drawing_number": [
      19,
@@ -2010,27 +2015,27 @@
    },
    "values": {
     "title": "ENTRANCE",
-    "sheet_count": 35,
+    "sheet_number": 18,
     "drawing_number": "129328",
-    "sheet_number": 18
+    "sheet_count": 35
    },
    "sources": {
     "title": "rule:largest-lettering",
-    "sheet_count": "rule:sheet-of",
+    "sheet_number": "rule:sheet-of",
     "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
-    "sheet_number": "rule:sheet-of"
+    "sheet_count": "rule:sheet-of"
    },
    "evidence": {
     "title": [
      45
     ],
-    "sheet_count": [
+    "sheet_number": [
      36
     ],
     "drawing_number": [
      14
     ],
-    "sheet_number": [
+    "sheet_count": [
      36
     ]
    },
@@ -2056,19 +2061,19 @@
     "revision": "absent"
    },
    "values": {
-    "title": "TECHWOOD PROJECT NO. 1101",
-    "date": "1934-11-22"
+    "date": "1934-11-22",
+    "title": "TECHWOOD PROJECT NO. 1101"
    },
    "sources": {
-    "title": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
-    "date": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
+    "date": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "title": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
-    "title": [
-     5
-    ],
     "date": [
      23
+    ],
+    "title": [
+     5
     ]
    },
    "block_found": true,
@@ -2118,33 +2123,33 @@
    },
    "values": {
     "title": "RECORD DRAWING",
-    "drawing_number": "14 2972",
-    "sheet_number": 7,
     "sheet_count": 135,
-    "date": "1969-05-14"
+    "date": "1969-05-14",
+    "drawing_number": "14 2972",
+    "sheet_number": 7
    },
    "sources": {
     "title": "rule:largest-lettering",
-    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
-    "sheet_number": "rule:sheet-of",
     "sheet_count": "rule:sheet-of",
-    "date": "rule:date-near-label"
+    "date": "rule:date-near-label",
+    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "sheet_number": "rule:sheet-of"
    },
    "evidence": {
     "title": [
      41
-    ],
-    "drawing_number": [
-     46
-    ],
-    "sheet_number": [
-     61
     ],
     "sheet_count": [
      61
     ],
     "date": [
      32
+    ],
+    "drawing_number": [
+     46
+    ],
+    "sheet_number": [
+     61
     ]
    },
    "block_found": true,
@@ -2370,19 +2375,16 @@
     "revision": "missed"
    },
    "values": {
-    "scale": "ELECBICALSCALEAS",
     "title": "T-1306 MESS-HALLS CAIT.MKTMLT,MMT.CMNT",
-    "drawing_number": "114"
+    "drawing_number": "114",
+    "scale": "ELECBICALSCALEAS"
    },
    "sources": {
-    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "title": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
-    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
+    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
-    "scale": [
-     16
-    ],
     "title": [
      1,
      10,
@@ -2390,6 +2392,9 @@
     ],
     "drawing_number": [
      0
+    ],
+    "scale": [
+     16
     ]
    },
    "block_found": true,
@@ -2604,16 +2609,16 @@
    },
    "values": {
     "title": "HIGHWAY AND TRANSPORTATION AUTHORITY HIGHWAY SYSTEM ADMINISTRATION OFFICE",
+    "date": "1973-11-10",
     "drawing_number": "£66VA093",
     "sheet_number": 339,
-    "date": "1973-11-10",
     "revision": "Dec26/85 Apr. 10/89 Revised"
    },
    "sources": {
     "title": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "date": "rule:date-unlabelled",
     "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "sheet_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
-    "date": "rule:date-unlabelled",
     "revision": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
@@ -2621,14 +2626,14 @@
      0,
      1
     ],
+    "date": [
+     12
+    ],
     "drawing_number": [
      14
     ],
     "sheet_number": [
      18
-    ],
-    "date": [
-     12
     ],
     "revision": [
      2,
@@ -2749,21 +2754,21 @@
     "revision": "absent"
    },
    "values": {
-    "title": "ROAD NO. 98O KM.1O.6",
     "date": "1982-05-12",
+    "title": "ROAD NO. 98O KM.1O.6",
     "drawing_number": "436"
    },
    "sources": {
-    "title": "rule:largest-lettering",
     "date": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "title": "rule:largest-lettering",
     "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
-    "title": [
-     2
-    ],
     "date": [
      0
+    ],
+    "title": [
+     2
     ],
     "drawing_number": [
      6,
@@ -2793,26 +2798,26 @@
     "revision": "absent"
    },
    "values": {
-    "scale": "8=1-0",
     "title": "OF BUILDING CAT/WALK",
-    "drawing_number": "128-130"
+    "drawing_number": "128-130",
+    "scale": "8=1-0"
    },
    "sources": {
-    "scale": "rule:scale-label",
     "title": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
-    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
+    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "scale": "rule:scale-label"
    },
    "evidence": {
-    "scale": [
-     16,
-     18
-    ],
     "title": [
      0,
      1
     ],
     "drawing_number": [
      6
+    ],
+    "scale": [
+     16,
+     18
     ]
    },
    "block_found": true,
@@ -2920,24 +2925,16 @@
     "revision": "absent"
    },
    "values": {
-    "scale": "at GALENA, ILLINOIS. INCHES AND CIGHTHS",
     "title": "MARINE HOSPITAL, SIDEELEVATION",
-    "drawing_number": "GALENA,ILLINOIS"
+    "drawing_number": "GALENA,ILLINOIS",
+    "scale": "at GALENA, ILLINOIS. INCHES AND CIGHTHS"
    },
    "sources": {
-    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "title": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
-    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
+    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
-    "scale": [
-     3,
-     4,
-     6,
-     7,
-     8,
-     9
-    ],
     "title": [
      0,
      1,
@@ -2945,6 +2942,14 @@
     ],
     "drawing_number": [
      4
+    ],
+    "scale": [
+     3,
+     4,
+     6,
+     7,
+     8,
+     9
     ]
    },
    "block_found": true,
@@ -3014,26 +3019,26 @@
     "revision": "absent"
    },
    "values": {
-    "date": "1900-05",
     "title": "SHOP DRAWING DETAILOFGutter etc. FOR FIRE ENGINE HOuSE",
+    "date": "1900-05",
     "drawing_number": "B2'D'G",
     "scale": "CALE INCH TO 1 fOoT"
    },
    "sources": {
-    "date": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "title": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "date": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
-    "date": [
-     2
-    ],
     "title": [
      3,
      4,
      5,
      6
+    ],
+    "date": [
+     2
     ],
     "drawing_number": [
      0
@@ -3065,16 +3070,16 @@
    },
    "values": {
     "title": "DOUBLE WARD BUILDING. CROSS SECTIONS",
-    "scale": "SCALE4=1-0",
-    "drawing_number": "H-72-A-",
     "date": "1925-11-05",
+    "drawing_number": "H-72-A-",
+    "scale": "SCALE4=1-0",
     "revision": "C2"
    },
    "sources": {
     "title": "rule:largest-lettering",
-    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
-    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "date": "rule:date-near-label",
+    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "revision": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
@@ -3082,14 +3087,14 @@
      19,
      21
     ],
-    "scale": [
-     8
+    "date": [
+     10
     ],
     "drawing_number": [
      29
     ],
-    "date": [
-     10
+    "scale": [
+     8
     ],
     "revision": [
      26
@@ -3104,8 +3109,8 @@
    "correct": false,
    "status": "needs_review",
    "reasons": [
-    "low OCR confidence on scale (0.76)",
     "low OCR confidence on date (0.80)",
+    "low OCR confidence on scale (0.76)",
     "readers disagree on drawing_number: '6899-800' vs '1000-671'"
    ],
    "outcomes": {
@@ -3118,30 +3123,30 @@
     "revision": "absent"
    },
    "values": {
-    "title": "Q.M. GAS & OIL HOUSE",
-    "scale": "NOTED",
     "date": "1940-06-12",
-    "drawing_number": "6899-800"
+    "title": "Q.M. GAS & OIL HOUSE",
+    "drawing_number": "6899-800",
+    "scale": "NOTED"
    },
    "sources": {
-    "title": "rule:largest-lettering",
-    "scale": "rule:scale-label",
     "date": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
-    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
+    "title": "rule:largest-lettering",
+    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "scale": "rule:scale-label"
    },
    "evidence": {
+    "date": [
+     53
+    ],
     "title": [
      43
+    ],
+    "drawing_number": [
+     61
     ],
     "scale": [
      34,
      36
-    ],
-    "date": [
-     53
-    ],
-    "drawing_number": [
-     61
     ]
    },
    "block_found": true,
@@ -3188,30 +3193,30 @@
     "revision": "absent"
    },
    "values": {
-    "scale": "AS SHOWN",
     "title": "ALTERATIONS TOQUARTERS",
-    "sheet_count": 2,
-    "drawing_number": "5011101"
+    "drawing_number": "5011101",
+    "scale": "AS SHOWN",
+    "sheet_count": 2
    },
    "sources": {
-    "scale": "rule:scale-label",
     "title": "rule:largest-lettering",
-    "sheet_count": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
-    "drawing_number": "rule:number-label"
+    "drawing_number": "rule:number-label",
+    "scale": "rule:scale-label",
+    "sheet_count": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
-    "scale": [
-     36
-    ],
     "title": [
      18
-    ],
-    "sheet_count": [
-     38
     ],
     "drawing_number": [
      27,
      29
+    ],
+    "scale": [
+     36
+    ],
+    "sheet_count": [
+     38
     ]
    },
    "block_found": true,
@@ -3394,25 +3399,25 @@
     "revision": "wrong"
    },
    "values": {
-    "title": "ROOSEVELT POWER PLANT PRESENT LAYOUT NEW CHANGESAND ADDITIONS",
     "date": "1950-09-07",
+    "title": "ROOSEVELT POWER PLANT PRESENT LAYOUT NEW CHANGESAND ADDITIONS",
     "drawing_number": "F-8-158",
     "revision": "REV"
    },
    "sources": {
-    "title": "rule:largest-lettering",
     "date": "rule:date-unlabelled",
+    "title": "rule:largest-lettering",
     "drawing_number": "rule:standalone-id",
     "revision": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
+    "date": [
+     8
+    ],
     "title": [
      18,
      19,
      22
-    ],
-    "date": [
-     8
     ],
     "drawing_number": [
      27
@@ -3443,25 +3448,25 @@
    },
    "values": {
     "title": "MEZZANINE FLOOR PLAN CONSTRUTION AND REFLECTED CEILING MEZZANINE WINDOWMODIFICATIONS",
-    "scale": "1/8' = 1'-0'",
+    "sheet_count": 29,
     "drawing_number": "M01B",
     "sheet_number": 6,
-    "sheet_count": 29
+    "scale": "1/8' = 1'-0'"
    },
    "sources": {
     "title": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
-    "scale": "rule:scale-label",
+    "sheet_count": "rule:sheet-of",
     "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "sheet_number": "rule:sheet-of",
-    "sheet_count": "rule:sheet-of"
+    "scale": "rule:scale-label"
    },
    "evidence": {
     "title": [
      10,
      23
     ],
-    "scale": [
-     11
+    "sheet_count": [
+     1
     ],
     "drawing_number": [
      2
@@ -3469,8 +3474,8 @@
     "sheet_number": [
      1
     ],
-    "sheet_count": [
-     1
+    "scale": [
+     11
     ]
    },
    "block_found": true,
@@ -3536,25 +3541,25 @@
     "revision": "absent"
    },
    "values": {
-    "scale": "/4°=1-O\"",
     "title": "MACDILL FIELD TAMPA FLORIDA",
-    "drawing_number": "6899-146"
+    "drawing_number": "6899-146",
+    "scale": "/4°=1-O\""
    },
    "sources": {
-    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "title": "rule:largest-lettering",
-    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
+    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
-    "scale": [
-     5
-    ],
     "title": [
      9,
      11
     ],
     "drawing_number": [
      25
+    ],
+    "scale": [
+     5
     ]
    },
    "block_found": true,
@@ -3604,24 +3609,24 @@
    },
    "values": {
     "title": "DETAILS",
-    "scale": "3/4INCH=1FOOT",
+    "sheet_count": 3,
     "drawing_number": "APPROVED",
     "sheet_number": 2,
-    "sheet_count": 3
+    "scale": "3/4INCH=1FOOT"
    },
    "sources": {
     "title": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
-    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "sheet_count": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "sheet_number": "rule:sheet-of",
-    "sheet_count": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
+    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
     "title": [
      27
     ],
-    "scale": [
-     29
+    "sheet_count": [
+     8
     ],
     "drawing_number": [
      6
@@ -3629,8 +3634,8 @@
     "sheet_number": [
      8
     ],
-    "sheet_count": [
-     8
+    "scale": [
+     29
     ]
    },
    "block_found": true,
@@ -3653,27 +3658,29 @@
    },
    "values": {
     "title": "AP.Bouth",
-    "scale": "AS NOTED",
+    "sheet_count": 8,
+    "date": "1975-01-14",
     "drawing_number": "SHEET5OF 8",
     "sheet_number": 5,
-    "sheet_count": 8,
-    "date": "1975-01-14"
+    "scale": "AS NOTED"
    },
    "sources": {
     "title": "rule:largest-lettering",
-    "scale": "rule:scale-label",
+    "sheet_count": "rule:sheet-of",
+    "date": "rule:date-near-label",
     "drawing_number": "rule:number-label",
     "sheet_number": "rule:sheet-of",
-    "sheet_count": "rule:sheet-of",
-    "date": "rule:date-near-label"
+    "scale": "rule:scale-label"
    },
    "evidence": {
     "title": [
      19
     ],
-    "scale": [
-     32,
-     35
+    "sheet_count": [
+     39
+    ],
+    "date": [
+     41
     ],
     "drawing_number": [
      33,
@@ -3682,11 +3689,9 @@
     "sheet_number": [
      39
     ],
-    "sheet_count": [
-     39
-    ],
-    "date": [
-     41
+    "scale": [
+     32,
+     35
     ]
    },
    "block_found": true,
@@ -3711,19 +3716,19 @@
     "revision": "absent"
    },
    "values": {
-    "title": "RIGHT END ELEVATION",
-    "date": "1930-03-10"
+    "date": "1930-03-10",
+    "title": "RIGHT END ELEVATION"
    },
    "sources": {
-    "title": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
-    "date": "rule:date-near-label"
+    "date": "rule:date-near-label",
+    "title": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
-    "title": [
-     2
-    ],
     "date": [
      61
+    ],
+    "title": [
+     2
     ]
    },
    "block_found": true,
@@ -3787,16 +3792,16 @@
    },
    "values": {
     "title": "BUILDING NO.1 FLOORPLANOECTIONELEVATION",
-    "scale": "AS SHOWN",
-    "drawing_number": "ESR77-264",
     "date": "1982-04-02",
+    "drawing_number": "ESR77-264",
+    "scale": "AS SHOWN",
     "revision": "F87"
    },
    "sources": {
     "title": "rule:largest-lettering",
-    "scale": "rule:scale-label",
-    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "date": "rule:date-unlabelled",
+    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "scale": "rule:scale-label",
     "revision": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
@@ -3804,14 +3809,14 @@
      33,
      34
     ],
-    "scale": [
-     46
+    "date": [
+     35
     ],
     "drawing_number": [
      18
     ],
-    "date": [
-     35
+    "scale": [
+     46
     ],
     "revision": [
      43,
@@ -3829,8 +3834,8 @@
    "reasons": [
     "missing date",
     "low OCR confidence on scale (0.64)",
-    "readers disagree on scale: 'CONSTRUCTION DIVISION SCALE 1/4=1.0° AS NOTED' vs 'AS NOTED'",
-    "readers disagree on drawing_number: 'FRONT-ELEVATION-m' vs '625-4577'"
+    "readers disagree on drawing_number: 'FRONT-ELEVATION-m' vs '625-4577'",
+    "readers disagree on scale: 'CONSTRUCTION DIVISION SCALE 1/4=1.0° AS NOTED' vs 'AS NOTED'"
    ],
    "outcomes": {
     "drawing_number": "wrong",
@@ -3842,21 +3847,16 @@
     "revision": "absent"
    },
    "values": {
-    "scale": "CONSTRUCTION DIVISION SCALE 1/4=1.0° AS NOTED",
     "title": "SOUTHEAST-AIR-BASE DOUBLE N.C.O. QUARTERS",
-    "drawing_number": "FRONT-ELEVATION-m"
+    "drawing_number": "FRONT-ELEVATION-m",
+    "scale": "CONSTRUCTION DIVISION SCALE 1/4=1.0° AS NOTED"
    },
    "sources": {
-    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "title": "rule:largest-lettering",
-    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
+    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
-    "scale": [
-     3,
-     4,
-     5
-    ],
     "title": [
      8,
      13
@@ -3864,6 +3864,11 @@
     "drawing_number": [
      1,
      0
+    ],
+    "scale": [
+     3,
+     4,
+     5
     ]
    },
    "block_found": true,
@@ -3946,34 +3951,24 @@
    },
    "values": {
     "title": "HEADWORKS RADIAL GATES",
-    "drawing_number": "Dwg*P-24-1 5-I-4-143",
-    "scale": "-As noted",
-    "sheet_number": 2,
     "sheet_count": 2,
-    "date": "1924-09"
+    "date": "1924-09",
+    "drawing_number": "Dwg*P-24-1 5-I-4-143",
+    "sheet_number": 2,
+    "scale": "-As noted"
    },
    "sources": {
     "title": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
-    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
-    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
-    "sheet_number": "rule:sheet-of",
     "sheet_count": "rule:sheet-of",
-    "date": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
+    "date": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "sheet_number": "rule:sheet-of",
+    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
     "title": [
      8,
      10
-    ],
-    "drawing_number": [
-     21,
-     22
-    ],
-    "scale": [
-     13
-    ],
-    "sheet_number": [
-     19
     ],
     "sheet_count": [
      19
@@ -3983,6 +3978,16 @@
      14,
      17,
      20
+    ],
+    "drawing_number": [
+     21,
+     22
+    ],
+    "sheet_number": [
+     19
+    ],
+    "scale": [
+     13
     ]
    },
    "block_found": true,
@@ -4006,32 +4011,32 @@
     "revision": "absent"
    },
    "values": {
-    "scale": "-IFt. ROOSEVELT RRIR. FEBR.17…S",
     "title": "TRANSFORPIR BUILDING FOR ROOSEVELT POWERPLANT FIPST, FLOCR PLAN AND SECTIONS (TRANSFORMERFLUUR)",
+    "sheet_number": 1,
     "drawing_number": "A-20-24",
-    "sheet_number": 1
+    "scale": "-IFt. ROOSEVELT RRIR. FEBR.17…S"
    },
    "sources": {
-    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "title": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "sheet_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
-    "sheet_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
+    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
-    "scale": [
-     7
-    ],
     "title": [
      3,
      4,
      5,
      6
     ],
+    "sheet_number": [
+     8
+    ],
     "drawing_number": [
      10
     ],
-    "sheet_number": [
-     8
+    "scale": [
+     7
     ]
    },
    "block_found": true,
@@ -4056,24 +4061,24 @@
     "revision": null
    },
    "values": {
-    "scale": "Ye'=1-O°",
     "title": "ROOP-PLAN-",
-    "drawing_number": "ROOP-PLAN-"
+    "drawing_number": "ROOP-PLAN-",
+    "scale": "Ye'=1-O°"
    },
    "sources": {
-    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "title": "rule:largest-lettering",
-    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
+    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
-    "scale": [
-     1
-    ],
     "title": [
      0
     ],
     "drawing_number": [
      0
+    ],
+    "scale": [
+     1
     ]
    },
    "block_found": true,
@@ -4160,25 +4165,25 @@
     "revision": "absent"
    },
    "values": {
-    "scale": "1/8\"=1'-0\"",
     "title": "NEW YORK BASE BLDG.215-WATER-PROOFING",
-    "drawing_number": "03-4429"
+    "drawing_number": "03-4429",
+    "scale": "1/8\"=1'-0\""
    },
    "sources": {
-    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "title": "rule:largest-lettering",
-    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
+    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
-    "scale": [
-     36
-    ],
     "title": [
      16,
      22
     ],
     "drawing_number": [
      34
+    ],
+    "scale": [
+     36
     ]
    },
    "block_found": true,
@@ -4226,21 +4231,27 @@
    },
    "values": {
     "title": "FIRST FLOOR. ELEV. 13G.5",
-    "drawing_number": "298210",
-    "sheet_number": 4,
     "sheet_count": 45,
-    "date": "1943-10-27"
+    "date": "1943-10-27",
+    "drawing_number": "298210",
+    "sheet_number": 4
    },
    "sources": {
     "title": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
-    "drawing_number": "rule:number-label",
-    "sheet_number": "rule:sheet-of",
     "sheet_count": "rule:sheet-of",
-    "date": "rule:date-label"
+    "date": "rule:date-label",
+    "drawing_number": "rule:number-label",
+    "sheet_number": "rule:sheet-of"
    },
    "evidence": {
     "title": [
      2
+    ],
+    "sheet_count": [
+     42
+    ],
+    "date": [
+     47
     ],
     "drawing_number": [
      48,
@@ -4248,12 +4259,6 @@
     ],
     "sheet_number": [
      42
-    ],
-    "sheet_count": [
-     42
-    ],
-    "date": [
-     47
     ]
    },
    "block_found": true,
@@ -4361,30 +4366,30 @@
     "revision": "absent"
    },
    "values": {
-    "scale": "#=1-0",
     "title": "FRONT ELEVATION. BASEMENY",
+    "sheet_number": 5,
     "drawing_number": "460",
-    "sheet_number": 5
+    "scale": "#=1-0"
    },
    "sources": {
-    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "title": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "sheet_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
-    "sheet_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
+    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
-    "scale": [
-     2
-    ],
     "title": [
      1,
      0
     ],
+    "sheet_number": [
+     4
+    ],
     "drawing_number": [
      3
     ],
-    "sheet_number": [
-     4
+    "scale": [
+     2
     ]
    },
    "block_found": true,
@@ -4444,30 +4449,30 @@
    },
    "values": {
     "title": "PLAN OF FIRST FLOOR",
-    "scale": "4:1'0",
-    "drawing_number": "226-9",
     "date": "1937-11-24",
+    "drawing_number": "226-9",
+    "scale": "4:1'0",
     "revision": "3/3/38"
    },
    "sources": {
     "title": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
-    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
-    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "date": "rule:date-near-label",
+    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "revision": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
     "title": [
      25
     ],
-    "scale": [
-     30
+    "date": [
+     37
     ],
     "drawing_number": [
      40
     ],
-    "date": [
-     37
+    "scale": [
+     30
     ],
     "revision": [
      5
@@ -4517,19 +4522,19 @@
     "revision": "absent"
    },
    "values": {
-    "title": "APART.-4",
-    "date": "1934-05-23"
+    "date": "1934-05-23",
+    "title": "APART.-4"
    },
    "sources": {
-    "title": "rule:largest-lettering",
-    "date": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
+    "date": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "title": "rule:largest-lettering"
    },
    "evidence": {
-    "title": [
-     5
-    ],
     "date": [
      9
+    ],
+    "title": [
+     5
     ]
    },
    "block_found": true,
@@ -4617,30 +4622,30 @@
     "revision": "missed"
    },
    "values": {
-    "title": "men",
-    "scale": "NOTED",
     "date": "1970-05-20",
-    "drawing_number": "03-2730"
+    "title": "men",
+    "drawing_number": "03-2730",
+    "scale": "NOTED"
    },
    "sources": {
-    "title": "rule:largest-lettering",
-    "scale": "rule:scale-label",
     "date": "rule:date-unlabelled",
-    "drawing_number": "rule:number-label"
+    "title": "rule:largest-lettering",
+    "drawing_number": "rule:number-label",
+    "scale": "rule:scale-label"
    },
    "evidence": {
-    "title": [
-     23
-    ],
-    "scale": [
-     37
-    ],
     "date": [
      1
+    ],
+    "title": [
+     23
     ],
     "drawing_number": [
      35,
      36
+    ],
+    "scale": [
+     37
     ]
    },
    "block_found": true,
@@ -4702,24 +4707,24 @@
     "revision": "invented"
    },
    "values": {
-    "title": "ASSIGNMENT OF ROOMS TO MEDICAL EXAM,NURSES LOCKER, SWITCH BOARD  ELEC.SHOP IN ACCOROANCE",
     "date": "1944-04-08",
+    "title": "ASSIGNMENT OF ROOMS TO MEDICAL EXAM,NURSES LOCKER, SWITCH BOARD  ELEC.SHOP IN ACCOROANCE",
     "drawing_number": "RECORD OF PLAN CHANGES",
     "revision": "9./7/I945"
    },
    "sources": {
-    "title": "rule:largest-lettering",
     "date": "rule:date-label",
+    "title": "rule:largest-lettering",
     "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "revision": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
+    "date": [
+     6
+    ],
     "title": [
      1,
      2
-    ],
-    "date": [
-     6
     ],
     "drawing_number": [
      0
@@ -4796,24 +4801,24 @@
     "revision": "absent"
    },
    "values": {
-    "scale": "14=1-0",
     "title": "PURLINS",
-    "drawing_number": "0-1T"
+    "drawing_number": "0-1T",
+    "scale": "14=1-0"
    },
    "sources": {
-    "scale": "rule:scale-label",
     "title": "rule:largest-lettering",
-    "drawing_number": "rule:standalone-id"
+    "drawing_number": "rule:standalone-id",
+    "scale": "rule:scale-label"
    },
    "evidence": {
-    "scale": [
-     142
-    ],
     "title": [
      108
     ],
     "drawing_number": [
      3
+    ],
+    "scale": [
+     142
     ]
    },
    "block_found": true,
@@ -4861,27 +4866,27 @@
     "revision": "absent"
    },
    "values": {
-    "scale": "#=IFT",
     "title": "DRAWING",
-    "drawing_number": "A58-1"
+    "drawing_number": "A58-1",
+    "scale": "#=IFT"
    },
    "sources": {
-    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "title": "rule:largest-lettering",
-    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
+    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
-    "scale": [
-     4,
-     5,
-     6
-    ],
     "title": [
      3
     ],
     "drawing_number": [
      0,
      8
+    ],
+    "scale": [
+     4,
+     5,
+     6
     ]
    },
    "block_found": true,
@@ -4976,18 +4981,18 @@
    },
    "values": {
     "title": "STATE OF NEW HAMPSHIRE TOWN: PITTSFIELD PROJECT:TLB1934 LOCATION:CARROLL BRIDGE ROADSUNCOOK_VALLEY STREAM: SUNCOOK RIVER",
-    "drawing_number": "Q18",
-    "sheet_number": 3,
     "sheet_count": 4,
     "date": "1934-08-30",
+    "drawing_number": "Q18",
+    "sheet_number": 3,
     "revision": "2:2=1/Rev. 1-11-35 A.M.W"
    },
    "sources": {
     "title": "rule:largest-lettering",
-    "drawing_number": "rule:number-label",
-    "sheet_number": "rule:sheet-of",
     "sheet_count": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "date": "rule:date-label",
+    "drawing_number": "rule:number-label",
+    "sheet_number": "rule:sheet-of",
     "revision": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
@@ -4999,18 +5004,18 @@
      26,
      27
     ],
+    "sheet_count": [
+     35
+    ],
+    "date": [
+     31
+    ],
     "drawing_number": [
      36,
      37
     ],
     "sheet_number": [
      35
-    ],
-    "sheet_count": [
-     35
-    ],
-    "date": [
-     31
     ],
     "revision": [
      36,
@@ -5061,24 +5066,24 @@
     "revision": "absent"
    },
    "values": {
-    "scale": "14\"=1-",
     "title": "SCREENED PORCH",
-    "drawing_number": "742286"
+    "drawing_number": "742286",
+    "scale": "14\"=1-"
    },
    "sources": {
-    "scale": "rule:scale-label",
     "title": "rule:largest-lettering",
-    "drawing_number": "rule:number-label"
+    "drawing_number": "rule:number-label",
+    "scale": "rule:scale-label"
    },
    "evidence": {
-    "scale": [
-     96
-    ],
     "title": [
      16
     ],
     "drawing_number": [
      101
+    ],
+    "scale": [
+     96
     ]
    },
    "block_found": true,
@@ -5159,24 +5164,24 @@
     "revision": "absent"
    },
    "values": {
-    "scale": "3&考2=10",
     "title": "BRANCH Philadelphia",
-    "drawing_number": "BRIDGE No. 13-A"
+    "drawing_number": "BRIDGE No. 13-A",
+    "scale": "3&考2=10"
    },
    "sources": {
-    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "title": "rule:largest-lettering",
-    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
+    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
-    "scale": [
-     5
-    ],
     "title": [
      4
     ],
     "drawing_number": [
      3
+    ],
+    "scale": [
+     5
     ]
    },
    "block_found": true,
@@ -5307,16 +5312,16 @@
    },
    "values": {
     "title": "ELECT. . HEAT.",
-    "scale": "SHOWN",
-    "drawing_number": "ENTIRS 98EET",
     "date": "1912-01-04",
+    "drawing_number": "ENTIRS 98EET",
+    "scale": "SHOWN",
     "revision": "+20FO"
    },
    "sources": {
     "title": "rule:largest-lettering",
-    "scale": "rule:scale-label",
-    "drawing_number": "rule:number-label",
     "date": "rule:date-unlabelled",
+    "drawing_number": "rule:number-label",
+    "scale": "rule:scale-label",
     "revision": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
@@ -5324,16 +5329,16 @@
      93,
      105
     ],
-    "scale": [
-     119,
-     120
+    "date": [
+     98
     ],
     "drawing_number": [
      51,
      63
     ],
-    "date": [
-     98
+    "scale": [
+     119,
+     120
     ],
     "revision": [
      143
@@ -5349,8 +5354,8 @@
    "status": "needs_review",
    "reasons": [
     "missing date",
-    "readers disagree on scale: '14\"= 1\\'-0 10100-1' vs '14\"= 1\\'-0'",
-    "readers disagree on drawing_number: 'G-A-1' vs '10100-1'"
+    "readers disagree on drawing_number: 'G-A-1' vs '10100-1'",
+    "readers disagree on scale: '14\"= 1\\'-0 10100-1' vs '14\"= 1\\'-0'"
    ],
    "outcomes": {
     "drawing_number": "correct",
@@ -5362,25 +5367,25 @@
     "revision": "absent"
    },
    "values": {
-    "scale": "14\"= 1'-0 10100-1",
     "title": "JUN 1 8 1981",
-    "drawing_number": "G-A-1"
+    "drawing_number": "G-A-1",
+    "scale": "14\"= 1'-0 10100-1"
    },
    "sources": {
-    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "title": "rule:largest-lettering",
-    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
+    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
-    "scale": [
-     22,
-     23
-    ],
     "title": [
      27
     ],
     "drawing_number": [
      26
+    ],
+    "scale": [
+     22,
+     23
     ]
    },
    "block_found": true,
@@ -5406,16 +5411,16 @@
    },
    "values": {
     "title": "SERVANTS'HOUSE QUARTERS",
-    "drawing_number": "A-A-A-5",
     "scale": "4\"= 1-0\"",
     "date": "1936-12-28",
+    "drawing_number": "A-A-A-5",
     "revision": "50"
    },
    "sources": {
     "title": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
-    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "date": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "revision": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
@@ -5423,14 +5428,14 @@
      1,
      3
     ],
-    "drawing_number": [
-     0
-    ],
     "scale": [
      5
     ],
     "date": [
      6
+    ],
+    "drawing_number": [
+     0
     ],
     "revision": [
      9
@@ -5569,13 +5574,13 @@
    },
    "values": {
     "title": "EAST WASHINGTON AVE. BRIDGE OVER PE2UONNOCK RIVER POR THE CAYGE BRIDGEPORT. CONN",
-    "sheet_count": 13,
-    "scale": "Ee-12=10°"
+    "scale": "Ee-12=10°",
+    "sheet_count": 13
    },
    "sources": {
     "title": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
-    "sheet_count": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
-    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
+    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "sheet_count": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
     "title": [
@@ -5585,12 +5590,12 @@
      3,
      4
     ],
+    "scale": [
+     8
+    ],
     "sheet_count": [
      15,
      16
-    ],
-    "scale": [
-     8
     ]
    },
    "block_found": true,
@@ -5662,20 +5667,23 @@
     "revision": "absent"
    },
    "values": {
-    "scale": "=1Foot",
-    "title": "ICE HOUSE. WEST POINT NY GALLERY SECTION & HOIST OF THE ADJUSTABLE GALLERY",
     "date": "1916-04",
-    "sheet_number": 581
+    "sheet_number": 581,
+    "title": "ICE HOUSE. WEST POINT NY GALLERY SECTION & HOIST OF THE ADJUSTABLE GALLERY",
+    "scale": "=1Foot"
    },
    "sources": {
-    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
-    "title": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "date": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
-    "sheet_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
+    "sheet_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "title": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
-    "scale": [
-     26
+    "date": [
+     29
+    ],
+    "sheet_number": [
+     30
     ],
     "title": [
      17,
@@ -5684,11 +5692,8 @@
      20,
      21
     ],
-    "date": [
-     29
-    ],
-    "sheet_number": [
-     30
+    "scale": [
+     26
     ]
    },
    "block_found": true,
@@ -5713,27 +5718,27 @@
     "revision": "absent"
    },
    "values": {
-    "date": "1918-06-19",
     "title": "NAVAL AIRSTATION PENSACOLA, FLORIDA. BUILDING N9 223 POST-OFFICE LOCATION PLAN AND DETAILS",
+    "date": "1918-06-19",
     "drawing_number": "DRAWING 1391",
     "scale": "- 10, #1o"
    },
    "sources": {
-    "date": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "title": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "date": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
-    "date": [
-     4,
-     12
-    ],
     "title": [
      0,
      1,
      2,
      3
+    ],
+    "date": [
+     4,
+     12
     ],
     "drawing_number": [
      7
@@ -5765,30 +5770,30 @@
    },
    "values": {
     "title": "-NAVY PROPERTY LINE",
-    "scale": "AS SHOWN",
-    "drawing_number": "80091",
     "date": "1907-05-20",
+    "drawing_number": "80091",
+    "scale": "AS SHOWN",
     "revision": "NO 292"
    },
    "sources": {
     "title": "rule:largest-lettering",
-    "scale": "rule:scale-label",
-    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "date": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "scale": "rule:scale-label",
     "revision": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
     "title": [
      62
     ],
-    "scale": [
-     158
+    "date": [
+     144
     ],
     "drawing_number": [
      152
     ],
-    "date": [
-     144
+    "scale": [
+     158
     ],
     "revision": [
      26
@@ -5815,31 +5820,31 @@
     "revision": "absent"
    },
    "values": {
-    "title": "KINGSTON STATION R.R. BRIDGE SOUTH KINGSTOWN, R.I. GENERAL PLAN",
-    "scale": "1'=8'-0'",
     "date": "1935-11-15",
-    "drawing_number": "26-6"
+    "title": "KINGSTON STATION R.R. BRIDGE SOUTH KINGSTOWN, R.I. GENERAL PLAN",
+    "drawing_number": "26-6",
+    "scale": "1'=8'-0'"
    },
    "sources": {
-    "title": "rule:largest-lettering",
-    "scale": "rule:scale-label",
     "date": "rule:date-near-label",
-    "drawing_number": "rule:standalone-id"
+    "title": "rule:largest-lettering",
+    "drawing_number": "rule:standalone-id",
+    "scale": "rule:scale-label"
    },
    "evidence": {
+    "date": [
+     235
+    ],
     "title": [
      136,
      157,
      181
     ],
-    "scale": [
-     5
-    ],
-    "date": [
-     235
-    ],
     "drawing_number": [
      46
+    ],
+    "scale": [
+     5
     ]
    },
    "block_found": true,
@@ -5978,16 +5983,16 @@
    },
    "values": {
     "title": "FRONT ELEVATIONPLAN L- 4",
-    "scale": "\"#=1'-0\"Scale 3\"=1'-0\"",
-    "sheet_number": 3,
     "sheet_count": 8,
+    "sheet_number": 3,
+    "scale": "\"#=1'-0\"Scale 3\"=1'-0\"",
     "revision": "1932"
    },
    "sources": {
     "title": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
-    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
-    "sheet_number": "rule:sheet-of",
     "sheet_count": "rule:sheet-of",
+    "sheet_number": "rule:sheet-of",
+    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "revision": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
@@ -5995,15 +6000,15 @@
      0,
      6
     ],
-    "scale": [
-     4,
-     10
+    "sheet_count": [
+     14
     ],
     "sheet_number": [
      14
     ],
-    "sheet_count": [
-     14
+    "scale": [
+     4,
+     10
     ],
     "revision": [
      12
@@ -6032,21 +6037,18 @@
     "revision": "invented"
    },
    "values": {
-    "scale": "IN = IFOOT",
     "title": "DEPT YARDS & DOCKS U.S. NAVY YARD MARE ISLAND CAL. PRISON EXTEASION BUILDING 84",
     "drawing_number": "1908",
+    "scale": "IN = IFOOT",
     "revision": "B"
    },
    "sources": {
-    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "title": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "revision": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
-    "scale": [
-     10
-    ],
     "title": [
      5,
      6,
@@ -6056,6 +6058,9 @@
     ],
     "drawing_number": [
      4
+    ],
+    "scale": [
+     10
     ],
     "revision": [
      12
@@ -6071,8 +6076,8 @@
    "status": "needs_review",
    "reasons": [
     "low OCR confidence on drawing_number (0.75)",
-    "readers disagree on scale: '1-1000 SCALE AS NOTED' vs 'AS NOTED'",
-    "readers disagree on title: 'INO.1 PUMP HOUSE SEWAGE TREATMENT PLANT NO1PUMP HOUSE DRAWN BY CHECKED BY' vs 'BCDE 21'"
+    "readers disagree on title: 'INO.1 PUMP HOUSE SEWAGE TREATMENT PLANT NO1PUMP HOUSE DRAWN BY CHECKED BY' vs 'BCDE 21'",
+    "readers disagree on scale: '1-1000 SCALE AS NOTED' vs 'AS NOTED'"
    ],
    "outcomes": {
     "drawing_number": "wrong",
@@ -6084,22 +6089,20 @@
     "revision": "absent"
    },
    "values": {
-    "scale": "1-1000 SCALE AS NOTED",
+    "date": "1940-12-05",
     "title": "INO.1 PUMP HOUSE SEWAGE TREATMENT PLANT NO1PUMP HOUSE DRAWN BY CHECKED BY",
     "drawing_number": "689-6681",
-    "date": "1940-12-05"
+    "scale": "1-1000 SCALE AS NOTED"
    },
    "sources": {
-    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "date": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "title": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "drawing_number": "rule:number-label",
-    "date": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
+    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
-    "scale": [
-     3,
-     5,
-     8
+    "date": [
+     28
     ],
     "title": [
      0,
@@ -6111,8 +6114,10 @@
      29,
      31
     ],
-    "date": [
-     28
+    "scale": [
+     3,
+     5,
+     8
     ]
    },
    "block_found": true,
@@ -6220,32 +6225,32 @@
    },
    "values": {
     "title": "AIR CORPS.",
-    "scale": "AS NOTED",
-    "drawing_number": "901-6689",
     "date": "1977-12",
+    "drawing_number": "901-6689",
+    "scale": "AS NOTED",
     "revision": "A"
    },
    "sources": {
     "title": "rule:largest-lettering",
-    "scale": "rule:scale-label",
-    "drawing_number": "rule:number-label",
     "date": "rule:date-unlabelled",
+    "drawing_number": "rule:number-label",
+    "scale": "rule:scale-label",
     "revision": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
     "title": [
      7
     ],
-    "scale": [
-     47,
-     49
+    "date": [
+     105
     ],
     "drawing_number": [
      97,
      103
     ],
-    "date": [
-     105
+    "scale": [
+     47,
+     49
     ],
     "revision": [
      6
@@ -6272,27 +6277,27 @@
     "revision": "invented"
    },
    "values": {
+    "date": "1926-05-05",
     "title": "KELLY-SPRINGFIELD TIRE CO",
     "drawing_number": "DX-855",
-    "date": "1926-05-05",
     "revision": "REVISED. 19BY"
    },
    "sources": {
+    "date": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "title": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "drawing_number": "rule:standalone-id",
-    "date": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "revision": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
+    "date": [
+     27,
+     28
+    ],
     "title": [
      20
     ],
     "drawing_number": [
      32
-    ],
-    "date": [
-     27,
-     28
     ],
     "revision": [
      21,
@@ -6454,28 +6459,28 @@
     "revision": "invented"
    },
    "values": {
-    "scale": "4-10 Dwa. 1-8",
     "title": "2NCORPSAREA. FORTJAY.GOV'S:ISL",
     "drawing_number": "DRWG N",
+    "scale": "4-10 Dwa. 1-8",
     "revision": "1212.1~37.1.5"
    },
    "sources": {
-    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "title": "rule:largest-lettering",
     "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "revision": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
-    "scale": [
-     19,
-     27
-    ],
     "title": [
      3,
      5
     ],
     "drawing_number": [
      20
+    ],
+    "scale": [
+     19,
+     27
     ],
     "revision": [
      30
@@ -6578,26 +6583,26 @@
     "revision": "invented"
    },
    "values": {
-    "scale": "AS NOTED",
     "title": "5/3/GATE",
     "drawing_number": "03-2723",
+    "scale": "AS NOTED",
     "revision": "REVISION"
    },
    "sources": {
-    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "title": "rule:largest-lettering",
     "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "revision": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
-    "scale": [
-     28
-    ],
     "title": [
      20
     ],
     "drawing_number": [
      27
+    ],
+    "scale": [
+     28
     ],
     "revision": [
      2
@@ -6704,20 +6709,16 @@
     "revision": "absent"
    },
    "values": {
-    "scale": "21-0\" AS NOTED",
     "title": "MACDILL FIELDLA (SOUTHEAST AID BASE,-AMPA FLA.) Q.M·WAREHOUSEOMMISSARY",
-    "drawing_number": "6899-480"
+    "drawing_number": "6899-480",
+    "scale": "21-0\" AS NOTED"
    },
    "sources": {
-    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "title": "rule:largest-lettering",
-    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
+    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
-    "scale": [
-     1,
-     60
-    ],
     "title": [
      65,
      66,
@@ -6725,6 +6726,10 @@
     ],
     "drawing_number": [
      87
+    ],
+    "scale": [
+     1,
+     60
     ]
    },
    "block_found": true,
@@ -6772,31 +6777,31 @@
     "revision": "wrong"
    },
    "values": {
-    "scale": "AS NOTED",
-    "title": "HOSPITALQUARTERS",
     "date": "1914-08-07",
-    "revision": "A 11-30.40cm"
+    "title": "HOSPITALQUARTERS",
+    "revision": "A 11-30.40cm",
+    "scale": "AS NOTED"
    },
    "sources": {
-    "scale": "rule:scale-label",
-    "title": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "date": "rule:date-near-label",
-    "revision": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
+    "title": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "revision": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "scale": "rule:scale-label"
    },
    "evidence": {
-    "scale": [
-     2,
-     4
+    "date": [
+     18
     ],
     "title": [
      10
     ],
-    "date": [
-     18
-    ],
     "revision": [
      8,
      9
+    ],
+    "scale": [
+     2,
+     4
     ]
    },
    "block_found": true,
@@ -6822,27 +6827,27 @@
     "revision": "invented"
    },
    "values": {
-    "scale": "JA50",
-    "title": "DETROIT-SUPERIOR BRIDGE GENERAL PLANA ELEVATION",
     "date": "1912-07-12",
+    "title": "DETROIT-SUPERIOR BRIDGE GENERAL PLANA ELEVATION",
+    "scale": "JA50",
     "revision": "REVISED"
    },
    "sources": {
-    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
-    "title": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "date": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "title": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "revision": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
-    "scale": [
-     8
+    "date": [
+     7
     ],
     "title": [
      2,
      4
     ],
-    "date": [
-     7
+    "scale": [
+     8
     ],
     "revision": [
      11
@@ -6869,20 +6874,20 @@
     "revision": "absent"
    },
    "values": {
-    "title": "BUILDING",
-    "date": "1911-09-04"
+    "date": "1911-09-04",
+    "title": "BUILDING"
    },
    "sources": {
-    "title": "rule:largest-lettering",
-    "date": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
+    "date": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "title": "rule:largest-lettering"
    },
    "evidence": {
-    "title": [
-     10
-    ],
     "date": [
      17,
      37
+    ],
+    "title": [
+     10
     ]
    },
    "block_found": true,
@@ -6946,31 +6951,31 @@
    },
    "values": {
     "title": "CLARK HOWELL HOMES",
-    "scale": "0.1=.57.7. 3908",
-    "drawing_number": "FIRST FLOOR PLAN -A-",
     "date": "1940-03-01",
+    "drawing_number": "FIRST FLOOR PLAN -A-",
+    "scale": "0.1=.57.7. 3908",
     "revision": "RivisEO Tosta"
    },
    "sources": {
     "title": "rule:largest-lettering",
-    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
-    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "date": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "revision": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
     "title": [
      0
     ],
-    "scale": [
-     33
+    "date": [
+     35
     ],
     "drawing_number": [
      26,
      28
     ],
-    "date": [
-     35
+    "scale": [
+     33
     ],
     "revision": [
      13
@@ -6995,22 +7000,22 @@
     "revision": "absent"
    },
    "values": {
-    "title": "BLDG N47$47-R PLRN",
     "date": "1956-07-03",
+    "title": "BLDG N47$47-R PLRN",
     "drawing_number": "47-A-32"
    },
    "sources": {
-    "title": "rule:largest-lettering",
     "date": "rule:date-label",
+    "title": "rule:largest-lettering",
     "drawing_number": "rule:number-label"
    },
    "evidence": {
+    "date": [
+     0
+    ],
     "title": [
      20,
      28
-    ],
-    "date": [
-     0
     ],
     "drawing_number": [
      15,
@@ -7153,25 +7158,25 @@
    },
    "values": {
     "title": "FILTRATION PLANT PLANS AND SECTIONS OF BUILDINGS.",
-    "scale": "l= 20",
+    "date": "1914-09-24",
     "drawing_number": "SHEET NO. 2",
     "sheet_number": 2,
-    "date": "1914-09-24"
+    "scale": "l= 20"
    },
    "sources": {
     "title": "rule:largest-lettering",
-    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "date": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "sheet_number": "rule:sheet-no",
-    "date": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
+    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
     "title": [
      3,
      6
     ],
-    "scale": [
-     7
+    "date": [
+     14
     ],
     "drawing_number": [
      15
@@ -7179,8 +7184,8 @@
     "sheet_number": [
      15
     ],
-    "date": [
-     14
+    "scale": [
+     7
     ]
    },
    "block_found": true,
@@ -7204,22 +7209,22 @@
     "revision": "absent"
    },
    "values": {
-    "title": "MECHANICAL",
     "date": "1947-10-17",
+    "title": "MECHANICAL",
     "drawing_number": "16 OF 20"
    },
    "sources": {
-    "title": "rule:largest-lettering",
     "date": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "title": "rule:largest-lettering",
     "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
-    "title": [
-     25
-    ],
     "date": [
      29,
      30
+    ],
+    "title": [
+     25
     ],
     "drawing_number": [
      32,
@@ -7248,28 +7253,28 @@
     "revision": "absent"
    },
    "values": {
+    "sheet_number": 2,
     "title": "FIRST FLOOR PLAN",
-    "sheet_count": 3,
     "scale": "3/32\" = I'-0\"",
-    "sheet_number": 2
+    "sheet_count": 3
    },
    "sources": {
+    "sheet_number": "rule:sheet-of",
     "title": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
-    "sheet_count": "rule:sheet-of",
     "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
-    "sheet_number": "rule:sheet-of"
+    "sheet_count": "rule:sheet-of"
    },
    "evidence": {
+    "sheet_number": [
+     17
+    ],
     "title": [
      0
-    ],
-    "sheet_count": [
-     17
     ],
     "scale": [
      1
     ],
-    "sheet_number": [
+    "sheet_count": [
      17
     ]
    },
@@ -7295,26 +7300,26 @@
     "revision": "invented"
    },
    "values": {
-    "scale": "SCALE6INCH- |FOOT",
     "title": "SeeH1-A-Z",
     "drawing_number": "44-4",
+    "scale": "SCALE6INCH- |FOOT",
     "revision": "LAMB"
    },
    "sources": {
-    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "title": "rule:largest-lettering",
     "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "revision": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
-    "scale": [
-     24
-    ],
     "title": [
      29
     ],
     "drawing_number": [
      10
+    ],
+    "scale": [
+     24
     ],
     "revision": [
      12
@@ -7339,26 +7344,26 @@
     "revision": "invented"
    },
    "values": {
+    "date": "1934-11-22",
     "title": "EAST·ELEVATIOI",
     "drawing_number": "101A-7",
-    "date": "1934-11-22",
     "revision": "2410"
    },
    "sources": {
+    "date": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "title": "rule:largest-lettering",
     "drawing_number": "rule:standalone-id",
-    "date": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "revision": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
+    "date": [
+     57
+    ],
     "title": [
      22
     ],
     "drawing_number": [
      56
-    ],
-    "date": [
-     57
     ],
     "revision": [
      16
@@ -7383,30 +7388,30 @@
     "revision": "absent"
    },
    "values": {
-    "title": "STEVENS & WILKINSON",
     "date": "1960-12-15",
-    "sheet_count": 41,
-    "drawing_number": "A9-14"
+    "title": "STEVENS & WILKINSON",
+    "drawing_number": "A9-14",
+    "sheet_count": 41
    },
    "sources": {
-    "title": "rule:largest-lettering",
     "date": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
-    "sheet_count": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
-    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
+    "title": "rule:largest-lettering",
+    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "sheet_count": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
+    "date": [
+     23
+    ],
     "title": [
      6,
      9
     ],
-    "date": [
-     23
+    "drawing_number": [
+     21
     ],
     "sheet_count": [
      26
-    ],
-    "drawing_number": [
-     21
     ]
    },
    "block_found": true,
@@ -7420,8 +7425,8 @@
    "reasons": [
     "missing date",
     "low OCR confidence on drawing_number (0.78)",
-    "readers disagree on scale: ',AS NOTED' vs 'AS NOTED'",
-    "readers disagree on title: 'OFFICE BUILDING SPECIAL' vs \"FOREST SERVICE REGION SIX - JAMES FRANKLAND ASS'T. REG. FORESTER\""
+    "readers disagree on title: 'OFFICE BUILDING SPECIAL' vs \"FOREST SERVICE REGION SIX - JAMES FRANKLAND ASS'T. REG. FORESTER\"",
+    "readers disagree on scale: ',AS NOTED' vs 'AS NOTED'"
    ],
    "outcomes": {
     "drawing_number": "wrong",
@@ -7433,25 +7438,25 @@
     "revision": "absent"
    },
    "values": {
-    "scale": ",AS NOTED",
     "title": "OFFICE BUILDING SPECIAL",
-    "drawing_number": "8-2101"
+    "drawing_number": "8-2101",
+    "scale": ",AS NOTED"
    },
    "sources": {
-    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "title": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
-    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
+    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
-    "scale": [
-     6
-    ],
     "title": [
      3,
      4
     ],
     "drawing_number": [
      12
+    ],
+    "scale": [
+     6
     ]
    },
    "block_found": true,
@@ -7463,31 +7468,27 @@
    "correct": false,
    "status": "needs_review",
    "reasons": [
+    "missing date",
     "low OCR confidence on title (0.66)"
    ],
    "outcomes": {
     "drawing_number": "wrong",
     "title": "wrong",
-    "date": "wrong",
+    "date": "missed",
     "scale": "missed",
     "sheet_number": "absent",
     "sheet_count": "absent",
     "revision": "absent"
    },
    "values": {
-    "date": "1077-12",
     "title": "ELEVATION OF GABLE END AT CODNED PIED PLATFODM. SMoOTN FaLL ConCRETE",
     "drawing_number": "68996111"
    },
    "sources": {
-    "date": "rule:date-unlabelled",
     "title": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
-    "date": [
-     39
-    ],
     "title": [
      3,
      0
@@ -7518,15 +7519,15 @@
    },
    "values": {
     "title": "MACHINESHOP PART EAST & WEST ELEVATIONS SOUTH ELEVATION & ALTERNATIVES A&B",
+    "revision": "0ste",
     "drawing_number": "680-A-5",
-    "scale": "AS NOTED",
-    "revision": "0ste"
+    "scale": "AS NOTED"
    },
    "sources": {
     "title": "rule:largest-lettering",
+    "revision": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "drawing_number": "rule:standalone-id",
-    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
-    "revision": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
+    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
     "title": [
@@ -7534,14 +7535,14 @@
      23,
      26
     ],
+    "revision": [
+     0
+    ],
     "drawing_number": [
      44
     ],
     "scale": [
      34
-    ],
-    "revision": [
-     0
     ]
    },
    "block_found": true,
@@ -7706,31 +7707,31 @@
     "revision": "absent"
    },
    "values": {
-    "scale": "Eight Feet to One Inch",
     "title": "ORDNANCE BUILDING, No.96; Bldg.77",
+    "date": "1871-11-07",
     "drawing_number": "A.18",
-    "date": "1871-11-07"
+    "scale": "Eight Feet to One Inch"
    },
    "sources": {
-    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "title": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "date": "rule:date-near-label",
     "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
-    "date": "rule:date-near-label"
+    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
-    "scale": [
-     4
-    ],
     "title": [
      0,
      1,
      2
     ],
+    "date": [
+     9
+    ],
     "drawing_number": [
      5
     ],
-    "date": [
-     9
+    "scale": [
+     4
     ]
    },
    "block_found": true,
@@ -7876,12 +7877,14 @@
   {
    "id": "e8bbcebf3ca7",
    "correct": false,
-   "status": "accepted",
-   "reasons": [],
+   "status": "needs_review",
+   "reasons": [
+    "missing date"
+   ],
    "outcomes": {
     "drawing_number": "wrong",
     "title": "wrong",
-    "date": "wrong",
+    "date": "missed",
     "scale": "missed",
     "sheet_number": "missed",
     "sheet_count": "missed",
@@ -7889,21 +7892,16 @@
    },
    "values": {
     "title": "Approred N Moor Approred Vico Fesident",
-    "date": "1007-09",
     "drawing_number": "BRIDGEN31.29Mid"
    },
    "sources": {
     "title": "rule:largest-lettering",
-    "date": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
     "title": [
      6,
      8
-    ],
-    "date": [
-     5
     ],
     "drawing_number": [
      2
@@ -7954,16 +7952,16 @@
    },
    "values": {
     "title": "NOTE: THISPLAN.",
-    "scale": "SCALERS NOTED",
-    "drawing_number": "TECHWOOD PROJECT NO. 1101",
     "date": "1934-11-22",
+    "drawing_number": "TECHWOOD PROJECT NO. 1101",
+    "scale": "SCALERS NOTED",
     "revision": "102 $; 103"
    },
    "sources": {
     "title": "rule:largest-lettering",
-    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
-    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "date": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "revision": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
@@ -7971,16 +7969,16 @@
      0,
      2
     ],
-    "scale": [
-     29
-    ],
-    "drawing_number": [
-     6
-    ],
     "date": [
      24,
      7,
      25
+    ],
+    "drawing_number": [
+     6
+    ],
+    "scale": [
+     29
     ],
     "revision": [
      20,
@@ -8031,23 +8029,23 @@
     "revision": "missed"
    },
    "values": {
-    "title": "ELEVATION",
     "date": "1942-06-02",
+    "title": "ELEVATION",
     "drawing_number": "TQ-700-6605",
     "scale": "1-0:10"
    },
    "sources": {
-    "title": "rule:largest-lettering",
     "date": "rule:date-unlabelled",
+    "title": "rule:largest-lettering",
     "drawing_number": "rule:number-label",
     "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
-    "title": [
-     47
-    ],
     "date": [
      67
+    ],
+    "title": [
+     47
     ],
     "drawing_number": [
      70,
@@ -8139,21 +8137,21 @@
     "revision": "missed"
    },
    "values": {
-    "title": "NEW SINK",
     "date": "1965-09-09",
+    "title": "NEW SINK",
     "drawing_number": "FURRINGALSTRIPSTO DE"
    },
    "sources": {
-    "title": "rule:largest-lettering",
     "date": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "title": "rule:largest-lettering",
     "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
-    "title": [
-     12
-    ],
     "date": [
      3
+    ],
+    "title": [
+     12
     ],
     "drawing_number": [
      0
@@ -8281,16 +8279,19 @@
     "revision": "absent"
    },
    "values": {
+    "sheet_number": 2,
     "title": "OFFICE OF THE SUPERINTENDENT OF LIGHTHOUSES. THIRD DISTRICT, STATEN ISLAND. N. Y. GREAT CAPTAINS ISLAND LIGHT STATION ARRANGEMENT OF PIPING MACHINERY FOR FOG SIGNAL INSTALLATION",
-    "scale": "2\"=1-0",
-    "sheet_number": 2
+    "scale": "2\"=1-0"
    },
    "sources": {
+    "sheet_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "title": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
-    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
-    "sheet_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
+    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
+    "sheet_number": [
+     13
+    ],
     "title": [
      0,
      1,
@@ -8300,9 +8301,6 @@
     ],
     "scale": [
      5
-    ],
-    "sheet_number": [
-     13
     ]
    },
    "block_found": true,
@@ -8327,25 +8325,25 @@
     "revision": "absent"
    },
    "values": {
-    "date": "1936-05-18",
     "title": "GENERAL STORE, CABINS,PAVILION PUBLIC COMFORT STATION AT HORSE THIEFBAIN. PARKS,PLAYGROUNDS RECREATIONAL DEPARTMENT",
+    "date": "1936-05-18",
     "drawing_number": "N2",
     "scale": "SHOWN"
    },
    "sources": {
-    "date": "rule:date-near-label",
     "title": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "date": "rule:date-near-label",
     "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "scale": "rule:scale-label"
    },
    "evidence": {
-    "date": [
-     24
-    ],
     "title": [
      15,
      21,
      25
+    ],
+    "date": [
+     24
     ],
     "drawing_number": [
      23
@@ -8365,9 +8363,9 @@
    "status": "needs_review",
    "reasons": [
     "missing date",
-    "readers disagree on scale: \"I'-O\" vs '1/4\"= 1\\'-0\"'",
     "readers disagree on title: 'SECOND FLOOR QUARTERS A-42 FLOOR PLAN AMMUNITION DEPOT' vs 'SECOND FLOOR'",
-    "readers disagree on drawing_number: '42-1A' vs 'A42-9'"
+    "readers disagree on drawing_number: '42-1A' vs 'A42-9'",
+    "readers disagree on scale: \"I'-O\" vs '1/4\"= 1\\'-0\"'"
    ],
    "outcomes": {
     "drawing_number": "wrong",
@@ -8379,20 +8377,16 @@
     "revision": "absent"
    },
    "values": {
-    "scale": "I'-O",
     "title": "SECOND FLOOR QUARTERS A-42 FLOOR PLAN AMMUNITION DEPOT",
-    "drawing_number": "42-1A"
+    "drawing_number": "42-1A",
+    "scale": "I'-O"
    },
    "sources": {
-    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "title": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
-    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
+    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
-    "scale": [
-     1,
-     13
-    ],
     "title": [
      0,
      9,
@@ -8401,6 +8395,10 @@
     ],
     "drawing_number": [
      15
+    ],
+    "scale": [
+     1,
+     13
     ]
    },
    "block_found": true,
@@ -8425,16 +8423,16 @@
    },
    "values": {
     "title": "PROJECT MGR DESIGN MGR",
+    "date": "1942-06-15",
     "drawing_number": "291923",
     "scale": "Seale",
-    "date": "1942-06-15",
     "revision": "4"
    },
    "sources": {
     "title": "rule:largest-lettering",
+    "date": "rule:date-unlabelled",
     "drawing_number": "rule:number-label",
     "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
-    "date": "rule:date-unlabelled",
     "revision": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
@@ -8442,15 +8440,15 @@
      26,
      29
     ],
+    "date": [
+     10
+    ],
     "drawing_number": [
      32,
      36
     ],
     "scale": [
      42
-    ],
-    "date": [
-     10
     ],
     "revision": [
      0,
@@ -8526,21 +8524,21 @@
     "revision": "absent"
    },
    "values": {
-    "title": "BLOCK#16",
     "date": "1939-05-24",
+    "title": "BLOCK#16",
     "drawing_number": "#13"
    },
    "sources": {
-    "title": "rule:largest-lettering",
     "date": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "title": "rule:largest-lettering",
     "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
-    "title": [
-     27
-    ],
     "date": [
      44
+    ],
+    "title": [
+     27
     ],
     "drawing_number": [
      4
@@ -8614,25 +8612,25 @@
     "revision": "absent"
    },
    "values": {
-    "scale": "4'= 1\"",
     "title": "ICE BREAKER FOR BRIDGE AT FIRST CROSSING CAMISTEO RIVER",
-    "drawing_number": "CAMISTEO RIVER"
+    "drawing_number": "CAMISTEO RIVER",
+    "scale": "4'= 1\""
    },
    "sources": {
-    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
     "title": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
-    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
+    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "scale": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
    },
    "evidence": {
-    "scale": [
-     2
-    ],
     "title": [
      0,
      1
     ],
     "drawing_number": [
      1
+    ],
+    "scale": [
+     2
     ]
    },
    "block_found": true,
@@ -8656,33 +8654,33 @@
     "revision": "absent"
    },
    "values": {
-    "title": "ARMAMENT 4 INSTRUMENT INSPECTION AND ADJUSTMENT BLDG. AIR CONDITIONING",
-    "scale": "AS NOTED",
     "date": "1941-04-23",
-    "drawing_number": "22"
+    "title": "ARMAMENT 4 INSTRUMENT INSPECTION AND ADJUSTMENT BLDG. AIR CONDITIONING",
+    "drawing_number": "22",
+    "scale": "AS NOTED"
    },
    "sources": {
-    "title": "rule:largest-lettering",
-    "scale": "rule:scale-label",
     "date": "rule:date-near-label",
-    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M"
+    "title": "rule:largest-lettering",
+    "drawing_number": "llm:qwen2.5-coder:14b-instruct-q4_K_M",
+    "scale": "rule:scale-label"
    },
    "evidence": {
+    "date": [
+     335
+    ],
     "title": [
      321,
      325,
      329
     ],
-    "scale": [
-     307,
-     312
-    ],
-    "date": [
-     335
-    ],
     "drawing_number": [
      0,
      1
+    ],
+    "scale": [
+     307,
+     312
     ]
    },
    "block_found": true,

@@ -1,19 +1,19 @@
 {
  "name": "rapidocr-gpt41mini",
- "created": "2026-10-14T01:22:04+00:00",
- "commit": "ead3383",
+ "created": "2026-10-14T01:41:22+00:00",
+ "commit": "05a17e0",
  "config": {
   "ocr": "rapidocr",
   "reader": "llm+rules",
   "model": "gpt-4.1-mini"
  },
  "usage": {
-  "seconds": 231.5,
+  "seconds": 0.7,
   "sheets": 200,
-  "llm_calls": 135,
-  "llm_seconds": 231.3,
-  "prompt_tokens": 163558,
-  "completion_tokens": 15086,
+  "llm_calls": 0,
+  "llm_seconds": 0.0,
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
   "ungrounded_values_rejected": 71,
   "rejected": [
    [
@@ -400,13 +400,13 @@
     },
     "date": {
      "counts": {
-      "missed": 46,
+      "missed": 48,
       "correct": 20,
-      "wrong": 10,
+      "wrong": 8,
       "absent": 21
      },
      "recall": 0.263,
-     "precision": 0.667
+     "precision": 0.714
     },
     "scale": {
      "counts": {
@@ -588,12 +588,12 @@
     "date": {
      "counts": {
       "correct": 34,
-      "missed": 71,
+      "missed": 73,
       "absent": 53,
-      "wrong": 22
+      "wrong": 20
      },
      "recall": 0.268,
-     "precision": 0.607
+     "precision": 0.63
     },
     "scale": {
      "counts": {
@@ -676,14 +676,14 @@
    "values": {
     "title": "TECHWOOD PROJECT NO. 1101 PUBLIC WORKS ADMINISTRATION-HOUSINGDIVISION THE UNITED STATES OF AMERICA",
     "drawing_number": "A-19",
-    "date": "1934-11-22",
-    "scale": "/16\" = 1-0\""
+    "scale": "/16\" = 1-0\"",
+    "date": "1934-11-22"
    },
    "sources": {
     "title": "rule:largest-lettering",
     "drawing_number": "llm:gpt-4.1-mini",
-    "date": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini"
+    "scale": "llm:gpt-4.1-mini",
+    "date": "llm:gpt-4.1-mini"
    },
    "evidence": {
     "title": [
@@ -694,11 +694,11 @@
     "drawing_number": [
      21
     ],
-    "date": [
-     26
-    ],
     "scale": [
      31
+    ],
+    "date": [
+     26
     ]
    },
    "block_found": true,
@@ -878,30 +878,28 @@
    },
    "values": {
     "title": "STRUCTURAL REPAIRS TO BUILDING COLUMN REPLACEMENT & INSULATION REPAIR",
-    "drawing_number": "1023621",
-    "sheet_number": 4,
+    "scale": "SHOWN",
     "revision": "F",
     "date": "1965-07-21",
-    "scale": "SHOWN"
+    "drawing_number": "1023621",
+    "sheet_number": 4
    },
    "sources": {
     "title": "llm:gpt-4.1-mini",
-    "drawing_number": "llm:gpt-4.1-mini",
-    "sheet_number": "llm:gpt-4.1-mini",
+    "scale": "llm:gpt-4.1-mini",
     "revision": "llm:gpt-4.1-mini",
     "date": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini"
+    "drawing_number": "llm:gpt-4.1-mini",
+    "sheet_number": "llm:gpt-4.1-mini"
    },
    "evidence": {
     "title": [
      26,
      36
     ],
-    "drawing_number": [
-     46
-    ],
-    "sheet_number": [
-     53
+    "scale": [
+     48,
+     49
     ],
     "revision": [
      43
@@ -914,9 +912,11 @@
      37,
      42
     ],
-    "scale": [
-     48,
-     49
+    "drawing_number": [
+     46
+    ],
+    "sheet_number": [
+     53
     ]
    },
    "block_found": true,
@@ -1017,14 +1017,14 @@
    "values": {
     "title": "DISPENSARY SICK OFFICERS OUARTERS FLOOR PLAN",
     "drawing_number": "323374",
-    "date": "1944-07-12",
-    "scale": "14\"= 10"
+    "scale": "14\"= 10",
+    "date": "1944-07-12"
    },
    "sources": {
     "title": "llm:gpt-4.1-mini",
     "drawing_number": "llm:gpt-4.1-mini",
-    "date": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini"
+    "scale": "llm:gpt-4.1-mini",
+    "date": "llm:gpt-4.1-mini"
    },
    "evidence": {
     "title": [
@@ -1036,9 +1036,6 @@
     "drawing_number": [
      88
     ],
-    "date": [
-     82
-    ],
     "scale": [
      84,
      85,
@@ -1046,6 +1043,9 @@
      90,
      91,
      92
+    ],
+    "date": [
+     82
     ]
    },
    "block_found": true,
@@ -1096,8 +1096,8 @@
    "correct": false,
    "status": "needs_review",
    "reasons": [
-    "readers disagree on drawing_number: 'A45-3' vs '10,230'",
-    "readers disagree on title: 'F.S.D OF WOOD BASE DESIGN MGRESNNEW PORCH AND STAIRTO 2ND. FLOOR AT STOOP POSTS. PLANS ELEVATIONS& DETAILS' vs 'OCT 1 3 189'"
+    "readers disagree on title: 'F.S.D OF WOOD BASE DESIGN MGRESNNEW PORCH AND STAIRTO 2ND. FLOOR AT STOOP POSTS. PLANS ELEVATIONS& DETAILS' vs 'OCT 1 3 189'",
+    "readers disagree on drawing_number: 'A45-3' vs '10,230'"
    ],
    "outcomes": {
     "drawing_number": "correct",
@@ -1109,38 +1109,38 @@
     "revision": "invented"
    },
    "values": {
-    "drawing_number": "A45-3",
-    "scale": "AS NOTED",
     "title": "F.S.D OF WOOD BASE DESIGN MGRESNNEW PORCH AND STAIRTO 2ND. FLOOR AT STOOP POSTS. PLANS ELEVATIONS& DETAILS",
+    "date": "1939-05-05",
+    "scale": "AS NOTED",
     "revision": "REVISION",
-    "date": "1939-05-05"
+    "drawing_number": "A45-3"
    },
    "sources": {
-    "drawing_number": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini",
     "title": "llm:gpt-4.1-mini",
+    "date": "rule:date-label",
+    "scale": "llm:gpt-4.1-mini",
     "revision": "llm:gpt-4.1-mini",
-    "date": "rule:date-label"
+    "drawing_number": "llm:gpt-4.1-mini"
    },
    "evidence": {
-    "drawing_number": [
-     20,
-     25
-    ],
-    "scale": [
-     22
-    ],
     "title": [
      13,
      14,
      15,
      16
     ],
+    "date": [
+     17
+    ],
+    "scale": [
+     22
+    ],
     "revision": [
      0
     ],
-    "date": [
-     17
+    "drawing_number": [
+     20,
+     25
     ]
    },
    "block_found": true,
@@ -1339,14 +1339,14 @@
    "values": {
     "title": "QURRTERS A-43-44-45-199 STEAMHEATINGSYSTEM CONCRETETRENCH & PIPING",
     "drawing_number": "9721-15",
-    "date": "1933-02-03",
-    "scale": "Ig\"= 1-FT"
+    "scale": "Ig\"= 1-FT",
+    "date": "1933-02-03"
    },
    "sources": {
     "title": "llm:gpt-4.1-mini",
     "drawing_number": "llm:gpt-4.1-mini",
-    "date": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini"
+    "scale": "llm:gpt-4.1-mini",
+    "date": "llm:gpt-4.1-mini"
    },
    "evidence": {
     "title": [
@@ -1357,11 +1357,11 @@
     "drawing_number": [
      21
     ],
-    "date": [
-     16
-    ],
     "scale": [
      20
+    ],
+    "date": [
+     16
     ]
    },
    "block_found": true,
@@ -1429,14 +1429,14 @@
    "values": {
     "title": "GENERAL STURE, CABINS,PAVILION PUBLIC COMFORT STATION",
     "drawing_number": "PR.344",
-    "date": "1936-05-28",
-    "scale": "-1"
+    "scale": "-1",
+    "date": "1936-05-28"
    },
    "sources": {
     "title": "llm:gpt-4.1-mini",
     "drawing_number": "llm:gpt-4.1-mini",
-    "date": "rule:date-unlabelled",
-    "scale": "llm:gpt-4.1-mini"
+    "scale": "llm:gpt-4.1-mini",
+    "date": "rule:date-unlabelled"
    },
    "evidence": {
     "title": [
@@ -1445,11 +1445,11 @@
     "drawing_number": [
      30
     ],
-    "date": [
-     6
-    ],
     "scale": [
      5
+    ],
+    "date": [
+     6
     ]
    },
    "block_found": true,
@@ -1475,39 +1475,39 @@
    },
    "values": {
     "title": "ENTRANCE DETAILS",
-    "drawing_number": "129328",
-    "sheet_number": 18,
-    "sheet_count": 35,
+    "scale": "Soolk: /2. 1-0",
     "revision": "Rovision",
-    "scale": "Soolk: /2. 1-0"
+    "sheet_count": 35,
+    "drawing_number": "129328",
+    "sheet_number": 18
    },
    "sources": {
     "title": "llm:gpt-4.1-mini",
-    "drawing_number": "llm:gpt-4.1-mini",
-    "sheet_number": "llm:gpt-4.1-mini",
-    "sheet_count": "llm:gpt-4.1-mini",
+    "scale": "llm:gpt-4.1-mini",
     "revision": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini"
+    "sheet_count": "llm:gpt-4.1-mini",
+    "drawing_number": "llm:gpt-4.1-mini",
+    "sheet_number": "llm:gpt-4.1-mini"
    },
    "evidence": {
     "title": [
      45,
      46
     ],
+    "scale": [
+     47
+    ],
+    "revision": [
+     1
+    ],
+    "sheet_count": [
+     36
+    ],
     "drawing_number": [
      14
     ],
     "sheet_number": [
      36
-    ],
-    "sheet_count": [
-     36
-    ],
-    "revision": [
-     1
-    ],
-    "scale": [
-     47
     ]
    },
    "block_found": true,
@@ -1534,14 +1534,14 @@
    "values": {
     "title": "PLANSG.J.K",
     "drawing_number": "108.A-29",
-    "date": "1934-11-22",
-    "scale": "/ 1-0"
+    "scale": "/ 1-0",
+    "date": "1934-11-22"
    },
    "sources": {
     "title": "llm:gpt-4.1-mini",
     "drawing_number": "llm:gpt-4.1-mini",
-    "date": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini"
+    "scale": "llm:gpt-4.1-mini",
+    "date": "llm:gpt-4.1-mini"
    },
    "evidence": {
     "title": [
@@ -1550,11 +1550,11 @@
     "drawing_number": [
      20
     ],
-    "date": [
-     23
-    ],
     "scale": [
      26
+    ],
+    "date": [
+     23
     ]
    },
    "block_found": true,
@@ -1606,43 +1606,43 @@
    },
    "values": {
     "title": "CONSOLIDATED PLATING FACILITY",
-    "drawing_number": "14 2972",
+    "scale": "/s″=r-0″",
     "revision": "F",
-    "sheet_number": 7,
-    "sheet_count": 135,
     "date": "1969-05-14",
-    "scale": "/s″=r-0″"
+    "sheet_count": 135,
+    "drawing_number": "14 2972",
+    "sheet_number": 7
    },
    "sources": {
     "title": "llm:gpt-4.1-mini",
-    "drawing_number": "llm:gpt-4.1-mini",
+    "scale": "llm:gpt-4.1-mini",
     "revision": "llm:gpt-4.1-mini",
-    "sheet_number": "llm:gpt-4.1-mini",
-    "sheet_count": "llm:gpt-4.1-mini",
     "date": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini"
+    "sheet_count": "llm:gpt-4.1-mini",
+    "drawing_number": "llm:gpt-4.1-mini",
+    "sheet_number": "llm:gpt-4.1-mini"
    },
    "evidence": {
     "title": [
      29
     ],
-    "drawing_number": [
-     46
+    "scale": [
+     59
     ],
     "revision": [
      48
     ],
-    "sheet_number": [
-     61
+    "date": [
+     32
     ],
     "sheet_count": [
      61
     ],
-    "date": [
-     32
+    "drawing_number": [
+     46
     ],
-    "scale": [
-     59
+    "sheet_number": [
+     61
     ]
    },
    "block_found": true,
@@ -1810,25 +1810,25 @@
     "revision": "invented"
    },
    "values": {
-    "revision": "REVISION",
     "title": "7 X 10 FOOT SONIC WIND TUNNEL PLAN",
-    "drawing_number": "1943-A-400"
+    "drawing_number": "1943-A-400",
+    "revision": "REVISION"
    },
    "sources": {
-    "revision": "llm:gpt-4.1-mini",
     "title": "llm:gpt-4.1-mini",
-    "drawing_number": "llm:gpt-4.1-mini"
+    "drawing_number": "llm:gpt-4.1-mini",
+    "revision": "llm:gpt-4.1-mini"
    },
    "evidence": {
-    "revision": [
-     15
-    ],
     "title": [
      32,
      34
     ],
     "drawing_number": [
      21
+    ],
+    "revision": [
+     15
     ]
    },
    "block_found": true,
@@ -2061,33 +2061,33 @@
    },
    "values": {
     "title": "PLAN-OF·CORNER-OT-BUILDING-",
-    "drawing_number": "106-A-4",
-    "sheet_number": 4,
+    "scale": "-#=1-",
     "sheet_count": 8,
-    "scale": "-#=1-"
+    "drawing_number": "106-A-4",
+    "sheet_number": 4
    },
    "sources": {
     "title": "llm:gpt-4.1-mini",
-    "drawing_number": "llm:gpt-4.1-mini",
-    "sheet_number": "llm:gpt-4.1-mini",
+    "scale": "llm:gpt-4.1-mini",
     "sheet_count": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini"
+    "drawing_number": "llm:gpt-4.1-mini",
+    "sheet_number": "llm:gpt-4.1-mini"
    },
    "evidence": {
     "title": [
      20
+    ],
+    "scale": [
+     19
+    ],
+    "sheet_count": [
+     25
     ],
     "drawing_number": [
      30
     ],
     "sheet_number": [
      25
-    ],
-    "sheet_count": [
-     25
-    ],
-    "scale": [
-     19
     ]
    },
    "block_found": true,
@@ -2112,34 +2112,34 @@
     "revision": "invented"
    },
    "values": {
-    "drawing_number": "£66VA093",
-    "sheet_number": 339,
     "title": "BRIDGE OVER HONDO RIVER",
+    "date": "1973-11-10",
+    "sheet_number": 339,
     "revision": "Revised",
-    "date": "1973-11-10"
+    "drawing_number": "£66VA093"
    },
    "sources": {
-    "drawing_number": "llm:gpt-4.1-mini",
-    "sheet_number": "llm:gpt-4.1-mini",
     "title": "llm:gpt-4.1-mini",
+    "date": "rule:date-unlabelled",
+    "sheet_number": "llm:gpt-4.1-mini",
     "revision": "llm:gpt-4.1-mini",
-    "date": "rule:date-unlabelled"
+    "drawing_number": "llm:gpt-4.1-mini"
    },
    "evidence": {
-    "drawing_number": [
-     14
+    "title": [
+     3
+    ],
+    "date": [
+     12
     ],
     "sheet_number": [
      18
     ],
-    "title": [
-     3
-    ],
     "revision": [
      2
     ],
-    "date": [
-     12
+    "drawing_number": [
+     14
     ]
    },
    "block_found": true,
@@ -2200,19 +2200,19 @@
     "revision": "invented"
    },
    "values": {
-    "revision": "REVISIONS",
-    "title": "DESCRIPTION"
+    "title": "DESCRIPTION",
+    "revision": "REVISIONS"
    },
    "sources": {
-    "revision": "llm:gpt-4.1-mini",
-    "title": "rule:largest-lettering"
+    "title": "rule:largest-lettering",
+    "revision": "llm:gpt-4.1-mini"
    },
    "evidence": {
-    "revision": [
-     0
-    ],
     "title": [
      1
+    ],
+    "revision": [
+     0
     ]
    },
    "block_found": true,
@@ -2259,27 +2259,27 @@
     "revision": "invented"
    },
    "values": {
-    "revision": "R",
     "title": "BRIDE OVER RIO GRANDE DE LOIZA ROAD NO. 98O KM.1O.6",
     "drawing_number": "436",
+    "revision": "R",
     "date": "1982-05-12"
    },
    "sources": {
-    "revision": "llm:gpt-4.1-mini",
     "title": "llm:gpt-4.1-mini",
     "drawing_number": "llm:gpt-4.1-mini",
+    "revision": "llm:gpt-4.1-mini",
     "date": "llm:gpt-4.1-mini"
    },
    "evidence": {
-    "revision": [
-     10
-    ],
     "title": [
      1,
      2
     ],
     "drawing_number": [
      11
+    ],
+    "revision": [
+     10
     ],
     "date": [
      0
@@ -2308,21 +2308,18 @@
     "revision": "invented"
    },
    "values": {
-    "revision": "REVISIONS",
     "title": "MOBILIZATION HOSPITAL BUILDINGS TYPE HSW-98 STANDARD WARD",
     "drawing_number": "128-130",
-    "scale": "8=1-0"
+    "scale": "8=1-0",
+    "revision": "REVISIONS"
    },
    "sources": {
-    "revision": "llm:gpt-4.1-mini",
     "title": "llm:gpt-4.1-mini",
     "drawing_number": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini"
+    "scale": "llm:gpt-4.1-mini",
+    "revision": "llm:gpt-4.1-mini"
    },
    "evidence": {
-    "revision": [
-     20
-    ],
     "title": [
      21,
      22,
@@ -2333,6 +2330,9 @@
     ],
     "scale": [
      18
+    ],
+    "revision": [
+     20
     ]
    },
    "block_found": true,
@@ -2398,14 +2398,14 @@
    "values": {
     "title": "SECOND·CORPSAKLA ·FORT JAY·GOVERNORS·ISLAND-NY: ALTERATIONS ADDITIONS BUILDING No 2",
     "drawing_number": "PAGEN61",
-    "date": "1939-04-01",
-    "scale": "CALE1/4:1ODRAWINGN"
+    "scale": "CALE1/4:1ODRAWINGN",
+    "date": "1939-04-01"
    },
    "sources": {
     "title": "llm:gpt-4.1-mini",
     "drawing_number": "llm:gpt-4.1-mini",
-    "date": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini"
+    "scale": "llm:gpt-4.1-mini",
+    "date": "llm:gpt-4.1-mini"
    },
    "evidence": {
     "title": [
@@ -2418,11 +2418,11 @@
     "drawing_number": [
      9
     ],
-    "date": [
-     25
-    ],
     "scale": [
      16
+    ],
+    "date": [
+     25
     ]
    },
    "block_found": true,
@@ -2536,17 +2536,17 @@
    },
    "values": {
     "title": "SHOP DRAWING DETAILOFGutter etc. FIRE ENGINE HOuSE",
-    "drawing_number": "B2'D'G\"99",
-    "sheet_number": 5,
+    "scale": "CALE INCH To 1 fOoT",
     "date": "1900-05",
-    "scale": "CALE INCH To 1 fOoT"
+    "drawing_number": "B2'D'G\"99",
+    "sheet_number": 5
    },
    "sources": {
     "title": "llm:gpt-4.1-mini",
-    "drawing_number": "llm:gpt-4.1-mini",
-    "sheet_number": "llm:gpt-4.1-mini",
+    "scale": "llm:gpt-4.1-mini",
     "date": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini"
+    "drawing_number": "llm:gpt-4.1-mini",
+    "sheet_number": "llm:gpt-4.1-mini"
    },
    "evidence": {
     "title": [
@@ -2554,17 +2554,17 @@
      4,
      6
     ],
+    "scale": [
+     9
+    ],
+    "date": [
+     2
+    ],
     "drawing_number": [
      0
     ],
     "sheet_number": [
      8
-    ],
-    "date": [
-     2
-    ],
-    "scale": [
-     9
     ]
    },
    "block_found": true,
@@ -2592,14 +2592,14 @@
    "values": {
     "title": "U.S.NAVAL HOSPITAL DOUBLE WARD BUILDING",
     "drawing_number": "H-72-A- H-72-A-8",
-    "date": "1989-09-25",
-    "scale": "4=1-0"
+    "scale": "4=1-0",
+    "date": "1989-09-25"
    },
    "sources": {
     "title": "llm:gpt-4.1-mini",
     "drawing_number": "llm:gpt-4.1-mini",
-    "date": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini"
+    "scale": "llm:gpt-4.1-mini",
+    "date": "llm:gpt-4.1-mini"
    },
    "evidence": {
     "title": [
@@ -2610,11 +2610,11 @@
      29,
      32
     ],
-    "date": [
-     33
-    ],
     "scale": [
      8
+    ],
+    "date": [
+     33
     ]
    },
    "block_found": true,
@@ -2626,8 +2626,8 @@
    "correct": false,
    "status": "needs_review",
    "reasons": [
-    "low OCR confidence on date (0.80)",
     "low OCR confidence on scale (0.76)",
+    "low OCR confidence on date (0.80)",
     "readers disagree on drawing_number: '6899-800' vs '1000-671'"
    ],
    "outcomes": {
@@ -2642,14 +2642,14 @@
    "values": {
     "title": "Q.M. GAS & OIL HOUSE PLAN,ELEVATIONS,SECTION &DETAILS",
     "drawing_number": "6899-800",
-    "date": "1940-06-12",
-    "scale": "NOTED"
+    "scale": "NOTED",
+    "date": "1940-06-12"
    },
    "sources": {
     "title": "llm:gpt-4.1-mini",
     "drawing_number": "llm:gpt-4.1-mini",
-    "date": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini"
+    "scale": "llm:gpt-4.1-mini",
+    "date": "llm:gpt-4.1-mini"
    },
    "evidence": {
     "title": [
@@ -2659,12 +2659,12 @@
     "drawing_number": [
      61
     ],
-    "date": [
-     53
-    ],
     "scale": [
      34,
      36
+    ],
+    "date": [
+     53
     ]
    },
    "block_found": true,
@@ -2713,34 +2713,34 @@
    },
    "values": {
     "title": "ALTERATIONS TOQUARTERS",
-    "drawing_number": "5011101 80091",
-    "sheet_count": 2,
+    "scale": "AS SHOWN",
     "revision": "19.3146 E",
-    "scale": "AS SHOWN"
+    "sheet_count": 2,
+    "drawing_number": "5011101 80091"
    },
    "sources": {
     "title": "llm:gpt-4.1-mini",
-    "drawing_number": "llm:gpt-4.1-mini",
-    "sheet_count": "llm:gpt-4.1-mini",
+    "scale": "llm:gpt-4.1-mini",
     "revision": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini"
+    "sheet_count": "llm:gpt-4.1-mini",
+    "drawing_number": "llm:gpt-4.1-mini"
    },
    "evidence": {
     "title": [
      18
     ],
-    "drawing_number": [
-     29,
-     33
-    ],
-    "sheet_count": [
-     38
+    "scale": [
+     36
     ],
     "revision": [
      7
     ],
-    "scale": [
-     36
+    "sheet_count": [
+     38
+    ],
+    "drawing_number": [
+     29,
+     33
     ]
    },
    "block_found": true,
@@ -2927,14 +2927,14 @@
    "values": {
     "title": "ROOSEVELT POWER PLANT PRESENT LAYOUT NEW CHANGESAND ADDITIONS",
     "drawing_number": "F-8-158",
-    "date": "1950-09-07",
-    "scale": "2.2"
+    "scale": "2.2",
+    "date": "1950-09-07"
    },
    "sources": {
     "title": "llm:gpt-4.1-mini",
     "drawing_number": "llm:gpt-4.1-mini",
-    "date": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini"
+    "scale": "llm:gpt-4.1-mini",
+    "date": "llm:gpt-4.1-mini"
    },
    "evidence": {
     "title": [
@@ -2945,12 +2945,12 @@
     "drawing_number": [
      27
     ],
-    "date": [
-     8
-    ],
     "scale": [
      25,
      26
+    ],
+    "date": [
+     8
     ]
    },
    "block_found": true,
@@ -2975,22 +2975,39 @@
     "revision": "invented"
    },
    "values": {
-    "drawing_number": "M08 M01B M07 M10C MO1C M10 M10A M10B",
-    "sheet_number": 6,
-    "scale": "1/8' = 1'-0' 1/4° = 1'-0°",
     "title": "MEZZANINE FLOOR PLAN CONSTRUTION AND REFLECTED CEILING MEZZANINE WINDOWMODIFICATIONS",
+    "scale": "1/8' = 1'-0' 1/4° = 1'-0°",
+    "sheet_number": 6,
     "revision": "E",
-    "sheet_count": 29
+    "sheet_count": 29,
+    "drawing_number": "M08 M01B M07 M10C MO1C M10 M10A M10B"
    },
    "sources": {
-    "drawing_number": "llm:gpt-4.1-mini",
-    "sheet_number": "rule:sheet-of",
-    "scale": "llm:gpt-4.1-mini",
     "title": "llm:gpt-4.1-mini",
+    "scale": "llm:gpt-4.1-mini",
+    "sheet_number": "rule:sheet-of",
     "revision": "llm:gpt-4.1-mini",
-    "sheet_count": "rule:sheet-of"
+    "sheet_count": "rule:sheet-of",
+    "drawing_number": "llm:gpt-4.1-mini"
    },
    "evidence": {
+    "title": [
+     10,
+     23
+    ],
+    "scale": [
+     11,
+     32
+    ],
+    "sheet_number": [
+     1
+    ],
+    "revision": [
+     26
+    ],
+    "sheet_count": [
+     1
+    ],
     "drawing_number": [
      0,
      2,
@@ -3000,23 +3017,6 @@
      7,
      8,
      9
-    ],
-    "sheet_number": [
-     1
-    ],
-    "scale": [
-     11,
-     32
-    ],
-    "title": [
-     10,
-     23
-    ],
-    "revision": [
-     26
-    ],
-    "sheet_count": [
-     1
     ]
    },
    "block_found": true,
@@ -3080,21 +3080,18 @@
     "revision": "invented"
    },
    "values": {
-    "revision": "REVISIONS",
     "title": "MACDILL FIELD TAMPA FLORIDA PAINT- OIL & DOPE BLDG. PLAN & ELEVATIONS",
     "drawing_number": "6899-146",
-    "scale": "/4°=1-O\""
+    "scale": "/4°=1-O\"",
+    "revision": "REVISIONS"
    },
    "sources": {
-    "revision": "llm:gpt-4.1-mini",
     "title": "llm:gpt-4.1-mini",
     "drawing_number": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini"
+    "scale": "llm:gpt-4.1-mini",
+    "revision": "llm:gpt-4.1-mini"
    },
    "evidence": {
-    "revision": [
-     8
-    ],
     "title": [
      9,
      11,
@@ -3106,6 +3103,9 @@
     ],
     "scale": [
      5
+    ],
+    "revision": [
+     8
     ]
    },
    "block_found": true,
@@ -3154,17 +3154,17 @@
    },
    "values": {
     "title": "△ MANTLE AND FIREPLACE RECEPTION HALL ELEVATION SECTION. U·S·MARINE·RESERVATION· REMODELING AND REBUILDING. QUARTERS·M-1. DETAILS",
-    "drawing_number": "M1-A-6",
-    "sheet_number": 2,
+    "scale": "3/4INCH=1FOOT",
     "sheet_count": 3,
-    "scale": "3/4INCH=1FOOT"
+    "drawing_number": "M1-A-6",
+    "sheet_number": 2
    },
    "sources": {
     "title": "llm:gpt-4.1-mini",
-    "drawing_number": "llm:gpt-4.1-mini",
-    "sheet_number": "llm:gpt-4.1-mini",
+    "scale": "llm:gpt-4.1-mini",
     "sheet_count": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini"
+    "drawing_number": "llm:gpt-4.1-mini",
+    "sheet_number": "llm:gpt-4.1-mini"
    },
    "evidence": {
     "title": [
@@ -3177,17 +3177,17 @@
      23,
      27
     ],
+    "scale": [
+     29
+    ],
+    "sheet_count": [
+     8
+    ],
     "drawing_number": [
      39
     ],
     "sheet_number": [
      8
-    ],
-    "sheet_count": [
-     8
-    ],
-    "scale": [
-     29
     ]
    },
    "block_found": true,
@@ -3213,19 +3213,19 @@
    },
    "values": {
     "title": "STRATEGIC AIR COMMAND CONSTRUCT SECURITY GUARD FACILITY SLC-3 (BLDG.768) GATE HOUSE PLANS, ELEVATIONS AND DETAILS",
-    "drawing_number": "VAB7G-005C",
-    "sheet_number": 5,
-    "sheet_count": 8,
+    "scale": "AS NOTED",
     "date": "1975-01-14",
-    "scale": "AS NOTED"
+    "sheet_count": 8,
+    "drawing_number": "VAB7G-005C",
+    "sheet_number": 5
    },
    "sources": {
     "title": "llm:gpt-4.1-mini",
-    "drawing_number": "llm:gpt-4.1-mini",
-    "sheet_number": "rule:sheet-of",
-    "sheet_count": "llm:gpt-4.1-mini",
+    "scale": "llm:gpt-4.1-mini",
     "date": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini"
+    "sheet_count": "llm:gpt-4.1-mini",
+    "drawing_number": "llm:gpt-4.1-mini",
+    "sheet_number": "rule:sheet-of"
    },
    "evidence": {
     "title": [
@@ -3236,20 +3236,20 @@
      18,
      21
     ],
+    "scale": [
+     35
+    ],
+    "date": [
+     41
+    ],
+    "sheet_count": [
+     39
+    ],
     "drawing_number": [
      42
     ],
     "sheet_number": [
      39
-    ],
-    "sheet_count": [
-     39
-    ],
-    "date": [
-     41
-    ],
-    "scale": [
-     35
     ]
    },
    "block_found": true,
@@ -3275,14 +3275,14 @@
    "values": {
     "title": "STATE BOARD OF PUBLIC ROADS BRIDGE DEPARTMENT HUNTS RIVER R. R. BRIDGE NORTH KINGSTOWN, R.I. GIRDER",
     "drawing_number": "PRINT NO",
-    "date": "1930-03-10",
-    "scale": "RECIPROCAL SCALE RECIPROCAL 8 REDUCTION SCALE RECIPROCAL 4 REDUCTION"
+    "scale": "RECIPROCAL SCALE RECIPROCAL 8 REDUCTION SCALE RECIPROCAL 4 REDUCTION",
+    "date": "1930-03-10"
    },
    "sources": {
     "title": "llm:gpt-4.1-mini",
     "drawing_number": "llm:gpt-4.1-mini",
-    "date": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini"
+    "scale": "llm:gpt-4.1-mini",
+    "date": "llm:gpt-4.1-mini"
    },
    "evidence": {
     "title": [
@@ -3295,9 +3295,6 @@
     "drawing_number": [
      54
     ],
-    "date": [
-     61
-    ],
     "scale": [
      24,
      26,
@@ -3309,6 +3306,9 @@
      47,
      49,
      52
+    ],
+    "date": [
+     61
     ]
    },
    "block_found": true,
@@ -3373,14 +3373,14 @@
    "values": {
     "title": "RENOVATEISTFLOORHEADBUILDING NO.1FLOORPLANOECTIONELEVATION",
     "drawing_number": "5160857",
-    "date": "1982-04-02",
-    "scale": "AS SHOWN"
+    "scale": "AS SHOWN",
+    "date": "1982-04-02"
    },
    "sources": {
     "title": "llm:gpt-4.1-mini",
     "drawing_number": "llm:gpt-4.1-mini",
-    "date": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini"
+    "scale": "llm:gpt-4.1-mini",
+    "date": "llm:gpt-4.1-mini"
    },
    "evidence": {
     "title": [
@@ -3391,11 +3391,11 @@
     "drawing_number": [
      41
     ],
-    "date": [
-     35
-    ],
     "scale": [
      46
+    ],
+    "date": [
+     35
     ]
    },
    "block_found": true,
@@ -3421,21 +3421,18 @@
     "revision": "invented"
    },
    "values": {
-    "revision": "REVISIONS",
     "title": "SOUTHEAST-AIR-BASE DOUBLE N.C.O. QUARTERS ELEVATIONS & SECTION",
     "drawing_number": "625-4577",
-    "scale": "1/4=1.0°. AS NOTED"
+    "scale": "1/4=1.0°. AS NOTED",
+    "revision": "REVISIONS"
    },
    "sources": {
-    "revision": "llm:gpt-4.1-mini",
     "title": "llm:gpt-4.1-mini",
     "drawing_number": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini"
+    "scale": "llm:gpt-4.1-mini",
+    "revision": "llm:gpt-4.1-mini"
    },
    "evidence": {
-    "revision": [
-     7
-    ],
     "title": [
      8,
      13,
@@ -3447,6 +3444,9 @@
     "scale": [
      4,
      5
+    ],
+    "revision": [
+     7
     ]
    },
    "block_found": true,
@@ -3528,19 +3528,19 @@
    },
    "values": {
     "title": "GILA RIVER PROJECT PIMA LATERAL HEADWORKS RADIAL GATES",
-    "drawing_number": "P-24-1",
-    "sheet_number": 2,
-    "sheet_count": 2,
+    "scale": "As noted",
     "date": "1924-09",
-    "scale": "As noted"
+    "sheet_count": 2,
+    "drawing_number": "P-24-1",
+    "sheet_number": 2
    },
    "sources": {
     "title": "llm:gpt-4.1-mini",
-    "drawing_number": "llm:gpt-4.1-mini",
-    "sheet_number": "llm:gpt-4.1-mini",
-    "sheet_count": "llm:gpt-4.1-mini",
+    "scale": "llm:gpt-4.1-mini",
     "date": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini"
+    "sheet_count": "llm:gpt-4.1-mini",
+    "drawing_number": "llm:gpt-4.1-mini",
+    "sheet_number": "llm:gpt-4.1-mini"
    },
    "evidence": {
     "title": [
@@ -3549,20 +3549,20 @@
      8,
      10
     ],
+    "scale": [
+     13
+    ],
+    "date": [
+     20
+    ],
+    "sheet_count": [
+     19
+    ],
     "drawing_number": [
      21
     ],
     "sheet_number": [
      19
-    ],
-    "sheet_count": [
-     19
-    ],
-    "date": [
-     20
-    ],
-    "scale": [
-     13
     ]
    },
    "block_found": true,
@@ -3587,17 +3587,17 @@
    },
    "values": {
     "title": "TRANSFORPIR BUILDING FOR ROOSEVELT POWERPLANT FIPST, FLOCR PLAN AND SECTIONS",
-    "drawing_number": "A-20-24",
-    "sheet_number": 1,
+    "scale": "-IFt. ROOSEVELT RRIR. FEBR.17…S",
     "revision": "B.FJ",
-    "scale": "-IFt. ROOSEVELT RRIR. FEBR.17…S"
+    "drawing_number": "A-20-24",
+    "sheet_number": 1
    },
    "sources": {
     "title": "llm:gpt-4.1-mini",
-    "drawing_number": "llm:gpt-4.1-mini",
-    "sheet_number": "llm:gpt-4.1-mini",
+    "scale": "llm:gpt-4.1-mini",
     "revision": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini"
+    "drawing_number": "llm:gpt-4.1-mini",
+    "sheet_number": "llm:gpt-4.1-mini"
    },
    "evidence": {
     "title": [
@@ -3605,17 +3605,17 @@
      4,
      5
     ],
+    "scale": [
+     7
+    ],
+    "revision": [
+     11
+    ],
     "drawing_number": [
      10
     ],
     "sheet_number": [
      8
-    ],
-    "revision": [
-     11
-    ],
-    "scale": [
-     7
     ]
    },
    "block_found": true,
@@ -3743,21 +3743,18 @@
     "revision": "invented"
    },
    "values": {
-    "revision": "REV",
     "title": "BLDG.215-WATER-PROOFING PLANS, ELEV. $ SECT",
     "drawing_number": "03-4429",
-    "scale": "1/8\"=1'-0\""
+    "scale": "1/8\"=1'-0\"",
+    "revision": "REV"
    },
    "sources": {
-    "revision": "llm:gpt-4.1-mini",
     "title": "llm:gpt-4.1-mini",
     "drawing_number": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini"
+    "scale": "llm:gpt-4.1-mini",
+    "revision": "llm:gpt-4.1-mini"
    },
    "evidence": {
-    "revision": [
-     0
-    ],
     "title": [
      22,
      23
@@ -3767,6 +3764,9 @@
     ],
     "scale": [
      36
+    ],
+    "revision": [
+     0
     ]
    },
    "block_found": true,
@@ -3815,34 +3815,34 @@
    },
    "values": {
     "title": "HOUSING FACILITIES FOR WAVES OFFICERS'QUARTERS",
-    "drawing_number": "733-A-2",
-    "sheet_number": 4,
+    "date": "1943-10-27",
     "sheet_count": 45,
-    "date": "1943-10-27"
+    "drawing_number": "733-A-2",
+    "sheet_number": 4
    },
    "sources": {
     "title": "llm:gpt-4.1-mini",
-    "drawing_number": "llm:gpt-4.1-mini",
-    "sheet_number": "llm:gpt-4.1-mini",
+    "date": "llm:gpt-4.1-mini",
     "sheet_count": "llm:gpt-4.1-mini",
-    "date": "llm:gpt-4.1-mini"
+    "drawing_number": "llm:gpt-4.1-mini",
+    "sheet_number": "llm:gpt-4.1-mini"
    },
    "evidence": {
     "title": [
      36,
      37
     ],
+    "date": [
+     47
+    ],
+    "sheet_count": [
+     42
+    ],
     "drawing_number": [
      53
     ],
     "sheet_number": [
      42
-    ],
-    "sheet_count": [
-     42
-    ],
-    "date": [
-     47
     ]
    },
    "block_found": true,
@@ -3952,14 +3952,14 @@
    "values": {
     "title": "RESIDENCE FOR MR.E.P·MILLER OAKWOOD PLACE RIVMT",
     "drawing_number": "460",
-    "sheet_number": 5,
-    "scale": "#=1-0"
+    "scale": "#=1-0",
+    "sheet_number": 5
    },
    "sources": {
     "title": "llm:gpt-4.1-mini",
     "drawing_number": "llm:gpt-4.1-mini",
-    "sheet_number": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini"
+    "scale": "llm:gpt-4.1-mini",
+    "sheet_number": "llm:gpt-4.1-mini"
    },
    "evidence": {
     "title": [
@@ -3969,11 +3969,11 @@
     "drawing_number": [
      3
     ],
-    "sheet_number": [
-     4
-    ],
     "scale": [
      2
+    ],
+    "sheet_number": [
+     4
     ]
    },
    "block_found": true,
@@ -4018,8 +4018,8 @@
    "status": "needs_review",
    "reasons": [
     "low OCR confidence on title (0.80)",
-    "low OCR confidence on revision (0.71)",
     "low OCR confidence on scale (0.76)",
+    "low OCR confidence on revision (0.71)",
     "readers disagree on title: \"SECOND CORPS AREA FORT JAY GOV'S ISL. BUILDING NS 205 PLAN OF FIRST FLOOR CONSTRUCTION\" vs \"SECOND CORPS AREA FORT JAY GOV'S ISL. COL.KARL TRUESDELL CAPT.L.FFELIO J.F. WHITNEY PLAN OF FIRST FLOOR\"",
     "readers disagree on drawing_number: '43-1-1' vs 'N2'"
    ],
@@ -4034,19 +4034,19 @@
    },
    "values": {
     "title": "SECOND CORPS AREA FORT JAY GOV'S ISL. BUILDING NS 205 PLAN OF FIRST FLOOR CONSTRUCTION",
-    "drawing_number": "43-1-1",
-    "sheet_number": 2,
+    "scale": "4:1'0",
     "revision": "N2",
     "date": "1937-11-24",
-    "scale": "4:1'0"
+    "drawing_number": "43-1-1",
+    "sheet_number": 2
    },
    "sources": {
     "title": "llm:gpt-4.1-mini",
-    "drawing_number": "llm:gpt-4.1-mini",
-    "sheet_number": "llm:gpt-4.1-mini",
+    "scale": "llm:gpt-4.1-mini",
     "revision": "llm:gpt-4.1-mini",
     "date": "rule:date-near-label",
-    "scale": "llm:gpt-4.1-mini"
+    "drawing_number": "llm:gpt-4.1-mini",
+    "sheet_number": "llm:gpt-4.1-mini"
    },
    "evidence": {
     "title": [
@@ -4056,11 +4056,9 @@
      25,
      26
     ],
-    "drawing_number": [
-     39
-    ],
-    "sheet_number": [
-     36
+    "scale": [
+     27,
+     30
     ],
     "revision": [
      35
@@ -4068,9 +4066,11 @@
     "date": [
      37
     ],
-    "scale": [
-     27,
-     30
+    "drawing_number": [
+     39
+    ],
+    "sheet_number": [
+     36
     ]
    },
    "block_found": true,
@@ -4119,33 +4119,33 @@
    },
    "values": {
     "title": "FORT-JAY..GOVERNORS-ISLAND..N.YH",
-    "drawing_number": "BUILDING-#2O2·DWGZOZ-8",
-    "sheet_number": 3,
     "revision": "G",
-    "date": "1934-05-23"
+    "date": "1934-05-23",
+    "drawing_number": "BUILDING-#2O2·DWGZOZ-8",
+    "sheet_number": 3
    },
    "sources": {
     "title": "llm:gpt-4.1-mini",
-    "drawing_number": "llm:gpt-4.1-mini",
-    "sheet_number": "llm:gpt-4.1-mini",
     "revision": "llm:gpt-4.1-mini",
-    "date": "llm:gpt-4.1-mini"
+    "date": "llm:gpt-4.1-mini",
+    "drawing_number": "llm:gpt-4.1-mini",
+    "sheet_number": "llm:gpt-4.1-mini"
    },
    "evidence": {
     "title": [
      8
-    ],
-    "drawing_number": [
-     7
-    ],
-    "sheet_number": [
-     11
     ],
     "revision": [
      10
     ],
     "date": [
      9
+    ],
+    "drawing_number": [
+     7
+    ],
+    "sheet_number": [
+     11
     ]
    },
    "block_found": true,
@@ -4229,24 +4229,24 @@
    },
    "values": {
     "title": "NEW LONDON LEDGE LIGHT STATION",
-    "drawing_number": "03-2730",
+    "scale": "NOTED",
     "revision": "B A",
     "date": "1970-05-20",
-    "scale": "NOTED"
+    "drawing_number": "03-2730"
    },
    "sources": {
     "title": "llm:gpt-4.1-mini",
-    "drawing_number": "llm:gpt-4.1-mini",
+    "scale": "llm:gpt-4.1-mini",
     "revision": "llm:gpt-4.1-mini",
     "date": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini"
+    "drawing_number": "llm:gpt-4.1-mini"
    },
    "evidence": {
     "title": [
      21
     ],
-    "drawing_number": [
-     36
+    "scale": [
+     37
     ],
     "revision": [
      0,
@@ -4255,8 +4255,8 @@
     "date": [
      1
     ],
-    "scale": [
-     37
+    "drawing_number": [
+     36
     ]
    },
    "block_found": true,
@@ -4320,22 +4320,22 @@
     "revision": "invented"
    },
    "values": {
-    "revision": "H",
     "title": "ASSIGNMENT OF ROOMS TO MEDICAL EXAM,NURSES LOCKER, SWITCH BOARD  ELEC.SHOP IN ACCOROANCE",
+    "revision": "H",
     "date": "1944-04-08"
    },
    "sources": {
-    "revision": "llm:gpt-4.1-mini",
     "title": "rule:largest-lettering",
+    "revision": "llm:gpt-4.1-mini",
     "date": "llm:gpt-4.1-mini"
    },
    "evidence": {
-    "revision": [
-     5
-    ],
     "title": [
      1,
      2
+    ],
+    "revision": [
+     5
     ],
     "date": [
      4,
@@ -4596,33 +4596,27 @@
    },
    "values": {
     "title": "Curved Wing Wall Offsets",
-    "drawing_number": "2:2-2=1",
-    "sheet_number": 3,
-    "sheet_count": 4,
+    "revision": "A",
     "date": "1934-08-30",
-    "revision": "A"
+    "sheet_count": 4,
+    "drawing_number": "2:2-2=1",
+    "sheet_number": 3
    },
    "sources": {
     "title": "llm:gpt-4.1-mini",
-    "drawing_number": "llm:gpt-4.1-mini",
-    "sheet_number": "llm:gpt-4.1-mini",
-    "sheet_count": "llm:gpt-4.1-mini",
+    "revision": "llm:gpt-4.1-mini",
     "date": "llm:gpt-4.1-mini",
-    "revision": "llm:gpt-4.1-mini"
+    "sheet_count": "llm:gpt-4.1-mini",
+    "drawing_number": "llm:gpt-4.1-mini",
+    "sheet_number": "llm:gpt-4.1-mini"
    },
    "evidence": {
     "title": [
      14,
      16
     ],
-    "drawing_number": [
-     36
-    ],
-    "sheet_number": [
-     35
-    ],
-    "sheet_count": [
-     35
+    "revision": [
+     34
     ],
     "date": [
      28,
@@ -4630,8 +4624,14 @@
      31,
      33
     ],
-    "revision": [
-     34
+    "sheet_count": [
+     35
+    ],
+    "drawing_number": [
+     36
+    ],
+    "sheet_number": [
+     35
     ]
    },
    "block_found": true,
@@ -4911,11 +4911,11 @@
    "correct": false,
    "status": "needs_review",
    "reasons": [
-    "low OCR confidence on scale (0.65)",
     "low OCR confidence on title (0.79)",
-    "readers disagree on drawing_number: 'TO-700-5500' vs 'ENTIRS 98EET'",
+    "low OCR confidence on scale (0.65)",
+    "readers disagree on title: 'FLOOR PLAN ELEVATION-A- GENERAL NOTES TITLE DSTAIL KOA' vs 'ELECT. . HEAT.'",
     "readers disagree on scale: \"Y0'= -0°\" vs 'SHOWN'",
-    "readers disagree on title: 'FLOOR PLAN ELEVATION-A- GENERAL NOTES TITLE DSTAIL KOA' vs 'ELECT. . HEAT.'"
+    "readers disagree on drawing_number: 'TO-700-5500' vs 'ENTIRS 98EET'"
    ],
    "outcomes": {
     "drawing_number": "wrong",
@@ -4927,29 +4927,20 @@
     "revision": "wrong"
    },
    "values": {
-    "drawing_number": "TO-700-5500",
-    "scale": "Y0'= -0°",
     "title": "FLOOR PLAN ELEVATION-A- GENERAL NOTES TITLE DSTAIL KOA",
+    "date": "1912-01-04",
+    "scale": "Y0'= -0°",
     "revision": "REVISIONS",
-    "date": "1912-01-04"
+    "drawing_number": "TO-700-5500"
    },
    "sources": {
-    "drawing_number": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini",
     "title": "llm:gpt-4.1-mini",
+    "date": "rule:date-unlabelled",
+    "scale": "llm:gpt-4.1-mini",
     "revision": "llm:gpt-4.1-mini",
-    "date": "rule:date-unlabelled"
+    "drawing_number": "llm:gpt-4.1-mini"
    },
    "evidence": {
-    "drawing_number": [
-     148,
-     150
-    ],
-    "scale": [
-     119,
-     120,
-     130
-    ],
     "title": [
      45,
      46,
@@ -4959,12 +4950,21 @@
      56,
      57
     ],
+    "date": [
+     98
+    ],
+    "scale": [
+     119,
+     120,
+     130
+    ],
     "revision": [
      123,
      124
     ],
-    "date": [
-     98
+    "drawing_number": [
+     148,
+     150
     ]
    },
    "block_found": true,
@@ -4990,23 +4990,18 @@
     "revision": "invented"
    },
    "values": {
-    "revision": "G",
     "title": "NAVY YARD, MARE ISLAND,CALIF ZUARTERS REMODELING PLANS",
     "drawing_number": "10100-1",
-    "scale": "14\"= 1'-0"
+    "scale": "14\"= 1'-0",
+    "revision": "G"
    },
    "sources": {
-    "revision": "llm:gpt-4.1-mini",
     "title": "llm:gpt-4.1-mini",
     "drawing_number": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini"
+    "scale": "llm:gpt-4.1-mini",
+    "revision": "llm:gpt-4.1-mini"
    },
    "evidence": {
-    "revision": [
-     12,
-     25,
-     26
-    ],
     "title": [
      9,
      11,
@@ -5018,6 +5013,11 @@
     ],
     "scale": [
      22
+    ],
+    "revision": [
+     12,
+     25,
+     26
     ]
    },
    "block_found": true,
@@ -5043,14 +5043,14 @@
    "values": {
     "title": "SERVANTS'HOUSE QUARTERS",
     "drawing_number": "A-3817-2",
-    "date": "1936-12-28",
-    "scale": "4\"= 1-0\""
+    "scale": "4\"= 1-0\"",
+    "date": "1936-12-28"
    },
    "sources": {
     "title": "llm:gpt-4.1-mini",
     "drawing_number": "llm:gpt-4.1-mini",
-    "date": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini"
+    "scale": "llm:gpt-4.1-mini",
+    "date": "llm:gpt-4.1-mini"
    },
    "evidence": {
     "title": [
@@ -5060,11 +5060,11 @@
     "drawing_number": [
      8
     ],
-    "date": [
-     6
-    ],
     "scale": [
      5
+    ],
+    "date": [
+     6
     ]
    },
    "block_found": true,
@@ -5199,21 +5199,18 @@
     "revision": "invented"
    },
    "values": {
-    "revision": "D",
     "title": "EAST WASHINGTON AVE. BRIDGE OVER PE2UONNOCK RIVER POR THE CAYGE BRIDGEPORT. CONN",
-    "sheet_number": 13,
-    "scale": "Ee-12=10°"
+    "scale": "Ee-12=10°",
+    "revision": "D",
+    "sheet_number": 13
    },
    "sources": {
-    "revision": "llm:gpt-4.1-mini",
     "title": "llm:gpt-4.1-mini",
-    "sheet_number": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini"
+    "scale": "llm:gpt-4.1-mini",
+    "revision": "llm:gpt-4.1-mini",
+    "sheet_number": "llm:gpt-4.1-mini"
    },
    "evidence": {
-    "revision": [
-     14
-    ],
     "title": [
      0,
      1,
@@ -5221,12 +5218,15 @@
      3,
      4
     ],
+    "scale": [
+     8
+    ],
+    "revision": [
+     14
+    ],
     "sheet_number": [
      15,
      16
-    ],
-    "scale": [
-     8
     ]
    },
    "block_found": true,
@@ -5297,13 +5297,13 @@
    },
    "values": {
     "title": "ICE HOUSE. WEST POINT NY GALLERY SECTION & HOIST ADJUSTABLE GALLERY",
-    "date": "1916-04",
-    "scale": "=1Foot"
+    "scale": "=1Foot",
+    "date": "1916-04"
    },
    "sources": {
     "title": "llm:gpt-4.1-mini",
-    "date": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini"
+    "scale": "llm:gpt-4.1-mini",
+    "date": "llm:gpt-4.1-mini"
    },
    "evidence": {
     "title": [
@@ -5311,11 +5311,11 @@
      19,
      21
     ],
-    "date": [
-     29
-    ],
     "scale": [
      26
+    ],
+    "date": [
+     29
     ]
    },
    "block_found": true,
@@ -5341,14 +5341,14 @@
    "values": {
     "title": "POST-OFFICE LOCATION PLAN AND DETAILS",
     "drawing_number": "1391",
-    "date": "1918-06-19",
-    "scale": "10, #1o"
+    "scale": "10, #1o",
+    "date": "1918-06-19"
    },
    "sources": {
     "title": "llm:gpt-4.1-mini",
     "drawing_number": "llm:gpt-4.1-mini",
-    "date": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini"
+    "scale": "llm:gpt-4.1-mini",
+    "date": "llm:gpt-4.1-mini"
    },
    "evidence": {
     "title": [
@@ -5358,11 +5358,11 @@
     "drawing_number": [
      7
     ],
-    "date": [
-     4
-    ],
     "scale": [
      5
+    ],
+    "date": [
+     4
     ]
    },
    "block_found": true,
@@ -5374,11 +5374,11 @@
    "correct": false,
    "status": "needs_review",
    "reasons": [
-    "low OCR confidence on drawing_number (0.68)",
     "low OCR confidence on title (0.76)",
     "low OCR confidence on date (0.66)",
-    "readers disagree on scale: 'AS SHOWNSPEC. 6 -87-M-L52Z' vs 'AS SHOWN'",
-    "readers disagree on title: 'PROIECT LacOTOHt REGIONAL MAP BAYOU NO 292' vs '-NAVY PROPERTY LINE'"
+    "low OCR confidence on drawing_number (0.68)",
+    "readers disagree on title: 'PROIECT LacOTOHt REGIONAL MAP BAYOU NO 292' vs '-NAVY PROPERTY LINE'",
+    "readers disagree on scale: 'AS SHOWNSPEC. 6 -87-M-L52Z' vs 'AS SHOWN'"
    ],
    "outcomes": {
     "drawing_number": "wrong",
@@ -5390,29 +5390,20 @@
     "revision": "absent"
    },
    "values": {
-    "drawing_number": "51L01342",
-    "sheet_number": 3,
-    "scale": "AS SHOWNSPEC. 6 -87-M-L52Z",
     "title": "PROIECT LacOTOHt REGIONAL MAP BAYOU NO 292",
-    "date": "1907-05-20"
+    "date": "1907-05-20",
+    "scale": "AS SHOWNSPEC. 6 -87-M-L52Z",
+    "sheet_number": 3,
+    "drawing_number": "51L01342"
    },
    "sources": {
-    "drawing_number": "llm:gpt-4.1-mini",
-    "sheet_number": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini",
     "title": "llm:gpt-4.1-mini",
-    "date": "rule:date-unlabelled"
+    "date": "rule:date-unlabelled",
+    "scale": "llm:gpt-4.1-mini",
+    "sheet_number": "llm:gpt-4.1-mini",
+    "drawing_number": "llm:gpt-4.1-mini"
    },
    "evidence": {
-    "drawing_number": [
-     154
-    ],
-    "sheet_number": [
-     159
-    ],
-    "scale": [
-     158
-    ],
     "title": [
      24,
      25,
@@ -5421,6 +5412,15 @@
     ],
     "date": [
      144
+    ],
+    "scale": [
+     158
+    ],
+    "sheet_number": [
+     159
+    ],
+    "drawing_number": [
+     154
     ]
    },
    "block_found": true,
@@ -5450,14 +5450,14 @@
    "values": {
     "title": "KINGSTON STATION R.R. BRIDGE",
     "drawing_number": "71-,0",
-    "date": "1935-11-15",
-    "scale": "1'-20'-0'"
+    "scale": "1'-20'-0'",
+    "date": "1935-11-15"
    },
    "sources": {
     "title": "llm:gpt-4.1-mini",
     "drawing_number": "llm:gpt-4.1-mini",
-    "date": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini"
+    "scale": "llm:gpt-4.1-mini",
+    "date": "llm:gpt-4.1-mini"
    },
    "evidence": {
     "title": [
@@ -5466,13 +5466,13 @@
     "drawing_number": [
      36
     ],
-    "date": [
-     235,
-     240
-    ],
     "scale": [
      5,
      248
+    ],
+    "date": [
+     235,
+     240
     ]
    },
    "block_found": true,
@@ -5611,39 +5611,39 @@
    },
    "values": {
     "title": "R-6 I9 30 L.O. HOUSE HIP ROOF BLOCK",
-    "drawing_number": "L- 4",
-    "sheet_number": 3,
-    "sheet_count": 8,
+    "scale": "\"=1'-0\"",
     "revision": "1932 REVISION",
-    "scale": "\"=1'-0\""
+    "sheet_count": 8,
+    "drawing_number": "L- 4",
+    "sheet_number": 3
    },
    "sources": {
     "title": "llm:gpt-4.1-mini",
-    "drawing_number": "llm:gpt-4.1-mini",
-    "sheet_number": "llm:gpt-4.1-mini",
-    "sheet_count": "llm:gpt-4.1-mini",
+    "scale": "llm:gpt-4.1-mini",
     "revision": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini"
+    "sheet_count": "llm:gpt-4.1-mini",
+    "drawing_number": "llm:gpt-4.1-mini",
+    "sheet_number": "llm:gpt-4.1-mini"
    },
    "evidence": {
     "title": [
      7,
      8
     ],
+    "scale": [
+     4
+    ],
+    "revision": [
+     12
+    ],
+    "sheet_count": [
+     14
+    ],
     "drawing_number": [
      6
     ],
     "sheet_number": [
      14
-    ],
-    "sheet_count": [
-     14
-    ],
-    "revision": [
-     12
-    ],
-    "scale": [
-     4
     ]
    },
    "block_found": true,
@@ -5669,21 +5669,18 @@
     "revision": "invented"
    },
    "values": {
-    "revision": "B",
     "title": "DEPT YARDS & DOCKS U.S. NAVY YARD MARE ISLAND CAL. PRISON EXTEASION. BUILDING 84",
     "drawing_number": "B1231",
-    "scale": "IN = IFOOT"
+    "scale": "IN = IFOOT",
+    "revision": "B"
    },
    "sources": {
-    "revision": "llm:gpt-4.1-mini",
     "title": "llm:gpt-4.1-mini",
     "drawing_number": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini"
+    "scale": "llm:gpt-4.1-mini",
+    "revision": "llm:gpt-4.1-mini"
    },
    "evidence": {
-    "revision": [
-     12
-    ],
     "title": [
      5,
      6,
@@ -5696,6 +5693,9 @@
     ],
     "scale": [
      10
+    ],
+    "revision": [
+     12
     ]
    },
    "block_found": true,
@@ -5721,25 +5721,25 @@
    },
    "values": {
     "title": "INO.1 PUMP\\HOUSE NO1PUMP·HOUSE",
-    "drawing_number": "689-6681",
+    "scale": "AS NOTED",
     "revision": "BCDE 21",
     "date": "1940-12-05",
-    "scale": "AS NOTED"
+    "drawing_number": "689-6681"
    },
    "sources": {
     "title": "llm:gpt-4.1-mini",
-    "drawing_number": "llm:gpt-4.1-mini",
+    "scale": "llm:gpt-4.1-mini",
     "revision": "llm:gpt-4.1-mini",
     "date": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini"
+    "drawing_number": "llm:gpt-4.1-mini"
    },
    "evidence": {
     "title": [
      0,
      20
     ],
-    "drawing_number": [
-     31
+    "scale": [
+     8
     ],
     "revision": [
      34
@@ -5747,8 +5747,8 @@
     "date": [
      28
     ],
-    "scale": [
-     8
+    "drawing_number": [
+     31
     ]
    },
    "block_found": true,
@@ -5802,8 +5802,8 @@
    "correct": false,
    "status": "needs_review",
    "reasons": [
-    "low OCR confidence on drawing_number (0.76)",
     "low OCR confidence on revision (0.56)",
+    "low OCR confidence on drawing_number (0.76)",
     "readers disagree on drawing_number: '130/913/PC' vs '5161627'"
    ],
    "outcomes": {
@@ -5817,46 +5817,46 @@
    },
    "values": {
     "title": "EMERGENCY POWER TO BUILDING 51",
-    "drawing_number": "130/913/PC",
-    "date": "1987-07-21",
-    "sheet_number": 1,
-    "sheet_count": 1,
+    "scale": "AS SHOWN",
     "revision": "0",
-    "scale": "AS SHOWN"
+    "date": "1987-07-21",
+    "sheet_count": 1,
+    "drawing_number": "130/913/PC",
+    "sheet_number": 1
    },
    "sources": {
     "title": "llm:gpt-4.1-mini",
-    "drawing_number": "llm:gpt-4.1-mini",
-    "date": "rule:date-near-label",
-    "sheet_number": "llm:gpt-4.1-mini",
-    "sheet_count": "llm:gpt-4.1-mini",
+    "scale": "llm:gpt-4.1-mini",
     "revision": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini"
+    "date": "rule:date-near-label",
+    "sheet_count": "llm:gpt-4.1-mini",
+    "drawing_number": "llm:gpt-4.1-mini",
+    "sheet_number": "llm:gpt-4.1-mini"
    },
    "evidence": {
     "title": [
      24,
      26
     ],
-    "drawing_number": [
-     2
+    "scale": [
+     44
+    ],
+    "revision": [
+     8
     ],
     "date": [
      30
-    ],
-    "sheet_number": [
-     46,
-     47
     ],
     "sheet_count": [
      46,
      47
     ],
-    "revision": [
-     8
+    "drawing_number": [
+     2
     ],
-    "scale": [
-     44
+    "sheet_number": [
+     46,
+     47
     ]
    },
    "block_found": true,
@@ -5868,8 +5868,8 @@
    "correct": false,
    "status": "needs_review",
    "reasons": [
-    "readers disagree on drawing_number: 'A13-540' vs '901-6689'",
-    "readers disagree on title: 'SOUTHEAST AIRBASE-TAMPA,FLORIDA PHOTOGRAPHIC LABORATGRY BUILDING PLANS' vs 'AIR CORPS.'"
+    "readers disagree on title: 'SOUTHEAST AIRBASE-TAMPA,FLORIDA PHOTOGRAPHIC LABORATGRY BUILDING PLANS' vs 'AIR CORPS.'",
+    "readers disagree on drawing_number: 'A13-540' vs '901-6689'"
    ],
    "outcomes": {
     "drawing_number": "wrong",
@@ -5881,36 +5881,36 @@
     "revision": "correct"
    },
    "values": {
-    "drawing_number": "A13-540",
-    "scale": "AS NOTED",
     "title": "SOUTHEAST AIRBASE-TAMPA,FLORIDA PHOTOGRAPHIC LABORATGRY BUILDING PLANS",
+    "date": "1977-12",
+    "scale": "AS NOTED",
     "revision": "A",
-    "date": "1977-12"
+    "drawing_number": "A13-540"
    },
    "sources": {
-    "drawing_number": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini",
     "title": "llm:gpt-4.1-mini",
+    "date": "rule:date-unlabelled",
+    "scale": "llm:gpt-4.1-mini",
     "revision": "llm:gpt-4.1-mini",
-    "date": "rule:date-unlabelled"
+    "drawing_number": "llm:gpt-4.1-mini"
    },
    "evidence": {
-    "drawing_number": [
-     67
-    ],
-    "scale": [
-     49
-    ],
     "title": [
      61,
      75,
      80
     ],
+    "date": [
+     105
+    ],
+    "scale": [
+     49
+    ],
     "revision": [
      6
     ],
-    "date": [
-     105
+    "drawing_number": [
+     67
     ]
    },
    "block_found": true,
@@ -6350,21 +6350,18 @@
     "revision": "invented"
    },
    "values": {
-    "revision": "AL",
     "title": "MACDILL FIELDLA(SOUTHEAST AID BASE,-AMPA FLA.)Q.M\u0000WAREHOUSEOMMISSARYFIRST FLOORPLADOORDETAILS",
     "drawing_number": "6899-480",
-    "scale": "AS NOTED"
+    "scale": "AS NOTED",
+    "revision": "AL"
    },
    "sources": {
-    "revision": "llm:gpt-4.1-mini",
     "title": "llm:gpt-4.1-mini",
     "drawing_number": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini"
+    "scale": "llm:gpt-4.1-mini",
+    "revision": "llm:gpt-4.1-mini"
    },
    "evidence": {
-    "revision": [
-     63
-    ],
     "title": [
      65,
      66,
@@ -6376,6 +6373,9 @@
     ],
     "scale": [
      60
+    ],
+    "revision": [
+     63
     ]
    },
    "block_found": true,
@@ -6424,17 +6424,17 @@
    },
    "values": {
     "title": "MOBILIZATION BUILDINGS HOSPITALQUARTERS TYPES HQ.18 N HQ.24 ONEISTORY, BUILDINGJ",
-    "drawing_number": "700:1240",
+    "scale": "AS NOTED",
     "revision": "A",
     "date": "1914-08-07",
-    "scale": "AS NOTED"
+    "drawing_number": "700:1240"
    },
    "sources": {
     "title": "llm:gpt-4.1-mini",
-    "drawing_number": "llm:gpt-4.1-mini",
+    "scale": "llm:gpt-4.1-mini",
     "revision": "llm:gpt-4.1-mini",
     "date": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini"
+    "drawing_number": "llm:gpt-4.1-mini"
    },
    "evidence": {
     "title": [
@@ -6444,8 +6444,8 @@
      12,
      13
     ],
-    "drawing_number": [
-     24
+    "scale": [
+     4
     ],
     "revision": [
      8
@@ -6453,8 +6453,8 @@
     "date": [
      18
     ],
-    "scale": [
-     4
+    "drawing_number": [
+     24
     ]
    },
    "block_found": true,
@@ -6480,30 +6480,30 @@
     "revision": "invented"
    },
    "values": {
-    "revision": "REVISED",
     "title": "DETROIT-SUPERIOR BRIDGE GENERAL PLANA ELEVATION",
-    "date": "1912-07-12",
-    "scale": "JA50"
+    "scale": "JA50",
+    "revision": "REVISED",
+    "date": "1912-07-12"
    },
    "sources": {
-    "revision": "llm:gpt-4.1-mini",
     "title": "llm:gpt-4.1-mini",
-    "date": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini"
+    "scale": "llm:gpt-4.1-mini",
+    "revision": "llm:gpt-4.1-mini",
+    "date": "llm:gpt-4.1-mini"
    },
    "evidence": {
-    "revision": [
-     11
-    ],
     "title": [
      2,
      4
     ],
-    "date": [
-     7
-    ],
     "scale": [
      8
+    ],
+    "revision": [
+     11
+    ],
+    "date": [
+     7
     ]
    },
    "block_found": true,
@@ -6527,21 +6527,18 @@
     "revision": "invented"
    },
    "values": {
-    "revision": "Revision",
     "title": "BUILDING WIND TUNNEL FRAMING PLAN TOP & BOTTOM",
     "drawing_number": "167273",
+    "revision": "Revision",
     "date": "1911-09-04"
    },
    "sources": {
-    "revision": "llm:gpt-4.1-mini",
     "title": "llm:gpt-4.1-mini",
     "drawing_number": "llm:gpt-4.1-mini",
+    "revision": "llm:gpt-4.1-mini",
     "date": "llm:gpt-4.1-mini"
    },
    "evidence": {
-    "revision": [
-     11
-    ],
     "title": [
      10,
      28,
@@ -6551,6 +6548,9 @@
     ],
     "drawing_number": [
      40
+    ],
+    "revision": [
+     11
     ],
     "date": [
      37
@@ -6617,23 +6617,30 @@
    },
    "values": {
     "title": "CLARK HOWELL HOMES FIRST FLOOR PLAN SCHEDULES FOLDING DOOR DETAIL",
-    "drawing_number": "60 ..0.1=.57.7. 3908",
-    "sheet_number": 60,
     "revision": "-A-",
-    "date": "1940-03-01"
+    "date": "1940-03-01",
+    "drawing_number": "60 ..0.1=.57.7. 3908",
+    "sheet_number": 60
    },
    "sources": {
     "title": "llm:gpt-4.1-mini",
-    "drawing_number": "llm:gpt-4.1-mini",
-    "sheet_number": "llm:gpt-4.1-mini",
     "revision": "llm:gpt-4.1-mini",
-    "date": "llm:gpt-4.1-mini"
+    "date": "llm:gpt-4.1-mini",
+    "drawing_number": "llm:gpt-4.1-mini",
+    "sheet_number": "llm:gpt-4.1-mini"
    },
    "evidence": {
     "title": [
      0,
      26,
      29
+    ],
+    "revision": [
+     28
+    ],
+    "date": [
+     34,
+     35
     ],
     "drawing_number": [
      25,
@@ -6642,13 +6649,6 @@
     ],
     "sheet_number": [
      32
-    ],
-    "revision": [
-     28
-    ],
-    "date": [
-     34,
-     35
     ]
    },
    "block_found": true,
@@ -6675,14 +6675,14 @@
    "values": {
     "title": "MARE ISLAND NAVAL SHIPYARD BLDG N47$47-R",
     "drawing_number": "47-A-32",
-    "date": "1956-07-03",
-    "scale": "8.=1-0\""
+    "scale": "8.=1-0\"",
+    "date": "1956-07-03"
    },
    "sources": {
     "title": "llm:gpt-4.1-mini",
     "drawing_number": "llm:gpt-4.1-mini",
-    "date": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini"
+    "scale": "llm:gpt-4.1-mini",
+    "date": "llm:gpt-4.1-mini"
    },
    "evidence": {
     "title": [
@@ -6692,11 +6692,11 @@
     "drawing_number": [
      17
     ],
-    "date": [
-     0
-    ],
     "scale": [
      37
+    ],
+    "date": [
+     0
     ]
    },
    "block_found": true,
@@ -6791,21 +6791,18 @@
     "revision": "invented"
    },
    "values": {
-    "revision": "C",
     "title": "DETAIL OF SKYLIGHT ROOF PLAN, SKYLIGHT AND. LOUVRES DETAILS STONE AND CONCRETE DRY DOCK",
     "drawing_number": "110-A-1 110A-1(4065)",
-    "scale": "'/'and3-1"
+    "scale": "'/'and3-1",
+    "revision": "C"
    },
    "sources": {
-    "revision": "llm:gpt-4.1-mini",
     "title": "llm:gpt-4.1-mini",
     "drawing_number": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini"
+    "scale": "llm:gpt-4.1-mini",
+    "revision": "llm:gpt-4.1-mini"
    },
    "evidence": {
-    "revision": [
-     13
-    ],
     "title": [
      3,
      7,
@@ -6818,6 +6815,9 @@
     ],
     "scale": [
      18
+    ],
+    "revision": [
+     13
     ]
    },
    "block_found": true,
@@ -6842,44 +6842,44 @@
    },
    "values": {
     "title": "FILTRATION PLANT PLANS AND SECTIONS OF BUILDINGS",
-    "drawing_number": "FILEL-142",
+    "scale": "l= 20",
     "revision": "0",
-    "sheet_number": 2,
-    "sheet_count": 21,
     "date": "1914-09-24",
-    "scale": "l= 20"
+    "sheet_count": 21,
+    "drawing_number": "FILEL-142",
+    "sheet_number": 2
    },
    "sources": {
     "title": "llm:gpt-4.1-mini",
-    "drawing_number": "llm:gpt-4.1-mini",
+    "scale": "llm:gpt-4.1-mini",
     "revision": "llm:gpt-4.1-mini",
-    "sheet_number": "llm:gpt-4.1-mini",
-    "sheet_count": "llm:gpt-4.1-mini",
     "date": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini"
+    "sheet_count": "llm:gpt-4.1-mini",
+    "drawing_number": "llm:gpt-4.1-mini",
+    "sheet_number": "llm:gpt-4.1-mini"
    },
    "evidence": {
     "title": [
      3,
      6
     ],
-    "drawing_number": [
-     16
+    "scale": [
+     7
     ],
     "revision": [
      9
     ],
-    "sheet_number": [
-     15
+    "date": [
+     14
     ],
     "sheet_count": [
      15
     ],
-    "date": [
-     14
+    "drawing_number": [
+     16
     ],
-    "scale": [
-     7
+    "sheet_number": [
+     15
     ]
    },
    "block_found": true,
@@ -6949,14 +6949,14 @@
    "values": {
     "sheet_count": 3,
     "title": "FIRST FLOOR PLAN",
-    "sheet_number": 2,
-    "scale": "3/32\" = I'-0\""
+    "scale": "3/32\" = I'-0\"",
+    "sheet_number": 2
    },
    "sources": {
     "sheet_count": "llm:gpt-4.1-mini",
     "title": "llm:gpt-4.1-mini",
-    "sheet_number": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini"
+    "scale": "llm:gpt-4.1-mini",
+    "sheet_number": "llm:gpt-4.1-mini"
    },
    "evidence": {
     "sheet_count": [
@@ -6965,11 +6965,11 @@
     "title": [
      0
     ],
-    "sheet_number": [
-     17
-    ],
     "scale": [
      1
+    ],
+    "sheet_number": [
+     17
     ]
    },
    "block_found": true,
@@ -6995,17 +6995,17 @@
    },
    "values": {
     "title": "PLANS OF BASEMENT & FIRST FLOOR FIRST FLOOR-",
-    "drawing_number": "H-1-A-28",
-    "sheet_count": 2,
+    "scale": "SCALE6INCH- |FOOT",
     "revision": "OCT. 13, 1941, LAMB",
-    "scale": "SCALE6INCH- |FOOT"
+    "sheet_count": 2,
+    "drawing_number": "H-1-A-28"
    },
    "sources": {
     "title": "llm:gpt-4.1-mini",
-    "drawing_number": "llm:gpt-4.1-mini",
-    "sheet_count": "llm:gpt-4.1-mini",
+    "scale": "llm:gpt-4.1-mini",
     "revision": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini"
+    "sheet_count": "llm:gpt-4.1-mini",
+    "drawing_number": "llm:gpt-4.1-mini"
    },
    "evidence": {
     "title": [
@@ -7013,17 +7013,17 @@
      22,
      23
     ],
-    "drawing_number": [
-     25
-    ],
-    "sheet_count": [
-     13
+    "scale": [
+     24
     ],
     "revision": [
      12
     ],
-    "scale": [
-     24
+    "sheet_count": [
+     13
+    ],
+    "drawing_number": [
+     25
     ]
    },
    "block_found": true,
@@ -7035,8 +7035,8 @@
    "correct": false,
    "status": "needs_review",
    "reasons": [
-    "low OCR confidence on revision (0.70)",
     "low OCR confidence on scale (0.64)",
+    "low OCR confidence on revision (0.70)",
     "readers disagree on title: \"TECHWOOD·'DRIVE.·KEY·PLOT·PLAN\" vs 'EAST·ELEVATIOI'"
    ],
    "outcomes": {
@@ -7050,25 +7050,25 @@
    },
    "values": {
     "title": "TECHWOOD·'DRIVE.·KEY·PLOT·PLAN",
-    "drawing_number": "101A-7",
+    "scale": "SCNE %=1-0",
     "revision": "B",
     "date": "1934-11-22",
-    "scale": "SCNE %=1-0"
+    "drawing_number": "101A-7"
    },
    "sources": {
     "title": "llm:gpt-4.1-mini",
-    "drawing_number": "llm:gpt-4.1-mini",
+    "scale": "llm:gpt-4.1-mini",
     "revision": "llm:gpt-4.1-mini",
     "date": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini"
+    "drawing_number": "llm:gpt-4.1-mini"
    },
    "evidence": {
     "title": [
      33,
      34
     ],
-    "drawing_number": [
-     56
+    "scale": [
+     59
     ],
     "revision": [
      55
@@ -7076,8 +7076,8 @@
     "date": [
      57
     ],
-    "scale": [
-     59
+    "drawing_number": [
+     56
     ]
    },
    "block_found": true,
@@ -7103,14 +7103,14 @@
    "values": {
     "title": "PARKING GARAGE STEVENS & WILKINSON RICH'S INC",
     "drawing_number": "A9-14",
-    "date": "1960-12-15",
-    "sheet_number": 41
+    "sheet_number": 41,
+    "date": "1960-12-15"
    },
    "sources": {
     "title": "llm:gpt-4.1-mini",
     "drawing_number": "llm:gpt-4.1-mini",
-    "date": "llm:gpt-4.1-mini",
-    "sheet_number": "llm:gpt-4.1-mini"
+    "sheet_number": "llm:gpt-4.1-mini",
+    "date": "llm:gpt-4.1-mini"
    },
    "evidence": {
     "title": [
@@ -7122,11 +7122,11 @@
     "drawing_number": [
      21
     ],
-    "date": [
-     23
-    ],
     "sheet_number": [
      26
+    ],
+    "date": [
+     23
     ]
    },
    "block_found": true,
@@ -7153,34 +7153,34 @@
    },
    "values": {
     "title": "OFFICE BUILDING SPECIAL",
-    "drawing_number": "8-2101",
-    "sheet_number": 1,
+    "scale": "AS NOTED",
     "sheet_count": 5,
-    "scale": "AS NOTED"
+    "drawing_number": "8-2101",
+    "sheet_number": 1
    },
    "sources": {
     "title": "llm:gpt-4.1-mini",
-    "drawing_number": "llm:gpt-4.1-mini",
-    "sheet_number": "llm:gpt-4.1-mini",
+    "scale": "llm:gpt-4.1-mini",
     "sheet_count": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini"
+    "drawing_number": "llm:gpt-4.1-mini",
+    "sheet_number": "llm:gpt-4.1-mini"
    },
    "evidence": {
     "title": [
      3,
      4
     ],
+    "scale": [
+     6
+    ],
+    "sheet_count": [
+     11
+    ],
     "drawing_number": [
      12
     ],
     "sheet_number": [
      11
-    ],
-    "sheet_count": [
-     11
-    ],
-    "scale": [
-     6
     ]
    },
    "block_found": true,
@@ -7192,13 +7192,14 @@
    "correct": false,
    "status": "needs_review",
    "reasons": [
+    "missing date",
     "low OCR confidence on scale (0.73)",
     "readers disagree on title: 'PLANS,ELEVATIONS,SECTION CELEGTRICAL' vs 'ELEVATION OF GABLE END AT CODNED PIED  PLATFODM.'"
    ],
    "outcomes": {
     "drawing_number": "wrong",
     "title": "wrong",
-    "date": "wrong",
+    "date": "missed",
     "scale": "wrong",
     "sheet_number": "absent",
     "sheet_count": "absent",
@@ -7207,13 +7208,11 @@
    "values": {
     "title": "PLANS,ELEVATIONS,SECTION CELEGTRICAL",
     "drawing_number": "68996111",
-    "date": "1077-12",
     "scale": "As NoTEO"
    },
    "sources": {
     "title": "llm:gpt-4.1-mini",
     "drawing_number": "llm:gpt-4.1-mini",
-    "date": "rule:date-unlabelled",
     "scale": "llm:gpt-4.1-mini"
    },
    "evidence": {
@@ -7222,9 +7221,6 @@
     ],
     "drawing_number": [
      38
-    ],
-    "date": [
-     39
     ],
     "scale": [
      5,
@@ -7254,34 +7250,34 @@
    },
    "values": {
     "title": "PART EAST & WEST ELEVATIONS SOUTH ELEVATION & ALTERNATIVES A&B",
-    "drawing_number": "680-A-5",
-    "sheet_count": 15,
+    "scale": "AS NOTED",
     "revision": "0ste",
-    "scale": "AS NOTED"
+    "sheet_count": 15,
+    "drawing_number": "680-A-5"
    },
    "sources": {
     "title": "llm:gpt-4.1-mini",
-    "drawing_number": "llm:gpt-4.1-mini",
-    "sheet_count": "llm:gpt-4.1-mini",
+    "scale": "llm:gpt-4.1-mini",
     "revision": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini"
+    "sheet_count": "llm:gpt-4.1-mini",
+    "drawing_number": "llm:gpt-4.1-mini"
    },
    "evidence": {
     "title": [
      23,
      26
     ],
-    "drawing_number": [
-     44
-    ],
-    "sheet_count": [
-     21
+    "scale": [
+     34
     ],
     "revision": [
      0
     ],
-    "scale": [
-     34
+    "sheet_count": [
+     21
+    ],
+    "drawing_number": [
+     44
     ]
    },
    "block_found": true,
@@ -7354,13 +7350,13 @@
    },
    "values": {
     "title": "TYPICAL CROSS SECTIONS NIAGARA PLANT NIACARA FALLS.NY",
-    "sheet_number": 8,
-    "scale": "INCH·8 FEET"
+    "scale": "INCH·8 FEET",
+    "sheet_number": 8
    },
    "sources": {
     "title": "llm:gpt-4.1-mini",
-    "sheet_number": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini"
+    "scale": "llm:gpt-4.1-mini",
+    "sheet_number": "llm:gpt-4.1-mini"
    },
    "evidence": {
     "title": [
@@ -7368,11 +7364,11 @@
      4,
      5
     ],
-    "sheet_number": [
-     9
-    ],
     "scale": [
      2
+    ],
+    "sheet_number": [
+     9
     ]
    },
    "block_found": true,
@@ -7454,14 +7450,14 @@
    "values": {
     "title": "ORDNANCE BUILDING, NAVY YARD, MARE ISLAND",
     "drawing_number": "No.96; Bldg.77 No.A.18",
-    "date": "1871-11-07",
-    "scale": "Eight Feet to One Inch"
+    "scale": "Eight Feet to One Inch",
+    "date": "1871-11-07"
    },
    "sources": {
     "title": "llm:gpt-4.1-mini",
     "drawing_number": "llm:gpt-4.1-mini",
-    "date": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini"
+    "scale": "llm:gpt-4.1-mini",
+    "date": "llm:gpt-4.1-mini"
    },
    "evidence": {
     "title": [
@@ -7473,11 +7469,11 @@
      2,
      5
     ],
-    "date": [
-     9
-    ],
     "scale": [
      4
+    ],
+    "date": [
+     9
     ]
    },
    "block_found": true,
@@ -7501,21 +7497,18 @@
     "revision": "correct"
    },
    "values": {
-    "revision": "A",
     "title": "SLCOND FLOOR PLAN÷DETAILS",
     "drawing_number": "29271",
-    "scale": "△> JUOWN"
+    "scale": "△> JUOWN",
+    "revision": "A"
    },
    "sources": {
-    "revision": "llm:gpt-4.1-mini",
     "title": "llm:gpt-4.1-mini",
     "drawing_number": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini"
+    "scale": "llm:gpt-4.1-mini",
+    "revision": "llm:gpt-4.1-mini"
    },
    "evidence": {
-    "revision": [
-     0
-    ],
     "title": [
      22
     ],
@@ -7524,6 +7517,9 @@
     ],
     "scale": [
      31
+    ],
+    "revision": [
+     0
     ]
    },
    "block_found": true,
@@ -7628,12 +7624,13 @@
    "status": "needs_review",
    "reasons": [
     "missing drawing_number",
+    "missing date",
     "readers disagree on title: 'YALNUT ST. HARTFORD GT' vs 'Approred N Moor Approred Vico Fesident'"
    ],
    "outcomes": {
     "drawing_number": "missed",
     "title": "wrong",
-    "date": "wrong",
+    "date": "missed",
     "scale": "wrong",
     "sheet_number": "missed",
     "sheet_count": "missed",
@@ -7641,20 +7638,15 @@
    },
    "values": {
     "title": "YALNUT ST. HARTFORD GT",
-    "date": "1007-09",
     "scale": "as shaun"
    },
    "sources": {
     "title": "llm:gpt-4.1-mini",
-    "date": "rule:date-unlabelled",
     "scale": "llm:gpt-4.1-mini"
    },
    "evidence": {
     "title": [
      3
-    ],
-    "date": [
-     5
     ],
     "scale": [
      4
@@ -7706,14 +7698,14 @@
    "values": {
     "title": "STASSP!DIROOF HOUSING",
     "drawing_number": "102 $",
-    "date": "1934-11-22",
-    "scale": "SCALERS NOTED"
+    "scale": "SCALERS NOTED",
+    "date": "1934-11-22"
    },
    "sources": {
     "title": "llm:gpt-4.1-mini",
     "drawing_number": "llm:gpt-4.1-mini",
-    "date": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini"
+    "scale": "llm:gpt-4.1-mini",
+    "date": "llm:gpt-4.1-mini"
    },
    "evidence": {
     "title": [
@@ -7722,11 +7714,11 @@
     "drawing_number": [
      20
     ],
-    "date": [
-     24
-    ],
     "scale": [
      29
+    ],
+    "date": [
+     24
     ]
    },
    "block_found": true,
@@ -7761,8 +7753,8 @@
    "correct": false,
    "status": "needs_review",
    "reasons": [
-    "low OCR confidence on sheet_number (0.64)",
     "low OCR confidence on revision (0.79)",
+    "low OCR confidence on sheet_number (0.64)",
     "readers disagree on title: 'STANDARD MISCELLANEOUS DETAILS' vs 'ELEVATION'"
    ],
    "outcomes": {
@@ -7776,33 +7768,33 @@
    },
    "values": {
     "title": "STANDARD MISCELLANEOUS DETAILS",
-    "drawing_number": "TQ-700-6605",
-    "sheet_number": 87,
     "revision": "(A) 8-1-42666",
-    "date": "1942-06-02"
+    "date": "1942-06-02",
+    "drawing_number": "TQ-700-6605",
+    "sheet_number": 87
    },
    "sources": {
     "title": "llm:gpt-4.1-mini",
-    "drawing_number": "llm:gpt-4.1-mini",
-    "sheet_number": "llm:gpt-4.1-mini",
     "revision": "llm:gpt-4.1-mini",
-    "date": "llm:gpt-4.1-mini"
+    "date": "llm:gpt-4.1-mini",
+    "drawing_number": "llm:gpt-4.1-mini",
+    "sheet_number": "llm:gpt-4.1-mini"
    },
    "evidence": {
     "title": [
      9
-    ],
-    "drawing_number": [
-     71
-    ],
-    "sheet_number": [
-     60
     ],
     "revision": [
      61
     ],
     "date": [
      67
+    ],
+    "drawing_number": [
+     71
+    ],
+    "sheet_number": [
+     60
     ]
    },
    "block_found": true,
@@ -7872,8 +7864,8 @@
    "correct": false,
    "status": "needs_review",
    "reasons": [
-    "low OCR confidence on date (0.80)",
     "low OCR confidence on scale (0.76)",
+    "low OCR confidence on date (0.80)",
     "readers disagree on title: 'GREE-NS LEDGE L/S MODERNIZATION' vs 'NEW SINK'",
     "readers disagree on date: '1965-09-09' vs '1952-04-03'"
    ],
@@ -7888,25 +7880,25 @@
    },
    "values": {
     "title": "GREE-NS LEDGE L/S MODERNIZATION",
-    "drawing_number": "N.Y. 1517",
+    "scale": "/CALE-YzU-O",
     "revision": "REV",
     "date": "1965-09-09",
-    "scale": "/CALE-YzU-O"
+    "drawing_number": "N.Y. 1517"
    },
    "sources": {
     "title": "llm:gpt-4.1-mini",
-    "drawing_number": "llm:gpt-4.1-mini",
+    "scale": "llm:gpt-4.1-mini",
     "revision": "llm:gpt-4.1-mini",
     "date": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini"
+    "drawing_number": "llm:gpt-4.1-mini"
    },
    "evidence": {
     "title": [
      17,
      19
     ],
-    "drawing_number": [
-     27
+    "scale": [
+     24
     ],
     "revision": [
      7
@@ -7914,8 +7906,8 @@
     "date": [
      3
     ],
-    "scale": [
-     24
+    "drawing_number": [
+     27
     ]
    },
    "block_found": true,
@@ -8055,17 +8047,17 @@
    },
    "values": {
     "title": "GREAT CAPTAINS ISLAND LIGHT STATION ARRANGEMENT OF PIPING MACHINERY FOR FOG SIGNAL INSTALLATION",
-    "drawing_number": "8075",
-    "sheet_number": 2,
+    "scale": "2\"=1-0\"",
     "sheet_count": 2,
-    "scale": "2\"=1-0\""
+    "drawing_number": "8075",
+    "sheet_number": 2
    },
    "sources": {
     "title": "llm:gpt-4.1-mini",
-    "drawing_number": "llm:gpt-4.1-mini",
-    "sheet_number": "llm:gpt-4.1-mini",
+    "scale": "llm:gpt-4.1-mini",
     "sheet_count": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini"
+    "drawing_number": "llm:gpt-4.1-mini",
+    "sheet_number": "llm:gpt-4.1-mini"
    },
    "evidence": {
     "title": [
@@ -8073,17 +8065,17 @@
      3,
      4
     ],
+    "scale": [
+     5
+    ],
+    "sheet_count": [
+     13
+    ],
     "drawing_number": [
      15
     ],
     "sheet_number": [
      13
-    ],
-    "sheet_count": [
-     13
-    ],
-    "scale": [
-     5
     ]
    },
    "block_found": true,
@@ -8109,17 +8101,17 @@
    },
    "values": {
     "title": "GENERAL STORE, CABINS,PAVILION PUBLIC COMFORT STATION AT HORSE THIEFBAIN. PARKS,PLAYGROUNDS RECREATIONAL DEPARTMENT",
-    "drawing_number": "276",
-    "sheet_number": 7,
+    "scale": "ASHOWN",
     "date": "1936-05-18",
-    "scale": "ASHOWN"
+    "drawing_number": "276",
+    "sheet_number": 7
    },
    "sources": {
     "title": "llm:gpt-4.1-mini",
-    "drawing_number": "llm:gpt-4.1-mini",
-    "sheet_number": "llm:gpt-4.1-mini",
+    "scale": "llm:gpt-4.1-mini",
     "date": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini"
+    "drawing_number": "llm:gpt-4.1-mini",
+    "sheet_number": "llm:gpt-4.1-mini"
    },
    "evidence": {
     "title": [
@@ -8127,17 +8119,17 @@
      21,
      25
     ],
+    "scale": [
+     18
+    ],
+    "date": [
+     24
+    ],
     "drawing_number": [
      26
     ],
     "sheet_number": [
      19
-    ],
-    "date": [
-     24
-    ],
-    "scale": [
-     18
     ]
    },
    "block_found": true,
@@ -8209,27 +8201,27 @@
     "revision": "wrong"
    },
    "values": {
-    "revision": "C",
     "title": "CENTRAL POWER PLANT SWITCHGEAR&OFFICE ANNEX",
     "drawing_number": "121-A-15",
+    "revision": "C",
     "date": "1942-06-15"
    },
    "sources": {
-    "revision": "llm:gpt-4.1-mini",
     "title": "llm:gpt-4.1-mini",
     "drawing_number": "llm:gpt-4.1-mini",
+    "revision": "llm:gpt-4.1-mini",
     "date": "rule:date-unlabelled"
    },
    "evidence": {
-    "revision": [
-     28
-    ],
     "title": [
      25,
      27
     ],
     "drawing_number": [
      49
+    ],
+    "revision": [
+     28
     ],
     "date": [
      10
@@ -8305,14 +8297,14 @@
    "values": {
     "title": "FLOORPLANS TYPE A,D4H BUILDINGS",
     "drawing_number": "A",
-    "date": "1939-05-24",
-    "sheet_number": 20
+    "sheet_number": 20,
+    "date": "1939-05-24"
    },
    "sources": {
     "title": "llm:gpt-4.1-mini",
     "drawing_number": "llm:gpt-4.1-mini",
-    "date": "llm:gpt-4.1-mini",
-    "sheet_number": "llm:gpt-4.1-mini"
+    "sheet_number": "llm:gpt-4.1-mini",
+    "date": "llm:gpt-4.1-mini"
    },
    "evidence": {
     "title": [
@@ -8322,11 +8314,11 @@
     "drawing_number": [
      40
     ],
-    "date": [
-     44
-    ],
     "sheet_number": [
      45
+    ],
+    "date": [
+     44
     ]
    },
    "block_found": true,
@@ -8351,19 +8343,16 @@
     "revision": "invented"
    },
    "values": {
-    "revision": "Feb 11-15",
     "title": "KEOKUK BRIDGE. SPAN-1 STRESS SHEET",
-    "scale": "1\"=15-0\""
+    "scale": "1\"=15-0\"",
+    "revision": "Feb 11-15"
    },
    "sources": {
-    "revision": "llm:gpt-4.1-mini",
     "title": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini"
+    "scale": "llm:gpt-4.1-mini",
+    "revision": "llm:gpt-4.1-mini"
    },
    "evidence": {
-    "revision": [
-     8
-    ],
     "title": [
      1,
      2,
@@ -8371,6 +8360,9 @@
     ],
     "scale": [
      6
+    ],
+    "revision": [
+     8
     ]
    },
    "block_found": true,
@@ -8435,14 +8427,14 @@
    "values": {
     "title": "ARMAMENT 4 INSTRUMENT INSPECTION AND ADJUSTMENT BLDG. AIR CONDITIONING",
     "drawing_number": "6899-629",
-    "date": "1941-04-23",
-    "scale": "AS NOTED"
+    "scale": "AS NOTED",
+    "date": "1941-04-23"
    },
    "sources": {
     "title": "llm:gpt-4.1-mini",
     "drawing_number": "llm:gpt-4.1-mini",
-    "date": "llm:gpt-4.1-mini",
-    "scale": "llm:gpt-4.1-mini"
+    "scale": "llm:gpt-4.1-mini",
+    "date": "llm:gpt-4.1-mini"
    },
    "evidence": {
     "title": [
@@ -8453,12 +8445,12 @@
     "drawing_number": [
      342
     ],
-    "date": [
-     335
-    ],
     "scale": [
      307,
      312
+    ],
+    "date": [
+     335
     ]
    },
    "block_found": true,

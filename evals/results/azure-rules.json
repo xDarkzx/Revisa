@@ -1,14 +1,14 @@
 {
  "name": "azure-rules",
- "created": "2026-10-14T01:14:35+00:00",
- "commit": "ead3383",
+ "created": "2026-10-14T01:41:17+00:00",
+ "commit": "05a17e0",
  "config": {
   "ocr": "azure",
   "reader": "rules",
   "model": null
  },
  "usage": {
-  "seconds": 0.8,
+  "seconds": 0.1,
   "sheets": 200
  },
  "summary": {
@@ -130,13 +130,13 @@
     "date": {
      "counts": {
       "correct": 15,
-      "missed": 30,
+      "missed": 31,
       "absent": 31,
-      "wrong": 6,
+      "wrong": 5,
       "invented": 1
      },
      "recall": 0.294,
-     "precision": 0.682
+     "precision": 0.714
     },
     "scale": {
      "counts": {
@@ -219,13 +219,13 @@
     "date": {
      "counts": {
       "correct": 37,
-      "missed": 67,
+      "missed": 68,
       "absent": 52,
-      "wrong": 23,
+      "wrong": 22,
       "invented": 1
      },
      "recall": 0.291,
-     "precision": 0.607
+     "precision": 0.617
     },
     "scale": {
      "counts": {
@@ -1984,7 +1984,7 @@
    "correct": false,
    "status": "needs_review",
    "reasons": [
-    "low OCR confidence on date (0.62)",
+    "low OCR confidence on date (0.36)",
     "low OCR confidence on scale (0.58)"
    ],
    "outcomes": {
@@ -1998,7 +1998,7 @@
    },
    "values": {
     "drawing_number": "6899-800",
-    "date": "1477-12",
+    "date": "1910-01-04",
     "scale": "1/4\"=1 0\"",
     "title": "Q.M. GAS & OIL HOUSE"
    },
@@ -2013,7 +2013,7 @@
      387
     ],
     "date": [
-     388
+     274
     ],
     "scale": [
      142
@@ -2403,12 +2403,12 @@
    "correct": false,
    "status": "needs_review",
    "reasons": [
-    "low OCR confidence on date (0.66)"
+    "missing date"
    ],
    "outcomes": {
     "drawing_number": "correct",
     "title": "correct",
-    "date": "wrong",
+    "date": "missed",
     "scale": "missed",
     "sheet_number": "absent",
     "sheet_count": "absent",
@@ -2416,21 +2416,16 @@
    },
    "values": {
     "drawing_number": "6899-146",
-    "date": "1077-12",
     "title": "MACDILL FIELD TAMPA FLORIDA PAINT - OIL & DOPE BLDG. PLAN & ELEVATIONS"
    },
    "sources": {
     "drawing_number": "rule:number-label",
-    "date": "rule:date-unlabelled",
     "title": "rule:largest-lettering"
    },
    "evidence": {
     "drawing_number": [
      80,
      83
-    ],
-    "date": [
-     86
     ],
     "title": [
      68,
