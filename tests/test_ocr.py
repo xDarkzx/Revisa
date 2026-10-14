@@ -47,12 +47,14 @@ class FakeClient:
         )()
 
 
-def test_azure_engine_sends_png_to_prebuilt_read():
+def test_azure_engine_sends_jpeg_to_prebuilt_read():
     client = FakeClient()
 
     lines = AzureReadEngine("https://unused", client=client).read(Image.new("L", (10, 10)))
 
-    assert client.calls == [("prebuilt-read", "application/octet-stream", b"\x89PNG\r\n\x1a\n")]
+    [(model, content_type, head)] = client.calls
+    assert (model, content_type) == ("prebuilt-read", "application/octet-stream")
+    assert head.startswith(b"\xff\xd8")  # JPEG, to stay under the free tier's 4 MB limit
     assert lines[0].text == "SHEET A-19"
 
 

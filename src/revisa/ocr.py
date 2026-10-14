@@ -107,8 +107,9 @@ class AzureReadEngine:
         self._client = client
 
     def read(self, image: Image.Image) -> list[Line]:
+        # JPEG keeps whole sheets under the free tier's 4 MB request limit; PNG wouldn't.
         buffer = io.BytesIO()
-        image.convert("RGB").save(buffer, "PNG")
+        image.convert("RGB").save(buffer, "JPEG", quality=90)
         buffer.seek(0)
         poller = self._client.begin_analyze_document(
             "prebuilt-read", body=buffer, content_type="application/octet-stream"
