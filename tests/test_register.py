@@ -96,6 +96,7 @@ def test_duplicates_missing_sheets_and_count_conflicts():
     assert missing[0].detail == "2 of 4 sheets not in the register: 2, 4"
     assert conflict[0].kind == "sheet_count_conflict"
     assert check([entry("s1", sheet_number=1, sheet_count=1)]) == []
+    assert check([entry("s1", sheet_count=3)]) == []  # its own number unread: can't tell what's missing
 
 
 def test_entries_keep_evidence_and_export_as_csv():

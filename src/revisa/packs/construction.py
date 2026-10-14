@@ -61,6 +61,8 @@ _MONTH = r"(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)[A-Z]*\.?"
 _DAY = r"(\d{1,2})(?:ST|ND|RD|TH)?"
 _YEAR = r"(\d{4}|'?\d{2})"
 _SHORT_YEAR = 2  # digits in a year written like '34
+# Years a construction drawing can plausibly carry; OCR turns "1977" into "1077" otherwise.
+YEARS = range(1700, 2101)
 _DATE_FORMS = [
     # month day year, e.g. NOV. 22, 1934 / Sept. 4,1941 / APR:11 1902
     ("mdy", re.compile(rf"\b{_MONTH}[\s:.,]*{_DAY}[\s,.]+{_YEAR}\b")),
@@ -96,13 +98,15 @@ def parse_dates(text: str, century: int = 1900) -> list[str]:
 def _to_iso(form: str, groups: Sequence[str], century: int) -> str | None:
     if form == "my":
         month, year = _MONTHS[groups[0][:3]], _year(groups[1], century)
-        return f"{year:04d}-{month:02d}"
+        return f"{year:04d}-{month:02d}" if year in YEARS else None
     if form == "mdy":
         month, day, year = _MONTHS[groups[0][:3]], int(groups[1]), _year(groups[2], century)
     elif form == "dmy":
         day, month, year = int(groups[0]), _MONTHS[groups[1][:3]], _year(groups[2], century)
     else:
         month, day, year = int(groups[0]), int(groups[1]), _year(groups[2], century)
+    if year not in YEARS:
+        return None
     try:
         return date(year, month, day).isoformat()
     except ValueError:
