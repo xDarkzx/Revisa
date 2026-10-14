@@ -22,7 +22,9 @@ def test_dates_are_read_to_the_precision_printed(text, expected):
     assert parse_dates(text) == expected
 
 
-@pytest.mark.parametrize("text", ["13/45/34", "SHEET 18 OF 35", "106-A-4", '1/8" = 1\'-0"'])
+@pytest.mark.parametrize(
+    "text", ["DEC 1077", "3/4/1077", "13/45/34", "SHEET 18 OF 35", "106-A-4", '1/8" = 1\'-0"']
+)
 def test_things_that_are_not_dates(text):
     assert parse_dates(text) == []
 

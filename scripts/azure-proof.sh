@@ -33,10 +33,16 @@ teardown() {
   step "Tear down $GROUP"
   accounts="$(az cognitiveservices account list -g "$GROUP" --query '[].name' -o tsv 2>/dev/null || true)"
   az group delete --name "$GROUP" --yes || true
-  # Deleted AI accounts are retained for 48 hours unless purged.
+  # Deleted AI accounts are retained for 48 hours unless purged. A purge straight after the group
+  # delete can fail while the deletion settles, so retry.
   while read -r account; do
-    [[ -n "$account" ]] && az cognitiveservices account purge --name "$account" -g "$GROUP" --location "$LOCATION" || true
+    [[ -z "$account" ]] && continue
+    for _ in 1 2 3 4 5; do
+      az cognitiveservices account purge --name "$account" -g "$GROUP" --location "$LOCATION" && break
+      sleep 30
+    done
   done <<< "$accounts"
+  echo "Soft-deleted AI accounts left: $(az cognitiveservices account list-deleted --query 'length(@)' -o tsv)"
   echo "Resource group still exists: $(az group exists --name "$GROUP")"
 }
 trap teardown EXIT

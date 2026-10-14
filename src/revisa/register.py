@@ -192,7 +192,8 @@ def _sequence(project: str, sheets: Sequence[Entry]) -> list[Issue]:
     (total,) = counts
     present = {s.sheet_number for s in sheets if s.sheet_number}
     missing = sorted(set(range(1, total + 1)) - present)
-    if not missing:
+    # A sheet whose own number wasn't read could be any of the missing ones; say nothing.
+    if not missing or any(s.sheet_number is None for s in sheets):
         return []
     shown = ", ".join(map(str, missing[:10])) + (" ..." if len(missing) > 10 else "")  # noqa: PLR2004
     return [
