@@ -1,0 +1,5589 @@
+{
+ "name": "local-rules",
+ "created": "2026-10-14T00:28:10+00:00",
+ "commit": "0f311c5",
+ "config": {
+  "ocr": "rapidocr",
+  "reader": "rules",
+  "model": null
+ },
+ "usage": {
+  "seconds": 0.2,
+  "sheets": 200
+ },
+ "summary": {
+  "test": {
+   "sheets": 107,
+   "fields": {
+    "drawing_number": {
+     "counts": {
+      "missed": 41,
+      "wrong": 17,
+      "correct": 26,
+      "absent": 20
+     },
+     "recall": 0.31,
+     "precision": 0.605
+    },
+    "title": {
+     "counts": {
+      "wrong": 55,
+      "missed": 20,
+      "correct": 20,
+      "absent": 10,
+      "invented": 1
+     },
+     "recall": 0.211,
+     "precision": 0.263
+    },
+    "date": {
+     "counts": {
+      "missed": 46,
+      "correct": 21,
+      "wrong": 9,
+      "absent": 21
+     },
+     "recall": 0.276,
+     "precision": 0.7
+    },
+    "scale": {
+     "counts": {
+      "correct": 11,
+      "missed": 46,
+      "absent": 35,
+      "wrong": 9,
+      "invented": 1
+     },
+     "recall": 0.167,
+     "precision": 0.524
+    },
+    "sheet_number": {
+     "counts": {
+      "absent": 62,
+      "missed": 34,
+      "correct": 8,
+      "wrong": 1
+     },
+     "recall": 0.186,
+     "precision": 0.889
+    },
+    "sheet_count": {
+     "counts": {
+      "absent": 75,
+      "missed": 24,
+      "correct": 8
+     },
+     "recall": 0.25,
+     "precision": 1.0
+    },
+    "revision": {
+     "counts": {
+      "absent": 93,
+      "missed": 8
+     },
+     "recall": 0.0,
+     "precision": null
+    }
+   },
+   "sheet_accuracy": 0.103,
+   "routing": {
+    "accepted": 15,
+    "needs_review": 92,
+    "error_recall": 0.844,
+    "review_precision": 0.88,
+    "silent_error_rate": 1.0,
+    "accepted_correct": 0
+   },
+   "locator": {
+    "found_when_present": 0.802,
+    "found_when_absent": 1,
+    "absent_sheets": 11
+   }
+  },
+  "dev": {
+   "sheets": 93,
+   "fields": {
+    "drawing_number": {
+     "counts": {
+      "correct": 21,
+      "absent": 33,
+      "missed": 28,
+      "wrong": 8,
+      "invented": 1
+     },
+     "recall": 0.368,
+     "precision": 0.7
+    },
+    "title": {
+     "counts": {
+      "wrong": 37,
+      "absent": 20,
+      "missed": 20,
+      "correct": 15,
+      "invented": 1
+     },
+     "recall": 0.208,
+     "precision": 0.283
+    },
+    "date": {
+     "counts": {
+      "correct": 14,
+      "missed": 27,
+      "absent": 32,
+      "wrong": 10
+     },
+     "recall": 0.275,
+     "precision": 0.583
+    },
+    "scale": {
+     "counts": {
+      "wrong": 7,
+      "missed": 40,
+      "absent": 26,
+      "correct": 12,
+      "invented": 1
+     },
+     "recall": 0.203,
+     "precision": 0.6
+    },
+    "sheet_number": {
+     "counts": {
+      "absent": 65,
+      "missed": 24,
+      "correct": 3
+     },
+     "recall": 0.111,
+     "precision": 1.0
+    },
+    "sheet_count": {
+     "counts": {
+      "absent": 75,
+      "missed": 16,
+      "correct": 2
+     },
+     "recall": 0.111,
+     "precision": 1.0
+    },
+    "revision": {
+     "counts": {
+      "absent": 81,
+      "missed": 10
+     },
+     "recall": 0.0,
+     "precision": null
+    }
+   },
+   "sheet_accuracy": 0.183,
+   "routing": {
+    "accepted": 12,
+    "needs_review": 81,
+    "error_recall": 0.842,
+    "review_precision": 0.79,
+    "silent_error_rate": 1.0,
+    "accepted_correct": 0
+   },
+   "locator": {
+    "found_when_present": 0.753,
+    "found_when_absent": 2,
+    "absent_sheets": 20
+   }
+  },
+  "all": {
+   "sheets": 200,
+   "fields": {
+    "drawing_number": {
+     "counts": {
+      "correct": 47,
+      "absent": 53,
+      "missed": 69,
+      "wrong": 25,
+      "invented": 1
+     },
+     "recall": 0.333,
+     "precision": 0.644
+    },
+    "title": {
+     "counts": {
+      "wrong": 92,
+      "absent": 30,
+      "missed": 40,
+      "correct": 35,
+      "invented": 2
+     },
+     "recall": 0.21,
+     "precision": 0.271
+    },
+    "date": {
+     "counts": {
+      "correct": 35,
+      "missed": 73,
+      "absent": 53,
+      "wrong": 19
+     },
+     "recall": 0.276,
+     "precision": 0.648
+    },
+    "scale": {
+     "counts": {
+      "wrong": 16,
+      "missed": 86,
+      "correct": 23,
+      "absent": 61,
+      "invented": 2
+     },
+     "recall": 0.184,
+     "precision": 0.561
+    },
+    "sheet_number": {
+     "counts": {
+      "absent": 127,
+      "missed": 58,
+      "correct": 11,
+      "wrong": 1
+     },
+     "recall": 0.157,
+     "precision": 0.917
+    },
+    "sheet_count": {
+     "counts": {
+      "absent": 150,
+      "missed": 40,
+      "correct": 10
+     },
+     "recall": 0.2,
+     "precision": 1.0
+    },
+    "revision": {
+     "counts": {
+      "absent": 174,
+      "missed": 18
+     },
+     "recall": 0.0,
+     "precision": null
+    }
+   },
+   "sheet_accuracy": 0.14,
+   "routing": {
+    "accepted": 27,
+    "needs_review": 173,
+    "error_recall": 0.843,
+    "review_precision": 0.838,
+    "silent_error_rate": 1.0,
+    "accepted_correct": 0
+   },
+   "locator": {
+    "found_when_present": 0.781,
+    "found_when_absent": 3,
+    "absent_sheets": 31
+   }
+  }
+ },
+ "per_sheet": [
+  {
+   "id": "0069f716df8f",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "low OCR confidence on scale (0.69)"
+   ],
+   "outcomes": {
+    "drawing_number": "correct",
+    "title": "wrong",
+    "date": "correct",
+    "scale": "wrong",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "A-19",
+    "date": "1934-11-22",
+    "scale": "16\" = 1-0\"",
+    "title": "TECHWOOD PROJECT NO. 1101 PUBLIC WORKS ADMINISTRATION-HOUSINGDIVISION THE UNITED STATES OF AMERICA"
+   },
+   "sources": {
+    "drawing_number": "rule:standalone-id",
+    "date": "rule:date-label",
+    "scale": "rule:scale-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "016f11fd3eca",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "absent",
+    "title": "absent",
+    "date": "missed",
+    "scale": "missed",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "045b404769e1",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number",
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "wrong",
+    "date": "missed",
+    "scale": "correct",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "scale": "1\"=1'",
+    "title": "U·S·NAVY-YARD-MARE-ISLAND-CAL·"
+   },
+   "sources": {
+    "scale": "rule:scale-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "04efc218b512",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number",
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "wrong",
+    "date": null,
+    "scale": "missed",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "title": "SIDE"
+   },
+   "sources": {
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "05ac08d4dde2",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "missed",
+    "date": null,
+    "scale": "missed",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "06ea1e80790d",
+   "correct": true,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "absent",
+    "title": "absent",
+    "date": "absent",
+    "scale": "absent",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": false,
+   "split": "dev"
+  },
+  {
+   "id": "08bd3a5ec0ad",
+   "correct": false,
+   "status": "accepted",
+   "reasons": [],
+   "outcomes": {
+    "drawing_number": "wrong",
+    "title": "wrong",
+    "date": "correct",
+    "scale": "correct",
+    "sheet_number": "missed",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "64887/ 65",
+    "date": "1965-07-21",
+    "scale": "SHOWN",
+    "title": "U.S. NAVAL AIR STATION U.S. NAVY PUBLIC WORKS CENTER STRUCTURAL REPAIRS TO BUILDING"
+   },
+   "sources": {
+    "drawing_number": "rule:number-label",
+    "date": "rule:date-near-label",
+    "scale": "rule:scale-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "0b0893bcd76d",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing date",
+    "low OCR confidence on drawing_number (0.73)"
+   ],
+   "outcomes": {
+    "drawing_number": "wrong",
+    "title": "wrong",
+    "date": "missed",
+    "scale": "missed",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "006I-WV",
+    "title": "MerdecaiI.Endicott"
+   },
+   "sources": {
+    "drawing_number": "rule:standalone-id",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "0cacd5881c75",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "missed",
+    "date": "missed",
+    "scale": "missed",
+    "sheet_number": "missed",
+    "sheet_count": "missed",
+    "revision": null
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "0d1af6f5bea5",
+   "correct": false,
+   "status": "accepted",
+   "reasons": [],
+   "outcomes": {
+    "drawing_number": "correct",
+    "title": "wrong",
+    "date": "correct",
+    "scale": "missed",
+    "sheet_number": "missed",
+    "sheet_count": "missed",
+    "revision": "missed"
+   },
+   "values": {
+    "drawing_number": "323374",
+    "date": "1944-07-12",
+    "title": "DISPENSARY BLDG. E AREA F H FLOOR PLAN ELEVATIONS"
+   },
+   "sources": {
+    "drawing_number": "rule:number-label",
+    "date": "rule:date-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "0f88fb3abafb",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number",
+    "missing title",
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "absent",
+    "title": "missed",
+    "date": "missed",
+    "scale": "missed",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": true,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "1024440cfe28",
+   "correct": false,
+   "status": "accepted",
+   "reasons": [],
+   "outcomes": {
+    "drawing_number": "correct",
+    "title": "wrong",
+    "date": "correct",
+    "scale": "correct",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "10,230",
+    "date": "1939-05-05",
+    "scale": "AS NOTED",
+    "title": "OCT 1 3 189"
+   },
+   "sources": {
+    "drawing_number": "rule:number-label",
+    "date": "rule:date-label",
+    "scale": "rule:scale-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "128e62f1c7d7",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "missed",
+    "date": "absent",
+    "scale": "missed",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "136dd9894cd1",
+   "correct": false,
+   "status": "accepted",
+   "reasons": [],
+   "outcomes": {
+    "drawing_number": "correct",
+    "title": "wrong",
+    "date": "correct",
+    "scale": "missed",
+    "sheet_number": "missed",
+    "sheet_count": "missed",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "C-3565",
+    "date": "1915-06-01",
+    "title": "Record Room"
+   },
+   "sources": {
+    "drawing_number": "rule:standalone-id",
+    "date": "rule:date-unlabelled",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "156c30ba3df2",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number",
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "absent",
+    "title": "correct",
+    "date": "absent",
+    "scale": "missed",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "title": "OLD NORTH VESTRY."
+   },
+   "sources": {
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "15af3bc62167",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "low OCR confidence on date (0.76)"
+   ],
+   "outcomes": {
+    "drawing_number": "wrong",
+    "title": "wrong",
+    "date": "wrong",
+    "scale": null,
+    "sheet_number": "missed",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "5-14",
+    "date": "1902-01-29",
+    "title": "CONTRMET NO. 297"
+   },
+   "sources": {
+    "drawing_number": "rule:standalone-id",
+    "date": "rule:date-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "1738aff37734",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "absent",
+    "title": "missed",
+    "date": "absent",
+    "scale": "missed",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "missed"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "1741b4ff5fab",
+   "correct": false,
+   "status": "accepted",
+   "reasons": [],
+   "outcomes": {
+    "drawing_number": "correct",
+    "title": "wrong",
+    "date": "correct",
+    "scale": "missed",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "115712",
+    "date": "1933-02-03",
+    "title": "QURRTERS A-43-44-45-199"
+   },
+   "sources": {
+    "drawing_number": "rule:number-label",
+    "date": "rule:date-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "175c35142c36",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number",
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "wrong",
+    "date": "missed",
+    "scale": "missed",
+    "sheet_number": "missed",
+    "sheet_count": "missed",
+    "revision": "absent"
+   },
+   "values": {
+    "title": "·U·S·NAVAL·ACADEMY. ·ANNAPOLIS-MD. MAY-1913."
+   },
+   "sources": {
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "17913d84e4ef",
+   "correct": false,
+   "status": "accepted",
+   "reasons": [],
+   "outcomes": {
+    "drawing_number": "correct",
+    "title": "wrong",
+    "date": "wrong",
+    "scale": "missed",
+    "sheet_number": "missed",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "275",
+    "date": "1936-05-28",
+    "title": "GENERAL STURE, CABINS,PAVILION  PUBLIC COMFORT STATION ATHORSETHIEF LESCHER AND MAHONEY ARCSITECTP"
+   },
+   "sources": {
+    "drawing_number": "rule:number-label",
+    "date": "rule:date-unlabelled",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "18eb4faee0d1",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "correct",
+    "title": "correct",
+    "date": "missed",
+    "scale": "missed",
+    "sheet_number": "correct",
+    "sheet_count": "correct",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "129328",
+    "title": "ENTRANCE",
+    "sheet_number": 18,
+    "sheet_count": 35
+   },
+   "sources": {
+    "drawing_number": "rule:number-label",
+    "title": "rule:largest-lettering",
+    "sheet_number": "rule:sheet-of",
+    "sheet_count": "rule:sheet-of"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "1c53aefdf0a8",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "wrong",
+    "date": "correct",
+    "scale": "missed",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "date": "1934-11-22",
+    "title": "TECHWOOD PROJECT NO. 1101 THE UNITED STATES OF AMERICA"
+   },
+   "sources": {
+    "date": "rule:date-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "1c9f91f5704b",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number",
+    "missing title",
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "absent",
+    "title": "missed",
+    "date": "missed",
+    "scale": null,
+    "sheet_number": "missed",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "1cd15b8f1701",
+   "correct": false,
+   "status": "accepted",
+   "reasons": [],
+   "outcomes": {
+    "drawing_number": "correct",
+    "title": "wrong",
+    "date": "correct",
+    "scale": "missed",
+    "sheet_number": "correct",
+    "sheet_count": "correct",
+    "revision": null
+   },
+   "values": {
+    "drawing_number": "1302590",
+    "date": "1969-05-14",
+    "title": "RECORD DRAWING",
+    "sheet_number": 7,
+    "sheet_count": 135
+   },
+   "sources": {
+    "drawing_number": "rule:number-label",
+    "date": "rule:date-near-label",
+    "title": "rule:largest-lettering",
+    "sheet_number": "rule:sheet-of",
+    "sheet_count": "rule:sheet-of"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "1ed837d39ba6",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "wrong",
+    "title": "correct",
+    "date": "missed",
+    "scale": "missed",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "APPROVED6-10141",
+    "title": "QUARTERS\"P"
+   },
+   "sources": {
+    "drawing_number": "rule:number-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "20d436cdf114",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number",
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "absent",
+    "title": "wrong",
+    "date": "absent",
+    "scale": "missed",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "title": "MPLAIN CANAL"
+   },
+   "sources": {
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "23a4d9a4549d",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "missed",
+    "date": "missed",
+    "scale": "missed",
+    "sheet_number": "missed",
+    "sheet_count": "missed",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "26acd84ad413",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number",
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "wrong",
+    "date": "absent",
+    "scale": "missed",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "title": "BLDG#52."
+   },
+   "sources": {
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "2b2fecf2337d",
+   "correct": true,
+   "status": "needs_review",
+   "reasons": [
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "correct",
+    "title": "correct",
+    "date": null,
+    "scale": null,
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "1943-A-400",
+    "title": "7 X 10 FOOT SONIC WIND TUNNEL"
+   },
+   "sources": {
+    "drawing_number": "rule:standalone-id",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "2c4dcdc3097b",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "missed",
+    "date": "missed",
+    "scale": "missed",
+    "sheet_number": "missed",
+    "sheet_count": "missed",
+    "revision": null
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "2d054eb64107",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "correct",
+    "title": "wrong",
+    "date": "missed",
+    "scale": "missed",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "missed"
+   },
+   "values": {
+    "drawing_number": "T-1306",
+    "title": "MESS-HALLS TYPES:MBT.M.CTMDTMETMGT.MHT ELECBICALSCALEAS"
+   },
+   "sources": {
+    "drawing_number": "rule:standalone-id",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "2efd440f8ac3",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "wrong",
+    "title": "wrong",
+    "date": "missed",
+    "scale": "absent",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "15-0",
+    "title": "0.H.BridgeNo.48.53-X PROPOSED CHANGES IN FLOOR SYSTEM BRIDGE STREET BRIDGE-CHRISTIANA"
+   },
+   "sources": {
+    "drawing_number": "rule:standalone-id",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "2f1909971f26",
+   "correct": true,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "absent",
+    "title": "absent",
+    "date": "absent",
+    "scale": "absent",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": false,
+   "split": "dev"
+  },
+  {
+   "id": "30099d02cbb6",
+   "correct": true,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "absent",
+    "title": "absent",
+    "date": "absent",
+    "scale": "absent",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": false,
+   "split": "test"
+  },
+  {
+   "id": "30c6a40b6632",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number",
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "absent",
+    "title": "wrong",
+    "date": "absent",
+    "scale": "absent",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "title": "W C  KRUGER  &  ASSOCIATES"
+   },
+   "sources": {
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "30e429b1db17",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "missed",
+    "date": null,
+    "scale": null,
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "3190d86b6362",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "correct",
+    "title": "wrong",
+    "date": "missed",
+    "scale": "missed",
+    "sheet_number": "missed",
+    "sheet_count": "missed",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "106-A-4",
+    "title": "-BOAT-SHOP- U·S-NAVY-YARD-MARE-ISLAND-CAL-"
+   },
+   "sources": {
+    "drawing_number": "rule:standalone-id",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "33077bcdb9dc",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "correct",
+    "date": "correct",
+    "scale": "absent",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "date": "1973-11-10",
+    "title": "BRIDGE OVER HONDO RIVER NO.156K.M.28.9,COMERIO,P.R. ROUTE"
+   },
+   "sources": {
+    "date": "rule:date-unlabelled",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "35fd6119e59b",
+   "correct": true,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number",
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "absent",
+    "title": "correct",
+    "date": null,
+    "scale": null,
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "title": "SCHERZER ROLLING LIFT BRIDGE — BRIDGE N 4OI- C.T. & V. BRANCH.- CUYAHOGA RIVER-OLD SHIP CHANNEL BALTIMORE & OHIO R. R. CO."
+   },
+   "sources": {
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "390813373441",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number",
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "wrong",
+    "date": "missed",
+    "scale": "missed",
+    "sheet_number": null,
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "title": "DESCRIPTION"
+   },
+   "sources": {
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "3d28d321e9e7",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number",
+    "missing title",
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": null,
+    "title": "missed",
+    "date": null,
+    "scale": null,
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": true,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "3e75bda4c586",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "wrong",
+    "title": "wrong",
+    "date": "missed",
+    "scale": "absent",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "436",
+    "title": "ROAD NO. 98O KM.1O.6"
+   },
+   "sources": {
+    "drawing_number": "rule:number-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "40d74aad73be",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing date",
+    "low OCR confidence on scale (0.54)"
+   ],
+   "outcomes": {
+    "drawing_number": "wrong",
+    "title": "correct",
+    "date": "missed",
+    "scale": "wrong",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "128-130",
+    "scale": "8=1-0",
+    "title": "STANDARD WARD ELEVATIONS AND"
+   },
+   "sources": {
+    "drawing_number": "rule:standalone-id",
+    "scale": "rule:scale-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "4197a9bf6527",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number",
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "wrong",
+    "date": "missed",
+    "scale": "missed",
+    "sheet_number": "missed",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "title": "ELEV△TION"
+   },
+   "sources": {
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "423092a90bf3",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "low OCR confidence on date (0.53)"
+   ],
+   "outcomes": {
+    "drawing_number": "correct",
+    "title": "correct",
+    "date": "wrong",
+    "scale": "missed",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "2-5",
+    "date": "1939-04-01",
+    "title": "ADDITIONS ALTERATIONS BUILDING No 2"
+   },
+   "sources": {
+    "drawing_number": "rule:standalone-id",
+    "date": "rule:date-unlabelled",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "43208008830e",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number",
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "correct",
+    "date": "absent",
+    "scale": "absent",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "title": "HOSPITAL, GALENA,ILLINOIS."
+   },
+   "sources": {
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "433abb431f61",
+   "correct": true,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "absent",
+    "title": "absent",
+    "date": "absent",
+    "scale": "absent",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": false,
+   "split": "dev"
+  },
+  {
+   "id": "45e8fa754659",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "absent",
+    "title": "missed",
+    "date": "absent",
+    "scale": "missed",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "47449827246e",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "wrong",
+    "date": "correct",
+    "scale": "missed",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "date": "1900-05",
+    "title": "SHOP DRAWING FIRE ENGINE HOuSE U. S.NAvy YARD.MARE ISLAND-(AL. CALE INCH To 1 fOoT"
+   },
+   "sources": {
+    "date": "rule:date-unlabelled",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "49b004c63172",
+   "correct": false,
+   "status": "accepted",
+   "reasons": [],
+   "outcomes": {
+    "drawing_number": "correct",
+    "title": "correct",
+    "date": "correct",
+    "scale": "missed",
+    "sheet_number": "missed",
+    "sheet_count": "missed",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "96587",
+    "date": "1925-11-05",
+    "title": "DOUBLE WARD BUILDING. CROSS SECTIONS"
+   },
+   "sources": {
+    "drawing_number": "rule:number-label",
+    "date": "rule:date-near-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "4b5578699e9f",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "low OCR confidence on drawing_number (0.60)",
+    "low OCR confidence on date (0.80)",
+    "low OCR confidence on scale (0.76)"
+   ],
+   "outcomes": {
+    "drawing_number": "wrong",
+    "title": "correct",
+    "date": "correct",
+    "scale": "wrong",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "1000-671",
+    "date": "1940-06-12",
+    "scale": "NOTED",
+    "title": "Q.M. GAS & OIL HOUSE"
+   },
+   "sources": {
+    "drawing_number": "rule:standalone-id",
+    "date": "rule:date-near-label",
+    "scale": "rule:scale-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "4bf5e757895b",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "missed",
+    "date": "missed",
+    "scale": "absent",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "4c3dd84e9fb0",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "correct",
+    "title": "wrong",
+    "date": "missed",
+    "scale": "correct",
+    "sheet_number": "missed",
+    "sheet_count": "missed",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "5011101",
+    "scale": "AS SHOWN",
+    "title": "ALTERATIONS TOQUARTERS"
+   },
+   "sources": {
+    "drawing_number": "rule:number-label",
+    "scale": "rule:scale-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "4d09feba8c05",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "missed",
+    "date": "missed",
+    "scale": "missed",
+    "sheet_number": "missed",
+    "sheet_count": "missed",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "4db6b53935cb",
+   "correct": true,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "absent",
+    "title": "absent",
+    "date": "absent",
+    "scale": "absent",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": false,
+   "split": "dev"
+  },
+  {
+   "id": "51261f4f2786",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "missed",
+    "date": "missed",
+    "scale": "absent",
+    "sheet_number": "missed",
+    "sheet_count": "missed",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "5144a70876ee",
+   "correct": true,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "absent",
+    "title": "absent",
+    "date": "absent",
+    "scale": "absent",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": false,
+   "split": "test"
+  },
+  {
+   "id": "528251167f4a",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": null,
+    "title": "missed",
+    "date": null,
+    "scale": null,
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "52a57871cc52",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "absent",
+    "title": "missed",
+    "date": null,
+    "scale": "absent",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "52dfb48aef51",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "missed",
+    "date": "missed",
+    "scale": "missed",
+    "sheet_number": "missed",
+    "sheet_count": "missed",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "5321c7c028d3",
+   "correct": false,
+   "status": "accepted",
+   "reasons": [],
+   "outcomes": {
+    "drawing_number": "correct",
+    "title": "correct",
+    "date": "wrong",
+    "scale": "absent",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "missed"
+   },
+   "values": {
+    "drawing_number": "F-8-158",
+    "date": "1950-09-07",
+    "title": "ROOSEVELT POWER PLANT PRESENT LAYOUT NEW CHANGESAND ADDITIONS"
+   },
+   "sources": {
+    "drawing_number": "rule:standalone-id",
+    "date": "rule:date-unlabelled",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "53640d38b004",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number",
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "wrong",
+    "date": null,
+    "scale": "wrong",
+    "sheet_number": "wrong",
+    "sheet_count": "correct",
+    "revision": "absent"
+   },
+   "values": {
+    "scale": "1/8' = 1'-0'",
+    "title": "MEZZANINE FLOOR PLAN CONSTRUTION AND REFLECTED CEILING",
+    "sheet_number": 6,
+    "sheet_count": 29
+   },
+   "sources": {
+    "scale": "rule:scale-label",
+    "title": "rule:largest-lettering",
+    "sheet_number": "rule:sheet-of",
+    "sheet_count": "rule:sheet-of"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "5411d3d54bd2",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number",
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "correct",
+    "date": "missed",
+    "scale": "missed",
+    "sheet_number": null,
+    "sheet_count": "absent",
+    "revision": "missed"
+   },
+   "values": {
+    "title": "·PENFIELD-REEF-L/S ·LONG·ISLAND·SOUND- MODERNIZATION+"
+   },
+   "sources": {
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "58442b802256",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "correct",
+    "title": "wrong",
+    "date": "missed",
+    "scale": "missed",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "6899-146",
+    "title": "MACDILL FIELD TAMPA FLORIDA"
+   },
+   "sources": {
+    "drawing_number": "rule:number-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "5bc4d3b68ca1",
+   "correct": true,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "absent",
+    "title": "absent",
+    "date": "absent",
+    "scale": "absent",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": false,
+   "split": "dev"
+  },
+  {
+   "id": "5bec92a2bb25",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "correct",
+    "title": "correct",
+    "date": "absent",
+    "scale": "missed",
+    "sheet_number": "correct",
+    "sheet_count": "correct",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "M1-A-6",
+    "title": "QUARTERS·M-1. DETAILS",
+    "sheet_number": 2,
+    "sheet_count": 3
+   },
+   "sources": {
+    "drawing_number": "rule:standalone-id",
+    "title": "rule:largest-lettering",
+    "sheet_number": "rule:sheet-of",
+    "sheet_count": "rule:sheet-of"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "5c3a24e2ac1d",
+   "correct": false,
+   "status": "accepted",
+   "reasons": [],
+   "outcomes": {
+    "drawing_number": "invented",
+    "title": "wrong",
+    "date": "correct",
+    "scale": "correct",
+    "sheet_number": "correct",
+    "sheet_count": "correct",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "SHEET5OF 8",
+    "date": "1975-01-14",
+    "scale": "AS NOTED",
+    "title": "AP.Bouth",
+    "sheet_number": 5,
+    "sheet_count": 8
+   },
+   "sources": {
+    "drawing_number": "rule:number-label",
+    "date": "rule:date-near-label",
+    "scale": "rule:scale-label",
+    "title": "rule:largest-lettering",
+    "sheet_number": "rule:sheet-of",
+    "sheet_count": "rule:sheet-of"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "5c83ec03f100",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "correct",
+    "date": "wrong",
+    "scale": "absent",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "date": "1930-03-10",
+    "title": "GIRDER"
+   },
+   "sources": {
+    "date": "rule:date-near-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "5e3e166153e8",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number",
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "absent",
+    "title": "wrong",
+    "date": "absent",
+    "scale": "missed",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "title": "SIDEWALK"
+   },
+   "sources": {
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "5e53fa880e28",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "low OCR confidence on date (0.51)"
+   ],
+   "outcomes": {
+    "drawing_number": "correct",
+    "title": "wrong",
+    "date": "wrong",
+    "scale": "correct",
+    "sheet_number": null,
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "5160857",
+    "date": "1982-04-02",
+    "scale": "AS SHOWN",
+    "title": "BUILDING NO.1 FLOORPLANOECTIONELEVATION"
+   },
+   "sources": {
+    "drawing_number": "rule:number-label",
+    "date": "rule:date-unlabelled",
+    "scale": "rule:scale-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "61b763dafd2c",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "correct",
+    "title": "correct",
+    "date": "missed",
+    "scale": "correct",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "625-4577",
+    "scale": "AS NOTED",
+    "title": "SOUTHEAST-AIR-BASE DOUBLE N.C.O. QUARTERS"
+   },
+   "sources": {
+    "drawing_number": "rule:number-label",
+    "scale": "rule:scale-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "632d0cc56b23",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number",
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "absent",
+    "title": "wrong",
+    "date": "absent",
+    "scale": "absent",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "title": "orestoration of east room."
+   },
+   "sources": {
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "664936bc4ca1",
+   "correct": true,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "absent",
+    "title": "absent",
+    "date": "absent",
+    "scale": "absent",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": false,
+   "split": "test"
+  },
+  {
+   "id": "66fe6bdfa6c5",
+   "correct": false,
+   "status": "accepted",
+   "reasons": [],
+   "outcomes": {
+    "drawing_number": "wrong",
+    "title": "wrong",
+    "date": "correct",
+    "scale": "correct",
+    "sheet_number": "correct",
+    "sheet_count": "correct",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "5-I-4-143",
+    "date": "1924-09",
+    "scale": "As noted",
+    "title": "HEADWORKS",
+    "sheet_number": 2,
+    "sheet_count": 2
+   },
+   "sources": {
+    "drawing_number": "rule:standalone-id",
+    "date": "rule:date-unlabelled",
+    "scale": "rule:scale-label",
+    "title": "rule:largest-lettering",
+    "sheet_number": "rule:sheet-of",
+    "sheet_count": "rule:sheet-of"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "6b0d599835c7",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "correct",
+    "title": "wrong",
+    "date": "missed",
+    "scale": "missed",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "A-20-24",
+    "title": "TRANSFORPIR BUILDING FIPST, FLOCR PLAN AND SECTIONS"
+   },
+   "sources": {
+    "drawing_number": "rule:standalone-id",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "6b53358c7db8",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number",
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "wrong",
+    "date": "missed",
+    "scale": "absent",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": null
+   },
+   "values": {
+    "title": "ROOP-PLAN-"
+   },
+   "sources": {
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "6cdfa1ea09bf",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": null,
+    "title": "wrong",
+    "date": "missed",
+    "scale": "missed",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "A-14",
+    "title": "TECHWOOD PROJECT NO. 1101 THE UNITED STATES OF AMERICA RCHITECTS·ATLANTA"
+   },
+   "sources": {
+    "drawing_number": "rule:standalone-id",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "6f517d34f8cf",
+   "correct": true,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "absent",
+    "title": "absent",
+    "date": "absent",
+    "scale": "absent",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": false,
+   "split": "dev"
+  },
+  {
+   "id": "6f8b9ef31326",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing date",
+    "low OCR confidence on scale (0.72)"
+   ],
+   "outcomes": {
+    "drawing_number": "correct",
+    "title": "correct",
+    "date": "missed",
+    "scale": "correct",
+    "sheet_number": "missed",
+    "sheet_count": "missed",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "03-4429",
+    "scale": "1/8\"=1'-0\"",
+    "title": "NEW YORK BASE BLDG.215-WATER-PROOFING"
+   },
+   "sources": {
+    "drawing_number": "rule:number-label",
+    "scale": "rule:scale-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "716109b59409",
+   "correct": true,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "absent",
+    "title": "absent",
+    "date": "absent",
+    "scale": "absent",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": false,
+   "split": "dev"
+  },
+  {
+   "id": "72564f892e5c",
+   "correct": false,
+   "status": "accepted",
+   "reasons": [],
+   "outcomes": {
+    "drawing_number": "correct",
+    "title": "wrong",
+    "date": "correct",
+    "scale": "absent",
+    "sheet_number": "correct",
+    "sheet_count": "correct",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "298210",
+    "date": "1943-10-27",
+    "title": "ELEVATIONS",
+    "sheet_number": 4,
+    "sheet_count": 45
+   },
+   "sources": {
+    "drawing_number": "rule:number-label",
+    "date": "rule:date-label",
+    "title": "rule:largest-lettering",
+    "sheet_number": "rule:sheet-of",
+    "sheet_count": "rule:sheet-of"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "726d9a7de6a0",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "absent",
+    "title": "missed",
+    "date": null,
+    "scale": null,
+    "sheet_number": "missed",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "7298d1f77a3d",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "absent",
+    "title": "absent",
+    "date": "absent",
+    "scale": "missed",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": false,
+   "split": "dev"
+  },
+  {
+   "id": "744f25fe8d3d",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number",
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "wrong",
+    "date": null,
+    "scale": "invented",
+    "sheet_number": "missed",
+    "sheet_count": "missed",
+    "revision": "absent"
+   },
+   "values": {
+    "scale": "4=1-0\"",
+    "title": "FLOOR PLAN"
+   },
+   "sources": {
+    "scale": "rule:scale-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "75e025d11497",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "correct",
+    "title": "wrong",
+    "date": "absent",
+    "scale": "missed",
+    "sheet_number": "correct",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "460",
+    "title": "OAKWOOD PLACE RIVMT.",
+    "sheet_number": 5
+   },
+   "sources": {
+    "drawing_number": "rule:number-label",
+    "title": "rule:largest-lettering",
+    "sheet_number": "rule:sheet-no"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "75f4df5ab850",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number",
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "wrong",
+    "date": null,
+    "scale": "missed",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "title": "TREASURY-DEP"
+   },
+   "sources": {
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "77a2cb1fcfd2",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "low OCR confidence on drawing_number (0.71)"
+   ],
+   "outcomes": {
+    "drawing_number": "wrong",
+    "title": "wrong",
+    "date": "correct",
+    "scale": "missed",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "N2",
+    "date": "1937-11-24",
+    "title": "SECOND CORPS AREA FORT JAY GOV'S ISL. COL.KARL TRUESDELL CAPT.L.FFELIO J.F. WHITNEY PLAN OF FIRST FLOOR"
+   },
+   "sources": {
+    "drawing_number": "rule:number-label",
+    "date": "rule:date-near-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "792da9763f2a",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "missed",
+    "date": null,
+    "scale": "missed",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "7a0f247fbea6",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "wrong",
+    "date": "wrong",
+    "scale": "absent",
+    "sheet_number": "missed",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "date": "1934-05-23",
+    "title": "APART.-4"
+   },
+   "sources": {
+    "date": "rule:date-unlabelled",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "7b152a16f894",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number",
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "absent",
+    "title": "wrong",
+    "date": "absent",
+    "scale": "absent",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "title": "ix2Cleats far tile Roof."
+   },
+   "sources": {
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "7b61c69ed71f",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "absent",
+    "title": "missed",
+    "date": "absent",
+    "scale": "absent",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "7bf500b1dadb",
+   "correct": false,
+   "status": "accepted",
+   "reasons": [],
+   "outcomes": {
+    "drawing_number": "correct",
+    "title": "wrong",
+    "date": "wrong",
+    "scale": "correct",
+    "sheet_number": "missed",
+    "sheet_count": "missed",
+    "revision": "missed"
+   },
+   "values": {
+    "drawing_number": "03-2730",
+    "date": "1970-05-20",
+    "scale": "NOTED",
+    "title": "men"
+   },
+   "sources": {
+    "drawing_number": "rule:number-label",
+    "date": "rule:date-unlabelled",
+    "scale": "rule:scale-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "7e2a74538d28",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing date",
+    "low OCR confidence on drawing_number (0.79)"
+   ],
+   "outcomes": {
+    "drawing_number": "wrong",
+    "title": "wrong",
+    "date": "missed",
+    "scale": "missed",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "5-13",
+    "title": "CEMENT HOUSE FLOOR PLAN ④ LAYOUT BLD'G \"23 KELLY SPRINGFIELD TIRE CO"
+   },
+   "sources": {
+    "drawing_number": "rule:standalone-id",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "7ef192b2143e",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "wrong",
+    "date": "wrong",
+    "scale": "missed",
+    "sheet_number": "missed",
+    "sheet_count": "missed",
+    "revision": "absent"
+   },
+   "values": {
+    "date": "1944-04-08",
+    "title": "ASSIGNMENT OF ROOMS TO MEDICAL EXAM,NURSES LOCKER, SWITCH BOARD  ELEC.SHOP IN ACCOROANCE"
+   },
+   "sources": {
+    "date": "rule:date-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "8106f06e95dd",
+   "correct": true,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "absent",
+    "title": "absent",
+    "date": "absent",
+    "scale": "absent",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": false,
+   "split": "dev"
+  },
+  {
+   "id": "815ad7c28802",
+   "correct": true,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "absent",
+    "title": "absent",
+    "date": "absent",
+    "scale": "absent",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": false,
+   "split": "test"
+  },
+  {
+   "id": "8762a58409e0",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing date",
+    "low OCR confidence on drawing_number (0.60)"
+   ],
+   "outcomes": {
+    "drawing_number": "wrong",
+    "title": "wrong",
+    "date": "missed",
+    "scale": "wrong",
+    "sheet_number": "missed",
+    "sheet_count": "missed",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "0-1T",
+    "scale": "14=1-0",
+    "title": "PURLINS"
+   },
+   "sources": {
+    "drawing_number": "rule:standalone-id",
+    "scale": "rule:scale-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "878f46a4753c",
+   "correct": true,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "absent",
+    "title": "absent",
+    "date": "absent",
+    "scale": "absent",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": false,
+   "split": "test"
+  },
+  {
+   "id": "87f3c14af54b",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "correct",
+    "title": "wrong",
+    "date": "missed",
+    "scale": "missed",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "A58-1",
+    "title": "DRAWING"
+   },
+   "sources": {
+    "drawing_number": "rule:standalone-id",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "892860db4fe4",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": null,
+    "title": "missed",
+    "date": null,
+    "scale": null,
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "8a77a287999a",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "absent",
+    "title": "missed",
+    "date": "absent",
+    "scale": "absent",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "8aacccabc898",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "missed",
+    "date": "missed",
+    "scale": "missed",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "8ab4f7c923ae",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "low OCR confidence on drawing_number (0.72)"
+   ],
+   "outcomes": {
+    "drawing_number": "correct",
+    "title": "wrong",
+    "date": "wrong",
+    "scale": "absent",
+    "sheet_number": "correct",
+    "sheet_count": "correct",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "Q18",
+    "date": "1934-08-30",
+    "title": "STATE OF NEW HAMPSHIRE TOWN: PITTSFIELD PROJECT:TLB1934 LOCATION:CARROLL BRIDGE ROADSUNCOOK_VALLEY STREAM: SUNCOOK RIVER",
+    "sheet_number": 3,
+    "sheet_count": 4
+   },
+   "sources": {
+    "drawing_number": "rule:number-label",
+    "date": "rule:date-label",
+    "title": "rule:largest-lettering",
+    "sheet_number": "rule:sheet-of",
+    "sheet_count": "rule:sheet-of"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "8c088e6a988f",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "missed",
+    "date": null,
+    "scale": "absent",
+    "sheet_number": "missed",
+    "sheet_count": "missed",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "8c494b542a76",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "correct",
+    "title": "wrong",
+    "date": "missed",
+    "scale": "wrong",
+    "sheet_number": "missed",
+    "sheet_count": "missed",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "742286",
+    "scale": "14\"=1-",
+    "title": "SCREENED PORCH"
+   },
+   "sources": {
+    "drawing_number": "rule:number-label",
+    "scale": "rule:scale-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "8d62ad21855d",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number",
+    "missing title",
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "absent",
+    "title": "missed",
+    "date": "absent",
+    "scale": "missed",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": true,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "92093da556ea",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "missed",
+    "date": "missed",
+    "scale": "absent",
+    "sheet_number": "missed",
+    "sheet_count": "absent",
+    "revision": null
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "92ee6c8e7977",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number",
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "wrong",
+    "date": "missed",
+    "scale": "wrong",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "scale": "2=10",
+    "title": "BRANCH Philadelphia"
+   },
+   "sources": {
+    "scale": "rule:scale-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "9437a8b9f73b",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number",
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "correct",
+    "date": "missed",
+    "scale": "absent",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "title": "WILMINGTON, DEL. CUSTOM HOUSE,"
+   },
+   "sources": {
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "94556b41f3cf",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "missed",
+    "date": "missed",
+    "scale": "missed",
+    "sheet_number": "missed",
+    "sheet_count": "missed",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "94a0bd243e22",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number",
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "absent",
+    "title": "invented",
+    "date": "absent",
+    "scale": "wrong",
+    "sheet_number": "missed",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "scale": "4=1-0\"",
+    "title": "FRONT ELEVATION"
+   },
+   "sources": {
+    "scale": "rule:scale-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": false,
+   "split": "dev"
+  },
+  {
+   "id": "99c996c0238a",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "low OCR confidence on drawing_number (0.72)"
+   ],
+   "outcomes": {
+    "drawing_number": "wrong",
+    "title": "wrong",
+    "date": "wrong",
+    "scale": "wrong",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "missed"
+   },
+   "values": {
+    "drawing_number": "ENTIRS 98EET",
+    "date": "1912-01-04",
+    "scale": "SHOWN",
+    "title": "ELECT. . HEAT."
+   },
+   "sources": {
+    "drawing_number": "rule:number-label",
+    "date": "rule:date-unlabelled",
+    "scale": "rule:scale-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "99cc4bcea02a",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "correct",
+    "title": "wrong",
+    "date": "missed",
+    "scale": "wrong",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "10100-1",
+    "scale": "14\"= 1'-0",
+    "title": "JUN 1 8 1981"
+   },
+   "sources": {
+    "drawing_number": "rule:number-label",
+    "scale": "rule:scale-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "9e6b0d790cd5",
+   "correct": false,
+   "status": "accepted",
+   "reasons": [],
+   "outcomes": {
+    "drawing_number": "correct",
+    "title": "wrong",
+    "date": "correct",
+    "scale": "wrong",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "A-3817-2",
+    "date": "1936-12-28",
+    "scale": "4\"= 1-0\"",
+    "title": "P.W.DRAWING"
+   },
+   "sources": {
+    "drawing_number": "rule:standalone-id",
+    "date": "rule:date-unlabelled",
+    "scale": "rule:scale-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "9f5b195cb085",
+   "correct": true,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "absent",
+    "title": "absent",
+    "date": "absent",
+    "scale": "absent",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": false,
+   "split": "dev"
+  },
+  {
+   "id": "a003bf4fe17e",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number",
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "wrong",
+    "date": "absent",
+    "scale": "wrong",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "scale": "1/8=1",
+    "title": "Ground Floor Plan."
+   },
+   "sources": {
+    "scale": "rule:scale-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "a1ed9b6fa06f",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "missed",
+    "date": "missed",
+    "scale": "missed",
+    "sheet_number": "missed",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "a27f70790ae2",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "absent",
+    "title": "missed",
+    "date": "missed",
+    "scale": "absent",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "a5beed17b07e",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number",
+    "missing date",
+    "low OCR confidence on scale (0.69)"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "wrong",
+    "date": "missed",
+    "scale": "wrong",
+    "sheet_number": "missed",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "scale": "12=10",
+    "title": "CAYGE BRIDGEPORT. CONN. THLSTRAUSS LASCULE BRIDGE CO."
+   },
+   "sources": {
+    "scale": "rule:scale-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "a5cf7dd2ba95",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "missed",
+    "date": "missed",
+    "scale": "missed",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "missed"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "a5d9ab9e1042",
+   "correct": true,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "absent",
+    "title": "absent",
+    "date": "absent",
+    "scale": "absent",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": false,
+   "split": "dev"
+  },
+  {
+   "id": "a6c2d562ae9d",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "correct",
+    "date": "correct",
+    "scale": "missed",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "date": "1916-04",
+    "title": "GALLERY SECTION & HOIST ADJUSTABLE GALLERY."
+   },
+   "sources": {
+    "date": "rule:date-unlabelled",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "a7888d4efd92",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "correct",
+    "date": "correct",
+    "scale": "missed",
+    "sheet_number": "missed",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "date": "1918-06-19",
+    "title": "BUILDINGN9 223 LOCATION PLAN AND DETAILS."
+   },
+   "sources": {
+    "date": "rule:date-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "a79a992c4c0a",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "low OCR confidence on drawing_number (0.68)",
+    "low OCR confidence on date (0.66)"
+   ],
+   "outcomes": {
+    "drawing_number": "wrong",
+    "title": "wrong",
+    "date": "wrong",
+    "scale": "correct",
+    "sheet_number": "missed",
+    "sheet_count": "missed",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "51L01342",
+    "date": "1907-05-20",
+    "scale": "AS SHOWN",
+    "title": "-NAVY PROPERTY LINE"
+   },
+   "sources": {
+    "drawing_number": "rule:number-label",
+    "date": "rule:date-unlabelled",
+    "scale": "rule:scale-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "a835326082bb",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "low OCR confidence on drawing_number (0.78)"
+   ],
+   "outcomes": {
+    "drawing_number": "wrong",
+    "title": "correct",
+    "date": "correct",
+    "scale": "invented",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "26-6",
+    "date": "1935-11-15",
+    "scale": "1'=8'-0'",
+    "title": "KINGSTON STATION R.R. BRIDGE SOUTH KINGSTOWN, R.I. GENERAL PLAN"
+   },
+   "sources": {
+    "drawing_number": "rule:standalone-id",
+    "date": "rule:date-near-label",
+    "scale": "rule:scale-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "a8a080d1ab09",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "missed",
+    "date": "missed",
+    "scale": "absent",
+    "sheet_number": "missed",
+    "sheet_count": "absent",
+    "revision": "missed"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "a8cbe2139e05",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number",
+    "missing title",
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "absent",
+    "title": "absent",
+    "date": "absent",
+    "scale": "missed",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": true,
+   "label_has_block": false,
+   "split": "dev"
+  },
+  {
+   "id": "ac3337d9494d",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number",
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "wrong",
+    "date": "missed",
+    "scale": "absent",
+    "sheet_number": "missed",
+    "sheet_count": "missed",
+    "revision": "absent"
+   },
+   "values": {
+    "title": "nest3"
+   },
+   "sources": {
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "ad175bfe18b2",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "missed",
+    "date": "missed",
+    "scale": "missed",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "b06b11a28713",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number",
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "correct",
+    "date": "missed",
+    "scale": "wrong",
+    "sheet_number": "correct",
+    "sheet_count": "correct",
+    "revision": "absent"
+   },
+   "values": {
+    "scale": "noted",
+    "title": "R-6 I9 30 L.O. HOUSE",
+    "sheet_number": 3,
+    "sheet_count": 8
+   },
+   "sources": {
+    "scale": "rule:scale-label",
+    "title": "rule:largest-lettering",
+    "sheet_number": "rule:sheet-of",
+    "sheet_count": "rule:sheet-of"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "b0ab3e2c93de",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number",
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "correct",
+    "date": "missed",
+    "scale": "missed",
+    "sheet_number": "missed",
+    "sheet_count": "missed",
+    "revision": "absent"
+   },
+   "values": {
+    "title": "BUILDING 84"
+   },
+   "sources": {
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "b0fa1180292d",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "low OCR confidence on drawing_number (0.75)"
+   ],
+   "outcomes": {
+    "drawing_number": "wrong",
+    "title": "wrong",
+    "date": "correct",
+    "scale": "correct",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "689-6681",
+    "date": "1940-12-05",
+    "scale": "AS NOTED",
+    "title": "BCDE 21"
+   },
+   "sources": {
+    "drawing_number": "rule:number-label",
+    "date": "rule:date-near-label",
+    "scale": "rule:scale-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "b4845dc675e8",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number",
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "correct",
+    "date": "missed",
+    "scale": "correct",
+    "sheet_number": "missed",
+    "sheet_count": "missed",
+    "revision": "absent"
+   },
+   "values": {
+    "scale": "AS SHOWN",
+    "title": "FIRST, SECOND & THIRD FLOOR PLANS"
+   },
+   "sources": {
+    "scale": "rule:scale-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "b735ee2fbd8e",
+   "correct": false,
+   "status": "accepted",
+   "reasons": [],
+   "outcomes": {
+    "drawing_number": "correct",
+    "title": "correct",
+    "date": "correct",
+    "scale": "correct",
+    "sheet_number": "missed",
+    "sheet_count": "missed",
+    "revision": "missed"
+   },
+   "values": {
+    "drawing_number": "5161627",
+    "date": "1987-07-21",
+    "scale": "AS SHOWN",
+    "title": "EMERGENCY POWER TO BUILDING 51"
+   },
+   "sources": {
+    "drawing_number": "rule:number-label",
+    "date": "rule:date-near-label",
+    "scale": "rule:scale-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "b7ec284c4919",
+   "correct": false,
+   "status": "accepted",
+   "reasons": [],
+   "outcomes": {
+    "drawing_number": "wrong",
+    "title": "wrong",
+    "date": "wrong",
+    "scale": "correct",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "missed"
+   },
+   "values": {
+    "drawing_number": "901-6689",
+    "date": "1977-12",
+    "scale": "AS NOTED",
+    "title": "AIR CORPS."
+   },
+   "sources": {
+    "drawing_number": "rule:number-label",
+    "date": "rule:date-unlabelled",
+    "scale": "rule:scale-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "b910a5456437",
+   "correct": false,
+   "status": "accepted",
+   "reasons": [],
+   "outcomes": {
+    "drawing_number": "correct",
+    "title": "wrong",
+    "date": "correct",
+    "scale": "missed",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "DX-855",
+    "date": "1926-05-05",
+    "title": "CAPACTY"
+   },
+   "sources": {
+    "drawing_number": "rule:standalone-id",
+    "date": "rule:date-unlabelled",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "b9d1ae1ae593",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "wrong",
+    "title": "wrong",
+    "date": null,
+    "scale": "missed",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "4-5",
+    "title": "·LEGEND."
+   },
+   "sources": {
+    "drawing_number": "rule:standalone-id",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "ba95a4809aee",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number",
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "correct",
+    "date": "missed",
+    "scale": "missed",
+    "sheet_number": "missed",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "title": ".LONGITUDINAL SECTION~"
+   },
+   "sources": {
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "bc8c1995d9b9",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "correct",
+    "title": "correct",
+    "date": "missed",
+    "scale": "absent",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "4-4",
+    "title": "ROAD NO. P.R.-2,KM. 74.75,ARECIBO,P. R. E. Beuits"
+   },
+   "sources": {
+    "drawing_number": "rule:number-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "bcba9af8c8bf",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "absent",
+    "title": "absent",
+    "date": "missed",
+    "scale": "absent",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": false,
+   "split": "dev"
+  },
+  {
+   "id": "bd005add95da",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "wrong",
+    "title": "wrong",
+    "date": "missed",
+    "scale": "missed",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "11-9",
+    "title": "2NCORPSAREA. FORTJAY.GOV'S:ISL"
+   },
+   "sources": {
+    "drawing_number": "rule:standalone-id",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "bdb5807f6467",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "correct",
+    "title": "wrong",
+    "date": "missed",
+    "scale": "absent",
+    "sheet_number": "missed",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "231-A-3",
+    "title": "PRINTS"
+   },
+   "sources": {
+    "drawing_number": "rule:number-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "be10fbf7777a",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number",
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "wrong",
+    "date": "absent",
+    "scale": "absent",
+    "sheet_number": "missed",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "title": "-A·HOVSE·IN·BLADENSBURG·MARYLAND· -OM-THE·ANNAPOLIS· LOAD· BVILT·CIRCA·I74G."
+   },
+   "sources": {
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "be16af555366",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "correct",
+    "title": "wrong",
+    "date": "missed",
+    "scale": "missed",
+    "sheet_number": "missed",
+    "sheet_count": "missed",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "03-2723",
+    "title": "5/3/GATE"
+   },
+   "sources": {
+    "drawing_number": "rule:number-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "bf17fcbfcfdb",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number",
+    "missing title",
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "absent",
+    "title": "missed",
+    "date": "absent",
+    "scale": "absent",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "c04e541ebc04",
+   "correct": true,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "absent",
+    "title": "absent",
+    "date": "absent",
+    "scale": "absent",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": false,
+   "split": "dev"
+  },
+  {
+   "id": "c08273ca9634",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": null,
+    "title": null,
+    "date": null,
+    "scale": null,
+    "sheet_number": "missed",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "c0b073955df8",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "correct",
+    "title": "wrong",
+    "date": "missed",
+    "scale": "correct",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "6899-480",
+    "scale": "AS NOTED",
+    "title": "MACDILL FIELDLA (SOUTHEAST AID BASE,-AMPA FLA.) Q.M·WAREHOUSEOMMISSARY"
+   },
+   "sources": {
+    "drawing_number": "rule:standalone-id",
+    "scale": "rule:scale-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "c1d264957332",
+   "correct": true,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "absent",
+    "title": "absent",
+    "date": "absent",
+    "scale": "absent",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": false,
+   "split": "test"
+  },
+  {
+   "id": "c3075c6d0f41",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number",
+    "low OCR confidence on date (0.78)"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "wrong",
+    "date": "wrong",
+    "scale": "correct",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "missed"
+   },
+   "values": {
+    "date": "1914-08-07",
+    "scale": "AS NOTED",
+    "title": "HOSPITALQUARTERS"
+   },
+   "sources": {
+    "date": "rule:date-near-label",
+    "scale": "rule:scale-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "c480ae912b08",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number"
+   ],
+   "outcomes": {
+    "drawing_number": "absent",
+    "title": "correct",
+    "date": "correct",
+    "scale": "missed",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "date": "1912-07-12",
+    "title": "COUNTY OF CUYAHOGA DETROIT-SUPERIOR BRIDGE"
+   },
+   "sources": {
+    "date": "rule:date-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "c568f9dd878e",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "wrong",
+    "date": "wrong",
+    "scale": "missed",
+    "sheet_number": "missed",
+    "sheet_count": "missed",
+    "revision": "absent"
+   },
+   "values": {
+    "date": "1911-09-04",
+    "title": "BUILDING"
+   },
+   "sources": {
+    "date": "rule:date-unlabelled",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "c5ff29105dab",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number",
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "wrong",
+    "date": null,
+    "scale": "missed",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "title": "U.SA2CORPS AREA FORT JAY GOVNRS Is"
+   },
+   "sources": {
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "c70d773a611a",
+   "correct": false,
+   "status": "accepted",
+   "reasons": [],
+   "outcomes": {
+    "drawing_number": "wrong",
+    "title": "wrong",
+    "date": "correct",
+    "scale": "missed",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": null
+   },
+   "values": {
+    "drawing_number": "60",
+    "date": "1940-03-01",
+    "title": "CLARK HOWELL HOMES"
+   },
+   "sources": {
+    "drawing_number": "rule:number-label",
+    "date": "rule:date-near-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "c8ae1e9d238f",
+   "correct": false,
+   "status": "accepted",
+   "reasons": [],
+   "outcomes": {
+    "drawing_number": "correct",
+    "title": "wrong",
+    "date": "wrong",
+    "scale": "missed",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "47-A-32",
+    "date": "1956-07-03",
+    "title": "BLDG N47$47-R PLRN"
+   },
+   "sources": {
+    "drawing_number": "rule:number-label",
+    "date": "rule:date-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "c8c65b1c963e",
+   "correct": true,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "absent",
+    "title": "absent",
+    "date": "absent",
+    "scale": "absent",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": false,
+   "split": "test"
+  },
+  {
+   "id": "c8d54dd3df38",
+   "correct": true,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "absent",
+    "title": "absent",
+    "date": "absent",
+    "scale": "absent",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": false,
+   "split": "dev"
+  },
+  {
+   "id": "cbdc88931e75",
+   "correct": true,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "absent",
+    "title": "absent",
+    "date": "absent",
+    "scale": "absent",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": false,
+   "split": "dev"
+  },
+  {
+   "id": "ccbfb5d7beef",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "correct",
+    "title": "wrong",
+    "date": null,
+    "scale": null,
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "110-A-1",
+    "title": "SCOFIELD CONSTRUCTION CO:"
+   },
+   "sources": {
+    "drawing_number": "rule:standalone-id",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "cd9c1687ea04",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "correct",
+    "date": "correct",
+    "scale": "missed",
+    "sheet_number": "correct",
+    "sheet_count": "missed",
+    "revision": "absent"
+   },
+   "values": {
+    "date": "1914-09-24",
+    "title": "FILTRATION PLANT PLANS AND SECTIONS OF BUILDINGS.",
+    "sheet_number": 2
+   },
+   "sources": {
+    "date": "rule:date-unlabelled",
+    "title": "rule:largest-lettering",
+    "sheet_number": "rule:sheet-no"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "cf0526d7adb0",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "correct",
+    "title": "wrong",
+    "date": "missed",
+    "scale": "missed",
+    "sheet_number": "missed",
+    "sheet_count": "missed",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "454,154",
+    "title": "MECHANICAL"
+   },
+   "sources": {
+    "drawing_number": "rule:number-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "cf664b3022cc",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number",
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "absent",
+    "title": "wrong",
+    "date": "absent",
+    "scale": "missed",
+    "sheet_number": "correct",
+    "sheet_count": "correct",
+    "revision": "absent"
+   },
+   "values": {
+    "title": "FIRST FLOOR PLAN",
+    "sheet_number": 2,
+    "sheet_count": 3
+   },
+   "sources": {
+    "title": "rule:largest-lettering",
+    "sheet_number": "rule:sheet-of",
+    "sheet_count": "rule:sheet-of"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "d0df857a6998",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "correct",
+    "title": "wrong",
+    "date": "missed",
+    "scale": "missed",
+    "sheet_number": "missed",
+    "sheet_count": "missed",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "H-1-A-28",
+    "title": "SeeH1-A-Z"
+   },
+   "sources": {
+    "drawing_number": "rule:standalone-id",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "d1ff7829eaa3",
+   "correct": false,
+   "status": "accepted",
+   "reasons": [],
+   "outcomes": {
+    "drawing_number": "wrong",
+    "title": "wrong",
+    "date": "correct",
+    "scale": "missed",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "101A-7",
+    "date": "1934-11-22",
+    "title": "EAST·ELEVATIOI"
+   },
+   "sources": {
+    "drawing_number": "rule:standalone-id",
+    "date": "rule:date-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "d2bb6d54aded",
+   "correct": false,
+   "status": "accepted",
+   "reasons": [],
+   "outcomes": {
+    "drawing_number": "correct",
+    "title": "wrong",
+    "date": "correct",
+    "scale": "absent",
+    "sheet_number": "absent",
+    "sheet_count": "missed",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "A9-14",
+    "date": "1960-12-15",
+    "title": "STEVENS & WILKINSON"
+   },
+   "sources": {
+    "drawing_number": "rule:standalone-id",
+    "date": "rule:date-near-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "d407c68b936a",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing date",
+    "low OCR confidence on drawing_number (0.78)"
+   ],
+   "outcomes": {
+    "drawing_number": "wrong",
+    "title": "wrong",
+    "date": "absent",
+    "scale": "correct",
+    "sheet_number": "missed",
+    "sheet_count": "missed",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "8-2101",
+    "scale": "AS NOTED",
+    "title": "FOREST SERVICE REGION SIX - JAMES FRANKLAND ASS'T. REG. FORESTER"
+   },
+   "sources": {
+    "drawing_number": "rule:standalone-id",
+    "scale": "rule:scale-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "d71f0d922df2",
+   "correct": false,
+   "status": "accepted",
+   "reasons": [],
+   "outcomes": {
+    "drawing_number": "wrong",
+    "title": "wrong",
+    "date": "wrong",
+    "scale": "missed",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "68996111",
+    "date": "1077-12",
+    "title": "ELEVATION OF GABLE END AT CODNED PIED  PLATFODM."
+   },
+   "sources": {
+    "drawing_number": "rule:number-label",
+    "date": "rule:date-unlabelled",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "da2aacac8ed1",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "correct",
+    "title": "wrong",
+    "date": "missed",
+    "scale": "correct",
+    "sheet_number": "missed",
+    "sheet_count": "missed",
+    "revision": "missed"
+   },
+   "values": {
+    "drawing_number": "680-A-5",
+    "scale": "AS NOTED",
+    "title": "MACHINESHOP PART EAST & WEST ELEVATIONS SOUTH ELEVATION & ALTERNATIVES A&B"
+   },
+   "sources": {
+    "drawing_number": "rule:standalone-id",
+    "scale": "rule:scale-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "daee9e4eae28",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "absent",
+    "title": "absent",
+    "date": "missed",
+    "scale": "absent",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": false,
+   "split": "test"
+  },
+  {
+   "id": "dcf7fa914986",
+   "correct": true,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "absent",
+    "title": "absent",
+    "date": "absent",
+    "scale": "absent",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": false,
+   "split": "test"
+  },
+  {
+   "id": "df247c298a2c",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number",
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "correct",
+    "date": "absent",
+    "scale": "missed",
+    "sheet_number": "missed",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "title": "THE NIAGARA FALLS POWER CO."
+   },
+   "sources": {
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "df6b35abb4a3",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number",
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "invented",
+    "date": "absent",
+    "scale": "absent",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "title": "PARTSECTIONTHRU ROADWAY Center Strip.(Alternate Povement)"
+   },
+   "sources": {
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": false,
+   "split": "test"
+  },
+  {
+   "id": "e2ad88610885",
+   "correct": true,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "absent",
+    "title": "absent",
+    "date": "absent",
+    "scale": "absent",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": false,
+   "split": "test"
+  },
+  {
+   "id": "e507f58a33e4",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "correct",
+    "date": "correct",
+    "scale": "missed",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "date": "1871-11-07",
+    "title": "ORDNANCE BUILDING,"
+   },
+   "sources": {
+    "date": "rule:date-near-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "e5489b128a17",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "correct",
+    "title": "wrong",
+    "date": "missed",
+    "scale": "missed",
+    "sheet_number": "missed",
+    "sheet_count": "missed",
+    "revision": "missed"
+   },
+   "values": {
+    "drawing_number": "29271",
+    "title": "BLDG.=738 SLCOND FLOOR PLAN÷DETAILS"
+   },
+   "sources": {
+    "drawing_number": "rule:number-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "e6b7bd62d04f",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "missed",
+    "date": "missed",
+    "scale": "missed",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "e6fb266c0923",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "missed",
+    "date": "missed",
+    "scale": "absent",
+    "sheet_number": "missed",
+    "sheet_count": "missed",
+    "revision": null
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "e7f8016eb2ba",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "missed",
+    "date": "absent",
+    "scale": "absent",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "e83d8793aaf4",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "missed",
+    "date": "missed",
+    "scale": "missed",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "e8bbcebf3ca7",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "wrong",
+    "date": "wrong",
+    "scale": "missed",
+    "sheet_number": "missed",
+    "sheet_count": "missed",
+    "revision": "absent"
+   },
+   "values": {
+    "date": "1007-09",
+    "title": "Approred N Moor Approred Vico Fesident"
+   },
+   "sources": {
+    "date": "rule:date-unlabelled",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "ea8c6dc4668b",
+   "correct": true,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "absent",
+    "title": "absent",
+    "date": "absent",
+    "scale": "absent",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": false,
+   "split": "dev"
+  },
+  {
+   "id": "eaf6deb5cdda",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "wrong",
+    "date": "correct",
+    "scale": "missed",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "date": "1934-11-22",
+    "title": "NOTE: THISPLAN."
+   },
+   "sources": {
+    "date": "rule:date-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "ecd669cf5483",
+   "correct": true,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "absent",
+    "title": "absent",
+    "date": "absent",
+    "scale": "absent",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": false,
+   "split": "dev"
+  },
+  {
+   "id": "ef42a9186614",
+   "correct": false,
+   "status": "accepted",
+   "reasons": [],
+   "outcomes": {
+    "drawing_number": "correct",
+    "title": "wrong",
+    "date": "correct",
+    "scale": "missed",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "missed"
+   },
+   "values": {
+    "drawing_number": "TQ-700-6605",
+    "date": "1942-06-02",
+    "title": "ELEVATION"
+   },
+   "sources": {
+    "drawing_number": "rule:number-label",
+    "date": "rule:date-unlabelled",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "ef84c65ee45d",
+   "correct": true,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number",
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "absent",
+    "title": "correct",
+    "date": "absent",
+    "scale": "absent",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "title": "EPISCOPAL THEOLOGICAL SCHOOL"
+   },
+   "sources": {
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "f0d28a4adcdc",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "missed",
+    "date": "missed",
+    "scale": "missed",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "missed"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "f2ee9749cc53",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "wrong",
+    "date": "correct",
+    "scale": "missed",
+    "sheet_number": "missed",
+    "sheet_count": "missed",
+    "revision": "missed"
+   },
+   "values": {
+    "date": "1952-04-03",
+    "title": "NEW SINK"
+   },
+   "sources": {
+    "date": "rule:date-near-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "f375f21e041e",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "correct",
+    "title": "wrong",
+    "date": "missed",
+    "scale": "missed",
+    "sheet_number": "missed",
+    "sheet_count": "missed",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "113813",
+    "title": "BLDG.#74-SOUTHELEVATION"
+   },
+   "sources": {
+    "drawing_number": "rule:number-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "f51d8eac56cf",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number",
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "wrong",
+    "date": "missed",
+    "scale": "missed",
+    "sheet_number": "missed",
+    "sheet_count": "missed",
+    "revision": "absent"
+   },
+   "values": {
+    "title": "BRIDGE N6 189FTSPAN"
+   },
+   "sources": {
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "f5cd3abd8a33",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "missed",
+    "date": null,
+    "scale": null,
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": null
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "f5f2dc110995",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number",
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "correct",
+    "date": "missed",
+    "scale": "wrong",
+    "sheet_number": "missed",
+    "sheet_count": "missed",
+    "revision": "absent"
+   },
+   "values": {
+    "scale": "2\"=1-0\"",
+    "title": "GREAT CAPTAINS ISLAND LIGHT STATION ARRANGEMENT OF PIPING MACHINERY"
+   },
+   "sources": {
+    "scale": "rule:scale-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "f6b0ae5bf79e",
+   "correct": false,
+   "status": "accepted",
+   "reasons": [],
+   "outcomes": {
+    "drawing_number": "correct",
+    "title": "wrong",
+    "date": "correct",
+    "scale": "wrong",
+    "sheet_number": "missed",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "276",
+    "date": "1936-05-18",
+    "scale": "SHOWN",
+    "title": "AT HORSE THIEFBAIN. LESCHER AND MAHONEY"
+   },
+   "sources": {
+    "drawing_number": "rule:number-label",
+    "date": "rule:date-near-label",
+    "scale": "rule:scale-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "f7782000600e",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "correct",
+    "title": "wrong",
+    "date": "missed",
+    "scale": "correct",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "A42-9",
+    "scale": "1/4\"= 1'-0\"",
+    "title": "SECOND FLOOR"
+   },
+   "sources": {
+    "drawing_number": "rule:standalone-id",
+    "scale": "rule:scale-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "f7bf0f4508c4",
+   "correct": false,
+   "status": "accepted",
+   "reasons": [],
+   "outcomes": {
+    "drawing_number": "correct",
+    "title": "wrong",
+    "date": "wrong",
+    "scale": "missed",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "missed"
+   },
+   "values": {
+    "drawing_number": "291923",
+    "date": "1942-06-15",
+    "title": "PROJECT MGR DESIGN MGR"
+   },
+   "sources": {
+    "drawing_number": "rule:number-label",
+    "date": "rule:date-unlabelled",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "f801f3e6560a",
+   "correct": true,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "absent",
+    "title": "absent",
+    "date": "absent",
+    "scale": "absent",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": false,
+   "split": "dev"
+  },
+  {
+   "id": "f866e4a1bd30",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "no title block found"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "missed",
+    "date": "missed",
+    "scale": "absent",
+    "sheet_number": "missed",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {},
+   "sources": {},
+   "block_found": false,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "f916f1363432",
+   "correct": false,
+   "status": "accepted",
+   "reasons": [],
+   "outcomes": {
+    "drawing_number": "wrong",
+    "title": "wrong",
+    "date": "correct",
+    "scale": "missed",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "20",
+    "date": "1939-05-24",
+    "title": "BLOCK#16"
+   },
+   "sources": {
+    "drawing_number": "rule:number-label",
+    "date": "rule:date-unlabelled",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "f94e21b27d5e",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number",
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "missed",
+    "title": "correct",
+    "date": "missed",
+    "scale": "correct",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "scale": "1\"=15-0\"",
+    "title": "KEOKUK BRIDGE. SPAN-1"
+   },
+   "sources": {
+    "scale": "rule:scale-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "dev"
+  },
+  {
+   "id": "f9c033c9448a",
+   "correct": false,
+   "status": "needs_review",
+   "reasons": [
+    "missing drawing_number",
+    "missing date"
+   ],
+   "outcomes": {
+    "drawing_number": "absent",
+    "title": "wrong",
+    "date": "missed",
+    "scale": "correct",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "scale": "4'= 1\".",
+    "title": "CamisteoRiver."
+   },
+   "sources": {
+    "scale": "rule:scale-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  },
+  {
+   "id": "ff6e88d7fcd1",
+   "correct": false,
+   "status": "accepted",
+   "reasons": [],
+   "outcomes": {
+    "drawing_number": "wrong",
+    "title": "correct",
+    "date": "correct",
+    "scale": "correct",
+    "sheet_number": "absent",
+    "sheet_count": "absent",
+    "revision": "absent"
+   },
+   "values": {
+    "drawing_number": "73645",
+    "date": "1941-04-23",
+    "scale": "AS NOTED",
+    "title": "ARMAMENT 4 INSTRUMENT INSPECTION AND ADJUSTMENT BLDG. AIR CONDITIONING"
+   },
+   "sources": {
+    "drawing_number": "rule:number-label",
+    "date": "rule:date-near-label",
+    "scale": "rule:scale-label",
+    "title": "rule:largest-lettering"
+   },
+   "block_found": true,
+   "label_has_block": true,
+   "split": "test"
+  }
+ ]
+}
