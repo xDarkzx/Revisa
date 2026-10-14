@@ -58,10 +58,12 @@ printf '{"dataPrincipals": {"value": ["%s"]}}' "$me" > "$params"
 outputs="$(az deployment group create -g "$GROUP" --template-file infra/main.bicep \
   --parameters "@$params" --query properties.outputs -o json)"
 output() { python -c "import json,sys; print(json.load(sys.stdin)['$1']['value'])" <<< "$outputs"; }
-export REVISA_AZURE_DOCUMENT_INTELLIGENCE_ENDPOINT="$(output documentIntelligenceEndpoint)"
-export REVISA_AZURE_OPENAI_ENDPOINT="$(output openaiEndpoint)"
-export REVISA_AZURE_OPENAI_DEPLOYMENT="$(output modelDeployment)"
-export REVISA_AZURE_COSMOS_ENDPOINT="$(output cosmosEndpoint)"
+# Assigned before export so a failed lookup stops the script (set -e).
+REVISA_AZURE_DOCUMENT_INTELLIGENCE_ENDPOINT="$(output documentIntelligenceEndpoint)"
+REVISA_AZURE_OPENAI_ENDPOINT="$(output openaiEndpoint)"
+REVISA_AZURE_OPENAI_DEPLOYMENT="$(output modelDeployment)"
+REVISA_AZURE_COSMOS_ENDPOINT="$(output cosmosEndpoint)"
+export REVISA_AZURE_DOCUMENT_INTELLIGENCE_ENDPOINT REVISA_AZURE_OPENAI_ENDPOINT REVISA_AZURE_OPENAI_DEPLOYMENT REVISA_AZURE_COSMOS_ENDPOINT
 az resource list -g "$GROUP" --query '[].{name:name, type:type, sku:sku.name}' -o table | tee "$PROOF/resources.txt"
 
 step "Wait for role assignments to reach the data planes"
