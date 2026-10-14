@@ -17,7 +17,8 @@ uv run revisa dataset-download
    (`feat:`, `fix:`, `docs:`, `test:`, `refactor:`, `perf:`, `build:`, `ci:`, `chore:`, and
    `eval:` for changes to evaluation data or results). The commit-msg hook enforces this.
 4. Open a pull request using the template. `main` is protected: changes land only through a
-   pull request, every CI job must pass, and merges are squash-only with linear history.
+   pull request, every CI job must pass, and history stays linear: squash for small changes,
+   rebase when the individual commits are worth keeping.
 
 ## Quality gates
 
