@@ -174,7 +174,7 @@ def stratified_sample(sheets: list[Sheet], total: int, per_record: int, seed: in
 
 def write_manifest(sheets: list[Sheet], path: Path) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text("".join(s.model_dump_json() + "\n" for s in sheets), encoding="utf-8")
+    path.write_text("".join(s.model_dump_json() + "\n" for s in sheets), encoding="utf-8", newline="\n")
 
 
 def read_manifest(path: Path) -> list[Sheet]:

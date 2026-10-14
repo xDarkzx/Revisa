@@ -91,7 +91,7 @@ class LlmReader:
             raw = self._ask(lines)
             if cached is not None:
                 cached.parent.mkdir(parents=True, exist_ok=True)
-                cached.write_text(json.dumps(raw, indent=1), encoding="utf-8")
+                cached.write_text(json.dumps(raw, indent=1), encoding="utf-8", newline="\n")
         try:
             parsed = self._schema.model_validate(raw)
         except ValidationError:

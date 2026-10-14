@@ -54,7 +54,7 @@ def ocr_pages(
             continue
         with _paced(interval), Image.open(images / f"{sheet.id}.jpg") as image:
             lines = engine.read(image)
-        target.write_text(json.dumps(lines_to_json(lines)), encoding="utf-8")
+        target.write_text(json.dumps(lines_to_json(lines)), encoding="utf-8", newline="\n")
         log.info("%s: %d lines", sheet.id, len(lines))
 
 
@@ -70,7 +70,7 @@ def ocr_blocks(
         with Image.open(images / f"{sheet.id}.jpg") as image:
             # Only sheets with a title block cost an OCR call, so pace inside read_block's call.
             block = read_block(image, page_lines, _Paced(engine, interval), construction.LOCATE)
-        target.write_text(json.dumps(block_to_json(block)), encoding="utf-8")
+        target.write_text(json.dumps(block_to_json(block)), encoding="utf-8", newline="\n")
         log.info("%s: %s", sheet.id, f"{len(block.lines)} lines" if block else "no title block")
 
 
