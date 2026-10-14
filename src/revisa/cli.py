@@ -3,10 +3,14 @@
 from __future__ import annotations
 
 import argparse
+import json
 import logging
 from pathlib import Path
 
 DEFAULT_MANIFEST = Path("datasets/habs/manifest.jsonl")
+DEFAULT_LABELS = Path("datasets/habs/labels.jsonl")
+SHEETS = Path("data/sheets")
+OCR_ROOT = Path("data/ocr")
 
 
 def main(argv: list[str] | None = None) -> None:
@@ -21,31 +25,50 @@ def main(argv: list[str] | None = None) -> None:
 
     download = commands.add_parser("dataset-download", help="download the manifest's sheet images")
     download.add_argument("--manifest", type=Path, default=DEFAULT_MANIFEST)
-    download.add_argument("--dest", type=Path, default=Path("data/sheets"))
+    download.add_argument("--dest", type=Path, default=SHEETS)
     download.add_argument("--width", type=int, default=3000)
 
-    ocr = commands.add_parser("ocr-pages", help="OCR whole sheets once and cache the lines (local engine)")
-    ocr.add_argument("--manifest", type=Path, default=DEFAULT_MANIFEST)
-    ocr.add_argument("--sheets", type=Path, default=Path("data/sheets"))
-    ocr.add_argument("--out", type=Path, default=Path("data/ocr/rapidocr/pages"))
+    from revisa.runs import OCR_ENGINES, READERS
 
-    blocks = commands.add_parser("ocr-blocks", help="locate each title block and OCR it enlarged (cached)")
-    blocks.add_argument("--manifest", type=Path, default=DEFAULT_MANIFEST)
-    blocks.add_argument("--sheets", type=Path, default=Path("data/sheets"))
-    blocks.add_argument("--pages", type=Path, default=Path("data/ocr/rapidocr/pages"))
-    blocks.add_argument("--out", type=Path, default=Path("data/ocr/rapidocr/blocks"))
+    for name, help_text in (
+        ("ocr-pages", "OCR whole sheets once and cache the lines"),
+        ("ocr-blocks", "locate each title block and OCR it enlarged (cached)"),
+    ):
+        command = commands.add_parser(name, help=help_text)
+        command.add_argument("--engine", choices=OCR_ENGINES, default="rapidocr")
+        command.add_argument("--manifest", type=Path, default=DEFAULT_MANIFEST)
+
+    run = commands.add_parser("run", help="extract from cached title blocks and score against the labels")
+    run.add_argument("name", help="name for this run, e.g. local-rules")
+    run.add_argument("--ocr", choices=OCR_ENGINES, default="rapidocr")
+    run.add_argument("--reader", choices=READERS, default="rules")
+    run.add_argument("--llm", choices=("ollama", "azure"), default="ollama")
+    run.add_argument("--model", help="model or Azure deployment name (default from settings)")
+    run.add_argument("--labels", type=Path, default=DEFAULT_LABELS)
+    run.add_argument("--out", type=Path, default=Path("evals/results"))
+
+    report = commands.add_parser("report", help="markdown table of saved runs")
+    report.add_argument("results", type=Path, nargs="+")
+    report.add_argument("--split", choices=("test", "dev", "all"), default="test")
 
     args = parser.parse_args(argv)
-    logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
-    logging.getLogger("httpx").setLevel(logging.WARNING)
+    logging.basicConfig(level=logging.WARNING, format="%(levelname)s %(name)s: %(message)s")
+    logging.getLogger("revisa").setLevel(logging.INFO)
 
-    if args.command == "ocr-pages":
-        _ocr_pages(args.manifest, args.sheets, args.out)
-        return
-    if args.command == "ocr-blocks":
-        _ocr_blocks(args.manifest, args.sheets, args.pages, args.out)
-        return
+    if args.command in ("dataset-collect", "dataset-download"):
+        _dataset(args)
+    elif args.command in ("ocr-pages", "ocr-blocks"):
+        _ocr(args)
+    elif args.command == "run":
+        _run(args)
+    elif args.command == "report":
+        from revisa.runs import report as render
 
+        results = [json.loads(path.read_text(encoding="utf-8")) for path in args.results]
+        print(render(results, args.split))
+
+
+def _dataset(args: argparse.Namespace) -> None:
     from revisa import dataset
 
     client = dataset.CommonsClient()
@@ -55,57 +78,53 @@ def main(argv: list[str] | None = None) -> None:
         dataset.write_manifest(sample, args.out)
         records = len({s.record for s in sample})
         print(f"{len(sheets)} public-domain sheets found; wrote {len(sample)} from {records} records")
-    elif args.command == "dataset-download":
+    else:
         paths = dataset.download_sheets(client, dataset.read_manifest(args.manifest), args.dest, args.width)
         print(f"{len(paths)} sheets in {args.dest}")
 
 
-def _ocr_pages(manifest: Path, sheets: Path, out: Path) -> None:
-    import json
-    import time
-
-    from PIL import Image
-
+def _ocr(args: argparse.Namespace) -> None:
+    from revisa import runs
+    from revisa.config import Settings
     from revisa.dataset import read_manifest
-    from revisa.ocr import RapidOcrEngine, lines_to_json
 
-    engine = RapidOcrEngine()
-    out.mkdir(parents=True, exist_ok=True)
-    for sheet in read_manifest(manifest):
-        target = out / f"{sheet.id}.json"
-        if target.exists():
-            continue
-        start = time.perf_counter()
-        with Image.open(sheets / f"{sheet.id}.jpg") as image:
-            lines = engine.read(image)
-        target.write_text(json.dumps(lines_to_json(lines)), encoding="utf-8")
-        print(f"{sheet.id}: {len(lines)} lines in {time.perf_counter() - start:.1f}s", flush=True)
+    settings = Settings()
+    engine = runs.make_engine(args.engine, settings)
+    interval = settings.azure_ocr_interval if args.engine == "azure" else 0.0
+    sheets = read_manifest(args.manifest)
+    root = OCR_ROOT / args.engine
+    if args.command == "ocr-pages":
+        runs.ocr_pages(sheets, SHEETS, engine, root / "pages", interval=interval)
+    else:
+        runs.ocr_blocks(sheets, SHEETS, root / "pages", engine, out=root / "blocks", interval=interval)
 
 
-def _ocr_blocks(manifest: Path, sheets: Path, pages: Path, out: Path) -> None:
-    import json
-    import time
-
-    from PIL import Image
-
-    from revisa.blocks import block_to_json, read_block
-    from revisa.dataset import read_manifest
-    from revisa.ocr import RapidOcrEngine, lines_from_json
+def _run(args: argparse.Namespace) -> None:
+    from revisa import runs
+    from revisa.config import Settings
+    from revisa.evaluate import read_labels
+    from revisa.llm import LlmReader
     from revisa.packs import construction
 
-    engine = RapidOcrEngine()
-    out.mkdir(parents=True, exist_ok=True)
-    for sheet in read_manifest(manifest):
-        target = out / f"{sheet.id}.json"
-        if target.exists():
-            continue
-        start = time.perf_counter()
-        page_lines = lines_from_json(json.loads((pages / f"{sheet.id}.json").read_text(encoding="utf-8")))
-        with Image.open(sheets / f"{sheet.id}.jpg") as image:
-            block = read_block(image, page_lines, engine, construction.LOCATE)
-        target.write_text(json.dumps(block_to_json(block)), encoding="utf-8")
-        found = f"{len(block.lines)} lines" if block else "no title block"
-        print(f"{sheet.id}: {found} in {time.perf_counter() - start:.1f}s", flush=True)
+    settings = Settings()
+    llm = None
+    if args.reader != "rules":
+        model = args.model or (
+            settings.local_model if args.llm == "ollama" else settings.azure_openai_deployment
+        )
+        llm = LlmReader(
+            runs.llm_client(args.llm, settings),
+            model,
+            fields=construction.FIELD_GUIDE,
+            coerce=construction.coerce,
+            cache=Path("data/llm") / args.ocr / model.replace(":", "_").replace("/", "_"),
+        )
+    result = runs.run(args.name, read_labels(args.labels), OCR_ROOT / args.ocr / "blocks", args.reader, llm)
+    args.out.mkdir(parents=True, exist_ok=True)
+    target = args.out / f"{args.name}.json"
+    target.write_text(json.dumps(result, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+    print(runs.report([result]))
+    print(f"wrote {target}")
 
 
 if __name__ == "__main__":
