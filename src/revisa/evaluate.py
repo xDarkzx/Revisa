@@ -94,6 +94,7 @@ def score(
                 "outcomes": outcomes,
                 "values": {name: found.value for name, found in result.fields.items()},
                 "sources": {name: found.source for name, found in result.fields.items()},
+                "evidence": {name: list(found.line_ids) for name, found in result.fields.items()},
                 "block_found": result.block_found,
                 "label_has_block": label.title_block,
             }
