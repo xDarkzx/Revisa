@@ -10,6 +10,7 @@ requires-python = ">=3.11"
 dependencies = [
     "aiohttp>=3.14.5",
     "azure-ai-documentintelligence>=1.0.2",
+    "azure-cosmos>=4.17.1",
     "azure-identity>=1.26.0",
     "httpx>=0.28.1",
     "onnxruntime>=1.31.0",
@@ -70,11 +71,13 @@ ignore = ["TRY003", "PLR0913"]
 "tests/**" = ["S101", "S105", "S106", "PLR2004", "ARG"]
 # The CLI prints by design, and imports per command so `revisa --help` stays fast.
 "src/revisa/cli.py" = ["T201", "PLC0415"]
+# One-off operational scripts report progress with print and assert their preconditions.
+"scripts/**" = ["T201", "S101", "INP001"]
 
 [tool.mypy]
 strict = true
 python_version = "3.11"
-packages = ["revisa"]
+files = ["src/revisa", "scripts"]
 mypy_path = "src"
 
 [tool.coverage.run]

@@ -14,6 +14,26 @@ OCR_ROOT = Path("data/ocr")
 
 
 def main(argv: list[str] | None = None) -> None:
+    args = _parser().parse_args(argv)
+    logging.basicConfig(level=logging.WARNING, format="%(levelname)s %(name)s: %(message)s")
+    logging.getLogger("revisa").setLevel(logging.INFO)
+
+    if args.command in ("dataset-collect", "dataset-download"):
+        _dataset(args)
+    elif args.command in ("ocr-pages", "ocr-blocks"):
+        _ocr(args)
+    elif args.command == "run":
+        _run(args)
+    elif args.command == "register":
+        _register(args)
+    elif args.command == "report":
+        from revisa.runs import report as render
+
+        results = [json.loads(path.read_text(encoding="utf-8")) for path in args.results]
+        print(render(results, args.split))
+
+
+def _parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="revisa")
     commands = parser.add_subparsers(dest="command", required=True)
 
@@ -51,21 +71,19 @@ def main(argv: list[str] | None = None) -> None:
     report.add_argument("results", type=Path, nargs="+")
     report.add_argument("--split", choices=("test", "dev", "all"), default="test")
 
-    args = parser.parse_args(argv)
-    logging.basicConfig(level=logging.WARNING, format="%(levelname)s %(name)s: %(message)s")
-    logging.getLogger("revisa").setLevel(logging.INFO)
-
-    if args.command in ("dataset-collect", "dataset-download"):
-        _dataset(args)
-    elif args.command in ("ocr-pages", "ocr-blocks"):
-        _ocr(args)
-    elif args.command == "run":
-        _run(args)
-    elif args.command == "report":
-        from revisa.runs import report as render
-
-        results = [json.loads(path.read_text(encoding="utf-8")) for path in args.results]
-        print(render(results, args.split))
+    register = commands.add_parser("register", help="the drawing register: load, check, query, export")
+    register.add_argument("--store", choices=("sqlite", "cosmos"), default="sqlite")
+    register.add_argument("--db", type=Path, default=Path("data/register.sqlite"))
+    actions = register.add_subparsers(dest="action", required=True)
+    load = actions.add_parser("load", help="load a saved run's sheets into the register")
+    load.add_argument("run", type=Path)
+    load.add_argument("--manifest", type=Path, default=DEFAULT_MANIFEST)
+    actions.add_parser("check", help="duplicates, superseded revisions, missing sheets")
+    actions.add_parser("review", help="sheets waiting for a person, with reasons")
+    actions.add_parser("export", help="the register as CSV")
+    latest = actions.add_parser("latest", help="current revision of a drawing")
+    latest.add_argument("drawing_number")
+    return parser
 
 
 def _dataset(args: argparse.Namespace) -> None:
@@ -125,6 +143,47 @@ def _run(args: argparse.Namespace) -> None:
     target.write_text(json.dumps(result, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
     print(runs.report([result]))
     print(f"wrote {target}")
+
+
+def _register(args: argparse.Namespace) -> None:
+    from revisa import register as reg
+    from revisa.config import Settings
+
+    store: reg.Register
+    if args.store == "cosmos":
+        endpoint = Settings().azure_cosmos_endpoint
+        if not endpoint:
+            raise SystemExit("REVISA_AZURE_COSMOS_ENDPOINT is not set")
+        store = reg.CosmosRegister.connect(endpoint)
+    else:
+        args.db.parent.mkdir(parents=True, exist_ok=True)
+        store = reg.SqliteRegister(args.db)
+
+    if args.action == "load":
+        from revisa.dataset import read_manifest
+
+        projects = {sheet.id: sheet.record for sheet in read_manifest(args.manifest)}
+        entries = reg.entries_from_run(args.run, projects)
+        for entry in entries:
+            store.upsert(entry)
+        print(f"{len(entries)} sheets in the register")
+    elif args.action == "check":
+        issues = reg.check(store.entries())
+        for issue in issues:
+            print(f"{issue.project}  {issue.kind}: {issue.detail}")
+        print(f"{len(issues)} issues")
+    elif args.action == "review":
+        waiting = [e for e in store.entries() if e.status == "needs_review"]
+        for entry in waiting:
+            print(f"{entry.sheet_id}  {entry.drawing_number or '-'}  {'; '.join(entry.reasons)}")
+        print(f"{len(waiting)} sheets waiting for review")
+    elif args.action == "export":
+        print(reg.export_csv(store.entries()), end="")
+    else:
+        found = reg.latest(store.entries(), args.drawing_number)
+        if found is None:
+            raise SystemExit(f"{args.drawing_number} is not in the register")
+        print(found.model_dump_json(indent=1))
 
 
 if __name__ == "__main__":
