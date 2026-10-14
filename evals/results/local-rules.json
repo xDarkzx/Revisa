@@ -1,14 +1,14 @@
 {
  "name": "local-rules",
- "created": "2026-10-14T01:41:13+00:00",
- "commit": "05a17e0",
+ "created": "2026-10-14T03:11:20+00:00",
+ "commit": "d390455",
  "config": {
   "ocr": "rapidocr",
   "reader": "rules",
   "model": null
  },
  "usage": {
-  "seconds": 0.1,
+  "seconds": 0.7,
   "sheets": 200
  },
  "summary": {

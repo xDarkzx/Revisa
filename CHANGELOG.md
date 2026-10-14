@@ -6,6 +6,13 @@ All notable changes are recorded here. The format follows
 
 ## [Unreleased]
 
+### Fixed
+
+- Label audit: a blind second reading of 20 random test sheets agreed on 130 of 140 values;
+  four label values were corrected from the sheet, rule 5 (dates) was clarified, and all runs
+  were re-scored from cached responses. Test-half date accuracy is now 32% (gpt-4.1-mini on
+  Document Intelligence) and 30% (rules on Document Intelligence).
+
 ## [0.1.0] - 2026-10-14
 
 ### Added
