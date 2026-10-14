@@ -140,7 +140,7 @@ def _run(args: argparse.Namespace) -> None:
     result = runs.run(args.name, read_labels(args.labels), OCR_ROOT / args.ocr / "blocks", args.reader, llm)
     args.out.mkdir(parents=True, exist_ok=True)
     target = args.out / f"{args.name}.json"
-    target.write_text(json.dumps(result, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+    target.write_text(json.dumps(result, indent=1, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n")
     print(runs.report([result]))
     print(f"wrote {target}")
 
