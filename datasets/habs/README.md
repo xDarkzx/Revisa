@@ -46,21 +46,37 @@ production meets all of it.
 5. `date`: the date the drawing was made, drawn, submitted or approved, in ISO 8601 to the
    precision printed (`1900-05` for "May 1900"). Not revision, "as built", record, print or
    archive dates. Where only approval dates exist, the earliest is listed; alternatives are
-   listed when two dates are equally the drawing's date.
+   listed when two dates are equally the drawing's date. When the only date on the sheet marks
+   a reissue of the whole drawing ("1932 Revision", "brought up to date 8-13-56"), that date is
+   the drawing's date.
 6. `scale`: as printed. Scales written only under individual views are not the sheet's scale.
 7. `sheet_number`, `sheet_count`: from "sheet n of m" or "sheet no. n".
 8. `revision`: the latest mark in a revision table. Revisions noted without a mark ("Revised
    6/18/02") have no revision value.
 
-## Who labelled it, and how to weigh that
+## How the labels were made and checked
 
-The labels were transcribed by an AI assistant (Claude) reading each sheet image at full
-resolution, zoomed into the title block, **independently of Revisa's OCR and extraction output**.
-They have not yet been verified by a second person. Known consequences:
+Each sheet was transcribed with an AI assistant (Claude) from the image at full resolution,
+zoomed into the title block, **independently of Revisa's OCR and extraction output**.
 
-- Hard sheets (faint handwriting, small print) carry most of the label uncertainty; those
+**Audit.** 20 sheets drawn at random from the test half (seed `20261014`) were read a second
+time, blind to the existing labels, and the two readings compared field by field. They agreed
+on 130 of 140 field values (93%). Each of the 10 disagreements was settled from the sheet
+under magnification:
+
+| Outcome | Fields | Sheets |
+|---|---|---|
+| Label wrong, corrected | 4 | 6b53358c7db8 date, 8c088e6a988f drawing number, b4845dc675e8 date, f51d8eac56cf scale |
+| Second reading wrong, label kept | 4 | c480ae912b08 date, ef42a9186614 drawing number and date, 6b0d599835c7 revision |
+| Rule unclear, rule 5 clarified, labels kept | 2 | b06b11a28713 date, 8c494b542a76 date |
+
+So about 3% of label values were wrong before the audit, all of them single faint characters
+(a digit or a month), not misread fields. Results were re-scored after the corrections; two
+date scores rose by one or two points and nothing else changed.
+
+- Hard sheets (faint handwriting, small print) carry most of the remaining uncertainty; those
   values are marked in `note` ("read from handwriting", "partly legible").
-- A labeller error can count a correct extraction as wrong, or the reverse. The
+- A labelling error can count a correct extraction as wrong, or the reverse. The
   `extraction_error` issue template exists for reporting either.
 
 Any change to a label must be a correction to match the sheet, never to match model output,
@@ -79,3 +95,7 @@ accordingly.
 | Date | Sheet | Field | Change | Reason |
 |---|---|---|---|---|
 | 2026-10-14 | all | all | Initial labels | |
+| 2026-10-14 | 6b53358c7db8 | date | 1931-05-18 to 1931-03-18 | Audit: block reads MAR-18-31 |
+| 2026-10-14 | 8c088e6a988f | drawing_number | X3216 to X3218, X3216 | Audit: last digit blurred, 8 likelier |
+| 2026-10-14 | b4845dc675e8 | date | 1960-02-01 to 1960-03-01 | Audit: approval date reads 3/1/60 |
+| 2026-10-14 | f51d8eac56cf | scale | 1/2" to 1/4" (first of two scales) | Audit: fraction matches the 3/4 below |
