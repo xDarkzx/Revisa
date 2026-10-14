@@ -19,9 +19,9 @@ jobs:
           enable-cache: true
       - run: uv sync --locked
       - name: Ruff lint
-        run: uv run ruff check --output-format github src tests
+        run: uv run ruff check --output-format github src tests scripts
       - name: Ruff format
-        run: uv run ruff format --check src tests
+        run: uv run ruff format --check src tests scripts
       - name: mypy (strict)
         run: uv run mypy
       - name: Tests with coverage gate
@@ -63,3 +63,5 @@ jobs:
           az bicep install
           az bicep lint --file infra/main.bicep
           az bicep build --file infra/main.bicep --stdout > /dev/null
+      - name: Shell scripts
+        run: shellcheck scripts/*.sh

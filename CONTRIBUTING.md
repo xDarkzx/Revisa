@@ -26,8 +26,8 @@ or weakened in a pull request without an ADR explaining why.
 
 | Gate | Command |
 |---|---|
-| Lint, including security rules | `uv run ruff check src tests` |
-| Formatting | `uv run ruff format --check src tests` |
+| Lint, including security rules | `uv run ruff check src tests scripts` |
+| Formatting | `uv run ruff format --check src tests scripts` |
 | Types | `uv run mypy` (strict) |
 | Tests, coverage at least 85% | `uv run pytest --cov` |
 | Known-vulnerable dependencies | `uv export --no-emit-project --format requirements-txt > r.txt && uvx pip-audit -r r.txt --strict --disable-pip` |
